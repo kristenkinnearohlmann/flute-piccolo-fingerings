@@ -1,6 +1,10 @@
 main {
     border: 1px solid grey;
-    padding: 2rem;
+}
+
+#note-detail {
+    display: flex;
+    flex-flow: row nowrap;
 }
 
 /* media query for generic tablet */
