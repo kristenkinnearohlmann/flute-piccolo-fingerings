@@ -10,9 +10,17 @@ main {
     width: 66%
 }
 
+#note-name {
+    border-bottom: 1px solid grey;
+}
+
 #note-detail {
     display: flex;
     flex-flow: row nowrap;
+}
+
+#pane-one {
+    border-right: 1px solid grey;
 }
 
 /* media query for generic tablet */
