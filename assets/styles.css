@@ -1,13 +1,15 @@
+body {
+    font-size: 2rem;
+    margin: 0 auto;
+}
+
+header {
+    margin: 5%;
+}
+
 main {
     border: 1px solid grey;
-}
-
-.one-third {
-    width: 33%;
-}
-
-.two-third {
-    width: 66%
+    margin: 5%;
 }
 
 #note-name {
@@ -21,6 +23,11 @@ main {
 
 #pane-one {
     border-right: 1px solid grey;
+    width: 25%;
+}
+
+#pane-two {
+
 }
 
 /* media query for generic tablet */
