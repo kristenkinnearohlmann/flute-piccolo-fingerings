@@ -10,15 +10,20 @@ const init = () => {
 const setKeyPress = () => {
     console.log('setKeyPress Function')
     Array.from(keyItems).forEach(element => {
-        element.addEventListener('click', keyPress)
+        let key = element
+        element.addEventListener('click', keyPress(key))
     })
 }
 
-const keyPress = () => {
-    console.log('keyPress Function')
-    console.log('Add code to fill/clear svgs by id')
-    console.log(event.target)
+const keyPress = (key) => {
+    return function curried_func(e) {
+        console.log('keyPress Function')
+        console.log(key)
+    }
 }
+
+
+
 
 // Start app
 init()
