@@ -3,8 +3,8 @@ const keyItems = document.getElementsByClassName('key-item')
 // Set up functions
 const init = () => {
     console.log('Start fingerings app')
+    keysFlute()
     setKeyPress()
-    mainKey()
 }
 
 const setKeyPress = () => {
