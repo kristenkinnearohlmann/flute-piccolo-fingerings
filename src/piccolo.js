@@ -1,6 +1,4 @@
-const chart = document.getElementById("pane-two-top")
-
-const keysFlute = () => {
+const keysPiccolo = () => {
     const div = document.createElement("div")
     div.innerHTML = `
     <div>
