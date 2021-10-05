@@ -21,20 +21,21 @@ main {
     flex-flow: row nowrap;
 }
 
-#pane-one {
+#note-finger-options {
     border-right: 1px solid grey;
-    width: 25%;
+    width: 35%;
 }
 
-#pane-two {
-
-}
-
-#pane-two-top {
-    border: 1px solid green;
+#note-finger-chart {
+    align-items: center;
     display: flex;
     flex-flow: row nowrap;
-    max-width: 65%;
+    justify-content: center;
+    width: 65%;
+}
+
+#note-finger-explanation {
+    border-top: 1px solid grey;
 }
 
 /* media query for generic tablet */

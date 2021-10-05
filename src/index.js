@@ -1,5 +1,5 @@
 const keyItems = document.getElementsByClassName('key-item')
-const chart = document.getElementById("pane-two-top")
+const chart = document.getElementById("note-finger-chart")
 
 // Set up functions
 const init = () => {
