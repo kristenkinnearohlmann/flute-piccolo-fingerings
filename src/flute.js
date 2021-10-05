@@ -1,18 +1,33 @@
 const keysFlute = () => {
     const keySetup = `
-        <div id="key-lh1" class="key-item">
+        <div id="key-lh-1" class="key-item">
             <svg height="40" width="40">
-                <circle cx="20" cy="20" r="15" stroke="silver" stroke-width="3" fill="red" />
+                <circle cx="20" cy="20" r="15" stroke="silver" stroke-width="3" fill="none" />
             </svg>
         </div>
-        <div id="key-lh2" class="key-item">
+        <div id="key-lh-2" class="key-item">
             <svg height="40" width="40">
-                <circle cx="20" cy="20" r="15" stroke="silver" stroke-width="3" fill="orange" />
+                <circle cx="20" cy="20" r="15" stroke="silver" stroke-width="3" fill="none" />
             </svg>
         </div>
-        <div id="key-lh3" class="key-item">
+        <div id="key-lh-3" class="key-item">
             <svg height="40" width="40">
-                <circle cx="20" cy="20" r="15" stroke="silver" stroke-width="3" fill="yellow" />
+                <circle cx="20" cy="20" r="15" stroke="silver" stroke-width="3" fill="none" />
+            </svg>
+        </div>
+        <div id="key-rh-1" class="key-item">
+            <svg height="40" width="40">
+                <circle cx="20" cy="20" r="15" stroke="silver" stroke-width="3" fill="none" />
+            </svg>
+        </div>
+        <div id="key-rh-2" class="key-item">
+            <svg height="40" width="40">
+                <circle cx="20" cy="20" r="15" stroke="silver" stroke-width="3" fill="none" />
+            </svg>
+        </div>
+        <div id="key-rh-3" class="key-item">
+            <svg height="40" width="40">
+                <circle cx="20" cy="20" r="15" stroke="silver" stroke-width="3" fill="none" />
             </svg>
         </div>
     `
