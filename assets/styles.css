@@ -41,6 +41,17 @@ main {
     transform: rotate(-90deg);
 }
 
+.key-lower {
+    margin-top: 55px;
+}
+
+.key-name-lower {
+    font-family: sans-serif;
+    font-size: 0.65rem;
+    font-weight: bold;
+    transform: rotate(-90deg);
+}
+
 #note-finger-explanation {
     border-top: 1px solid grey;
 }
