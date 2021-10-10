@@ -21,10 +21,10 @@ const keysFlute = () => {
                 Sorry, your browser does not support inline SVG.
             </svg>
         </div>
-        <div id="key-lh-4" class="key-item"
+        <div id="key-lh-4" class="key-item">
             <p class="key-name">LH 4</p>
             <svg height="60" width="40">
-            <path d="M 20 20 h 5 v 10 h -1 v -8 h -4 v -2" stroke="silver" stroke-width="3" fill="none" />
+            <path d="M 10 10 h 20 v 40 h -5 v -28 h -15 v -12" stroke="silver" stroke-width="3" fill="none" />
             Sorry, your browser does not support inline SVG.
             </svg>
         </div>
