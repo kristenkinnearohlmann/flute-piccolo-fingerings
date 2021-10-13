@@ -1,15 +1,24 @@
 const keyItems = document.getElementsByClassName('key-item')
 const chart = document.getElementById("note-finger-chart")
+const keyChoiceForm = document.getElementById('key-choice-form')
+const keyChoiceFlute = document.getElementById('flute-keys')
+const keyChoicePiccolo = document.getElementById('piccolo-keys')
 
 // Set up functions
 const init = () => {
     console.log('Start fingerings app')
-    initialKeys()
+    setFluteKeys()
     setKeyPress()
 }
 
-const initialKeys = () => {
+const setFluteKeys = () => {
     keysFlute()
+    document.getElementById('flute-keys').checked = true
+}
+
+const setPiccoloKeys = () => {
+    keysPiccolo()
+    document.getElementById('piccolo-keys').checked = true
 }
 
 const setKeyPress = () => {
@@ -27,7 +36,8 @@ const keyPress = (key) => {
     }
 }
 
-document.getElementById('key-choice-form').addEventListener('click', (event) => {
+keyChoicePiccolo.addEventListener('click', (event) =>{
+    console.log('Picc key pick')
     console.log(event.target.name)
     console.log(event.target.value)
 })
