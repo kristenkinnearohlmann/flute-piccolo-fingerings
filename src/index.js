@@ -23,7 +23,10 @@ const keyPress = (key) => {
     }
 }
 
-
+document.getElementById('key-choice-form').addEventListener('click', (event) => {
+    console.log(event.target.name)
+    console.log(event.target.value)
+})
 
 
 // Start app
