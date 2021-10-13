@@ -1,23 +1,68 @@
 const keysPiccolo = () => {
-    const div = document.createElement("div")
-    div.innerHTML = `
-    <div>
-        <div id="key-lh1" class="key-item">
-            <svg height="30" wdith="30">
-                <circle cx="15" cy="15" r="10" stroke="silver" stroke-width="3" fill="red" />
+    const keySetup = `
+        <div id="key-lh-1" class="key-item">
+            <p class="key-name">LH 1</p>
+            <svg height="40" width="40">
+                <circle cx="20" cy="20" r="15" stroke="black" stroke-width="3" fill="none" />
+                Sorry, your browser does not support inline SVG.
             </svg>
         </div>
-        <div id="key-lh2" class="key-item">
-            <svg height="30" wdith="30">
-                <circle cx="15" cy="15" r="10" stroke="silver" stroke-width="3" fill="orange" />
+        <div id="key-lh-2" class="key-item">
+            <p class="key-name">LH 2</p>
+            <svg height="40" width="40">
+                <circle cx="20" cy="20" r="15" stroke="black" stroke-width="3" fill="none" />
+                Sorry, your browser does not support inline SVG.
             </svg>
         </div>
-        <div id="key-lh3" class="key-item">
-            <svg height="30" wdith="30">
-                <circle cx="15" cy="15" r="10" stroke="silver" stroke-width="3" fill="yellow" />
+        <div id="key-lh-3" class="key-item">
+            <p class="key-name">LH 3</p>
+            <svg height="40" width="40">
+                <circle cx="20" cy="20" r="15" stroke="black" stroke-width="3" fill="none" />
+                Sorry, your browser does not support inline SVG.
             </svg>
         </div>
-    </div>
+        <div id="key-lh-4" class="key-item">
+            <p class="key-name">LH 4</p>
+            <svg height="60" width="40">
+            <path d="M 10 10 h 20 v 40 h -5 v -28 h -15 v -12" stroke="black" stroke-width="3" fill="none" />
+            Sorry, your browser does not support inline SVG.
+            </svg>
+        </div>
+        <div id="key-rh-1" class="key-item">
+            <p class="key-name">RH 1</p>
+            <svg height="40" width="40">
+                <circle cx="20" cy="20" r="15" stroke="black" stroke-width="3" fill="none" />
+                Sorry, your browser does not support inline SVG.
+            </svg>
+        </div>
+        <div id="key-rh-tr1" class="key-item key-lower">
+            <p class="key-name-lower">TR 1</p>
+            <svg height="63" width="18">
+            <ellipse cx="9" cy="24" rx="5" ry="12" stroke="black" stroke-width="2" fill="none" />
+            Sorry, your browser does not support inline SVG.
+            </svg>
+        </div>
+        <div id="key-rh-2" class="key-item">
+            <p class="key-name">RH 2</p>
+            <svg height="40" width="40">
+                <circle cx="20" cy="20" r="15" stroke="black" stroke-width="3" fill="none" />
+                Sorry, your browser does not support inline SVG.
+            </svg>
+        </div>
+        <div id="key-rh-tr2" class="key-item key-lower">
+            <p class="key-name-lower">TR 2</p>
+            <svg height="63" width="18">
+            <ellipse cx="9" cy="24" rx="5" ry="12" stroke="black" stroke-width="2" fill="none" />
+            Sorry, your browser does not support inline SVG.
+            </svg>
+        </div>
+        <div id="key-rh-3" class="key-item">
+            <p class="key-name">RH 3</p>
+            <svg height="40" width="40">
+                <circle cx="20" cy="20" r="15" stroke="black" stroke-width="3" fill="none" />
+                Sorry, your browser does not support inline SVG.
+            </svg>
+        </div>
     `
-    chart.appendChild(div)
+    chart.innerHTML = keySetup
 }
