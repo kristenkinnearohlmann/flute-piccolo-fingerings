@@ -13,12 +13,12 @@ const init = () => {
 
 const setFluteKeys = () => {
     keysFlute()
-    document.getElementById('flute-keys').checked = true
+    keyChoiceFlute.checked = true
 }
 
 const setPiccoloKeys = () => {
     keysPiccolo()
-    document.getElementById('piccolo-keys').checked = true
+    keyChoicePiccolo.checked = true
 }
 
 const setKeyPress = () => {
@@ -36,10 +36,12 @@ const keyPress = (key) => {
     }
 }
 
+keyChoiceFlute.addEventListener('click', (event) => {
+    setFluteKeys()
+})
+
 keyChoicePiccolo.addEventListener('click', (event) =>{
-    console.log('Picc key pick')
-    console.log(event.target.name)
-    console.log(event.target.value)
+    setPiccoloKeys()
 })
 
 
