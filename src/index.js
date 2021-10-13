@@ -4,8 +4,12 @@ const chart = document.getElementById("note-finger-chart")
 // Set up functions
 const init = () => {
     console.log('Start fingerings app')
-    keysFlute()
+    initialKeys()
     setKeyPress()
+}
+
+const initialKeys = () => {
+    keysFlute()
 }
 
 const setKeyPress = () => {
