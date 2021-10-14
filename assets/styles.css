@@ -14,7 +14,10 @@ main {
 
 #main-chart {
     border: 1px solid grey;
-    /* margin: 5%; */
+}
+
+#choice-form {
+    padding: 10px;
 }
 
 #note-name {
@@ -66,6 +69,14 @@ main {
     body {
         font-size: 1.25rem;
     }
+
+    header {
+
+    }
+
+    main {
+
+    }
 }
 
 /* media query for generic desktop */
@@ -73,11 +84,27 @@ main {
     body {
         font-size: 1.25rem;
     }
+
+    header {
+        width: 65%;
+    }
+
+    main {
+        width: 65%;
+    }
 }
 
 /* media query for less than 300px */
 @media only screen and (max-width: 299px) {
     body {
+        
+    }
+
+    header {
+
+    }
+
+    main {
         
     }
 }
