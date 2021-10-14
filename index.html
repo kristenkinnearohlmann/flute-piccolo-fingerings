@@ -9,25 +9,27 @@
             <p>Interactive selection of flute and piccolo fingering charts</p>
         </header>
         <main>
-            <div>
-                <form id="key-choice-form">
-                    <label for="flute-keys">
-                        <input type="radio" id="flute-keys" name="key-choice" value="Flute" />
-                        Flute
-                    </label>
-                    <label for="piccolo-keys">
-                        <input type="radio" id="piccolo-keys" name="key-choice" value="Piccolo" />
-                        Piccolo
-                    </label>
-                </form>
-            </div>
-            <div id="note-name">Note name with staff image</div>
-            <div id="note-detail">
-                <div id="note-finger-options">Pane 1: List of options [basic, alternate 1-n] (click to change panes 2 and 3)</div>
-                <div id="note-finger-chart">
+            <div id="#main-chart">
+                <div>
+                    <form id="key-choice-form">
+                        <label for="flute-keys">
+                            <input type="radio" id="flute-keys" name="key-choice" value="Flute" />
+                            Flute
+                        </label>
+                        <label for="piccolo-keys">
+                            <input type="radio" id="piccolo-keys" name="key-choice" value="Piccolo" />
+                            Piccolo
+                        </label>
+                    </form>
                 </div>
+                <div id="note-name">Note name with staff image</div>
+                <div id="note-detail">
+                    <div id="note-finger-options">Pane 1: List of options [basic, alternate 1-n] (click to change panes 2 and 3)</div>
+                    <div id="note-finger-chart">
+                    </div>
+                </div>
+                <div id="note-finger-explanation">Full explanation</div>
             </div>
-            <div id="note-finger-explanation">Full explanation</div>
         </main>
         <script src="./src/piccolo.js"></script>
         <script src="./src/flute.js"></script>

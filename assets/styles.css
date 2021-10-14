@@ -8,6 +8,12 @@ header {
 }
 
 main {
+    border: 1px solid purple;
+    margin: 5%;
+    max-width: 95%;
+}
+
+#main-chart {
     border: 1px solid grey;
     margin: 5%;
 }
@@ -72,7 +78,7 @@ main {
 
 /* media query for less than 300px */
 @media only screen and (max-width: 299px) {
-    main {
+    body {
         
     }
 }
