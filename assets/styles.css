@@ -91,6 +91,21 @@ main {
     }
 
     header {
+        width: 90%;
+    }
+
+    main {
+        width: 90%;
+    }
+}
+
+/* media query for over 1220px */
+@media only screen and (min-width: 1220px) {
+    body {
+        font-size: 1.25rem;
+    }
+
+    header {
         width: 65%;
     }
 
@@ -106,10 +121,10 @@ main {
     }
 
     header {
-
+        width: 95%;
     }
 
     main {
-        
+        width: 95%;
     }
 }
