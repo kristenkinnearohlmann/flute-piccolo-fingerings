@@ -1,5 +1,19 @@
 const keysPiccolo = () => {
     const keySetup = `
+        <div id="key-th-bflat" class="key-item">
+            <p class="key-name-lower">Th B fl</p>
+            <svg height="63" width="30">
+                <path d="M 10 50 h 18 v 12 h -18 v -12" stroke="black" stroke-width="2" fill="none" />
+        Sorry, your browser does not support inline SVG.
+            </svg>
+        </div>
+        <div id="key-th" class="key-item">
+            <p class="key-name-lower">Th</p>
+            <svg height="63" width="30">
+                <path d="M 10 50 h 18 v 12 h -18 v -12" stroke="black" stroke-width="2" fill="none" />
+        Sorry, your browser does not support inline SVG.
+            </svg>
+        </div>
         <div id="key-lh-1" class="key-item">
             <p class="key-name">LH 1</p>
             <svg height="40" width="40">
