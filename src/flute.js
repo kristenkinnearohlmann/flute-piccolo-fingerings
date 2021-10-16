@@ -1,9 +1,16 @@
 const keysFlute = () => {
     const keySetup = `
+        <div id="key-th-bflat" class="key-item key-lower">
+            <p class="key-name-lower">Th B flat</p>
+            <svg height="63" width="18">
+            <path d="M 2 50 h 10 v 12 h -10 v -12" stroke="silver" stroke-width="2" fill="none" />
+            Sorry, your browser does not support inline SVG.
+            </svg>
+        </div>
         <div id="key-th" class="key-item">
-            <p class="key-name-lower">Thumb</p>
-            <svg height="60" width="40">
-                <path d="M 10 10 h 20 v 12 h -20 v -12" stroke="silver" stroke-width="3" fill="none" />
+            <p class="key-name-lower">Th</p>
+            <svg height="63" width="40">
+                <path d="M 10 50 h 20 v 12 h -20 v -12" stroke="silver" stroke-width="3" fill="none" />
                 Sorry, your browser does not support inline SVG.
             </svg>
         </div>
