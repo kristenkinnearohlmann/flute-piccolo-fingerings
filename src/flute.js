@@ -6,9 +6,9 @@ const keysFlute = () => {
                 Sorry, your browser does not support inline SVG.  
             </svg>
         </div>
-        <div id="key-th" class="key-item">
-            <svg height="63" width="30">
-                <path d="M 10 50 h 18 v 12 h -18 v -12" stroke="silver" stroke-width="2" fill="none" />
+        <div id="key-th" class="key-item key-lower">
+            <svg height="63" width="28">
+                <rect x="1" y="25" height="10" width="20" stroke="silver" stroke-width="2" fill="none" />
                 Sorry, your browser does not support inline SVG.
             </svg>
         </div>
