@@ -68,7 +68,7 @@ const keysPiccolo = () => {
         </div>
         <div id="key-rh-pinky" class="key-item">
             <svg height="40" width="24">
-            <ellipse cx="13" cy="24" rx="9" ry="12" stroke="black" stroke-width="2" fill="none" />
+            <ellipse cx="13" cy="24" rx="9" ry="15" stroke="black" stroke-width="2" fill="none" />
             Sorry, your browser does not support inline SVG.
             </svg>
         </div>
