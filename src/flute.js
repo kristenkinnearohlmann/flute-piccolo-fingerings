@@ -72,6 +72,26 @@ const keysFlute = () => {
             Sorry, your browser does not support inline SVG.
             </svg>
         </div>
+        <div>
+            <div id="key-rh-broll">
+                <svg height="63" width="28">
+                <rect x="1" y="25" height="10" width="20" stroke="silver" stroke-width="2" fill="none" />
+                Sorry, your browser does not support inline SVG.
+            </svg>
+            </div>
+            <div id="key-rh-croll">
+                <svg height="63" width="28">
+                <rect x="1" y="25" height="10" width="20" stroke="silver" stroke-width="2" fill="none" />
+                Sorry, your browser does not support inline SVG.
+            </svg>
+            </div>
+            <div id="key-rh-csharp">
+                <svg height="63" width="28">
+                    <rect x="1" y="25" height="10" width="20" stroke="silver" stroke-width="2" fill="none" />
+                    Sorry, your browser does not support inline SVG.
+                </svg>
+            </div>
+        <div>
     `
     chart.innerHTML = keySetup
 }
