@@ -73,21 +73,21 @@ const keysPiccolo = () => {
             </svg>
         </div>
         <div>
-            <div id="key-rh-broll">
-                <svg height="63" width="28">
-                <rect x="1" y="25" height="10" width="20" stroke="black" stroke-width="2" fill="none" />
-                Sorry, your browser does not support inline SVG.
-            </svg>
+            <div id="key-rh-broll" class="key-item">
+                <svg height="8" width="22">
+                    <rect x="1" y="1" height="6" width="20" stroke="black" stroke-width="2" fill="none" />
+                    Sorry, your browser does not support inline SVG.
+                </svg>
             </div>
-            <div id="key-rh-croll">
-                <svg height="63" width="28">
-                <rect x="1" y="25" height="10" width="20" stroke="black" stroke-width="2" fill="none" />
-                Sorry, your browser does not support inline SVG.
-            </svg>
+            <div id="key-rh-croll" class="key-item">
+                <svg height="8" width="22">
+                    <rect x="1" y="1" height="6" width="20" stroke="black" stroke-width="2" fill="none" />
+                    Sorry, your browser does not support inline SVG.
+                </svg>
             </div>
-            <div id="key-rh-csharp">
-                <svg height="63" width="28">
-                    <rect x="1" y="25" height="10" width="20" stroke="black" stroke-width="2" fill="none" />
+            <div id="key-rh-csharp" class="key-item">
+                <svg height="20" width="28">
+                    <rect x="1" y="2" height="15" width="20" stroke="black" stroke-width="2" fill="none" />
                     Sorry, your browser does not support inline SVG.
                 </svg>
             </div>
