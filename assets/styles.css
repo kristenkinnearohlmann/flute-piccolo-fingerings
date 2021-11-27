@@ -47,7 +47,12 @@ main {
 }
 
 .key-item-roller {
+    display: flex;
+    flex-flow: column nowrap;
+}
 
+.key-item-roller > svg {
+    margin-bottom: .125rem;
 }
 
 .key-name {
