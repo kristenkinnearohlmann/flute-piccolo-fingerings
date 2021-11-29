@@ -73,16 +73,6 @@ const keysPiccolo = () => {
             </svg>
         </div>
         <div>
-            <div class="key-item key-item-roller">
-                <svg class="key-target" id="key-rh-broll" height="8" width="22">
-                    <rect x="1" y="1" height="6" width="20" stroke="black" stroke-width="2" fill="none" />
-                    Sorry, your browser does not support inline SVG.
-                </svg>
-                <svg class="key-target" id="key-rh-croll" height="8" width="22">
-                    <rect x="1" y="1" height="6" width="20" stroke="black" stroke-width="2" fill="none" />
-                    Sorry, your browser does not support inline SVG.
-                </svg>
-            </div>
             <div class="key-item">
                 <svg class="key-target" id="key-rh-csharp" height="20" width="28">
                     <rect x="1" y="2" height="15" width="20" stroke="black" stroke-width="2" fill="none" />
