@@ -13,6 +13,11 @@ main {
     width: 95%;
 }
 
+.banner {
+    background-color: pink;
+    border: 2px solid red;
+}
+
 #main-chart {
     border: 1px solid grey;
 }
