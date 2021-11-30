@@ -16,6 +16,7 @@ main {
 .banner {
     background-color: pink;
     border: 2px solid red;
+    text-align: center;
 }
 
 #main-chart {
