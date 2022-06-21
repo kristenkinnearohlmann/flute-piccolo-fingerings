@@ -24,7 +24,6 @@ main {
 }
 
 .note-options {
-  background-color: blueviolet;
   display: flex;
   flex-direction: column;
   font-family: inherit;
@@ -47,13 +46,12 @@ select {
   }
 
   .note-options {
-    background-color: greenyellow;
     flex-direction: unset;
     font-size: inherit;
   }
 
   .note-options > div {
-    margin: 0 15px;
+    margin-right: 15px;
   }
 }
 /* #main-chart {
