@@ -23,11 +23,15 @@ main {
   text-align: center;
 }
 
-#main-chart {
+.note-options {
+}
+
+/* #main-chart {
   border: 1px solid grey;
 }
 
 #choice-form {
+  font-size: 1rem;
   padding: 10px;
 }
 
@@ -86,10 +90,10 @@ main {
 #note-finger-explanation {
   border-top: 1px solid grey;
   padding: 10px;
-}
+} */
 
 /* media query for generic tablet */
-@media only screen and (min-width: 600px) {
+/* @media only screen and (min-width: 600px) {
   body {
     font-size: 1.25rem;
   }
@@ -101,10 +105,10 @@ main {
   main {
     width: 95%;
   }
-}
+} */
 
 /* media query for generic desktop */
-@media only screen and (min-width: 768px) {
+/* @media only screen and (min-width: 768px) {
   body {
     font-size: 1.25rem;
   }
@@ -116,10 +120,10 @@ main {
   main {
     width: 90%;
   }
-}
+} */
 
 /* media query for over 1220px */
-@media only screen and (min-width: 1220px) {
+/* @media only screen and (min-width: 1220px) {
   body {
     font-size: 1.25rem;
   }
@@ -131,10 +135,10 @@ main {
   main {
     width: 65%;
   }
-}
+} */
 
 /* media query for less than 300px */
-@media only screen and (max-width: 299px) {
+/* @media only screen and (max-width: 299px) {
   body {
   }
 
@@ -145,4 +149,4 @@ main {
   main {
     width: 95%;
   }
-}
+} */
