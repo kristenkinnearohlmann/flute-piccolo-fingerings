@@ -24,11 +24,14 @@ main {
 }
 
 .note-options {
+  border: 2px solid gray;
+  border-radius: 8px;
   display: flex;
   flex-direction: column;
   font-family: inherit;
   font-size: inherit;
   margin-bottom: 15px;
+  padding: 10px;
 }
 
 .note-options > div {
@@ -48,10 +51,7 @@ select {
   .note-options {
     flex-direction: unset;
     font-size: inherit;
-  }
-
-  .note-options > div {
-    margin-right: 15px;
+    justify-content: space-around;
   }
 }
 /* #main-chart {
