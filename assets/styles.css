@@ -44,18 +44,27 @@ select {
 }
 
 .note-detail {
+  border: 2px solid gray;
+  border-radius: 8px;
   display: flex;
   flex-flow: row nowrap;
 }
 
-.note-finger-options {
+.note-detail-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.note-detail-panel:first-child {
   border-right: 1px solid grey;
+  width: 25%;
+}
+
+.note-finger-options {
   padding: 10px;
-  width: 35%;
 }
 
 .note-finger-explanation {
-  border-top: 1px solid grey;
   padding: 10px;
 }
 
