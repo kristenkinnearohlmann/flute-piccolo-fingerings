@@ -27,6 +27,13 @@ main {
   background-color: blueviolet;
   display: flex;
   flex-direction: column;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+select {
+  font-family: inherit;
+  font-size: inherit;
 }
 
 @media only screen and (min-width: 768px) {
@@ -36,6 +43,7 @@ main {
   .note-options {
     background-color: greenyellow;
     flex-direction: unset;
+    font-size: inherit;
   }
 }
 /* #main-chart {
