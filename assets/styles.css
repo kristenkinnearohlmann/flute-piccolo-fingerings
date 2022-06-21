@@ -3,7 +3,7 @@
 }
 
 body {
-  font-size: 2rem;
+  font-size: 0.75rem;
   margin: 0 auto;
 }
 
@@ -30,8 +30,11 @@ main {
 }
 
 @media only screen and (min-width: 768px) {
+  body {
+    font-size: 2rem;
+  }
   .note-options {
-    background-color: brown;
+    background-color: greenyellow;
     flex-direction: unset;
   }
 }
