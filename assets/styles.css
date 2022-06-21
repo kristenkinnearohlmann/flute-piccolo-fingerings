@@ -77,24 +77,6 @@ select {
   width: 65%;
 }
 
-@media only screen and (min-width: 768px) {
-  body {
-    font-size: 2rem;
-  }
-
-  .note-options {
-    flex-direction: unset;
-    font-size: inherit;
-    justify-content: space-around;
-  }
-}
-/*
-
-
-
-
-
-
 .key-item-roller {
   display: flex;
   flex-flow: column nowrap;
@@ -122,5 +104,14 @@ select {
   transform: rotate(-90deg);
 }
 
+@media only screen and (min-width: 768px) {
+  body {
+    font-size: 2rem;
+  }
 
-*/
+  .note-options {
+    flex-direction: unset;
+    font-size: inherit;
+    justify-content: space-around;
+  }
+}
