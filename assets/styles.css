@@ -29,6 +29,11 @@ main {
   flex-direction: column;
   font-family: inherit;
   font-size: inherit;
+  margin-bottom: 15px;
+}
+
+.note-options > div {
+  margin: 5px 0;
 }
 
 select {
@@ -40,10 +45,15 @@ select {
   body {
     font-size: 2rem;
   }
+
   .note-options {
     background-color: greenyellow;
     flex-direction: unset;
     font-size: inherit;
+  }
+
+  .note-options > div {
+    margin: 0 15px;
   }
 }
 /* #main-chart {
