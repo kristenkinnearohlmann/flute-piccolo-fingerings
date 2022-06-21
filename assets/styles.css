@@ -60,15 +60,15 @@ select {
   width: 25%;
 }
 
-.note-finger-options {
+#note-finger-options {
   padding: 10px;
 }
 
-.note-finger-explanation {
+#note-finger-explanation {
   padding: 10px;
 }
 
-.note-finger-chart {
+#note-finger-chart {
   align-items: center;
   display: flex;
   flex-flow: row nowrap;
