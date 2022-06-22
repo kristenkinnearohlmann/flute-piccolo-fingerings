@@ -61,20 +61,21 @@ select {
 }
 
 #note-finger-options {
-  padding: 10px;
+  margin: 10px;
 }
 
 #note-finger-explanation {
-  padding: 10px;
+  margin: 10px;
 }
 
 #note-finger-chart {
+  border: 1px solid black;
   align-items: center;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
-  padding: 10px;
-  width: 65%;
+  margin: 10px;
+  width: 100%;
 }
 
 .key-item-roller {
