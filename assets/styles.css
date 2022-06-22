@@ -47,17 +47,19 @@ select {
   border: 2px solid gray;
   border-radius: 8px;
   display: flex;
-  flex-flow: row nowrap;
-}
-
-.note-detail-panel {
-  display: flex;
+  /* flex-flow: row nowrap; */
   flex-direction: column;
 }
 
+.note-detail-panel {
+  /* display: flex; */
+  /* flex-direction: column; */
+}
+
 .note-detail-panel:first-child {
-  border-right: 1px solid grey;
-  width: 25%;
+  /* border-right: 1px solid grey; */
+  border-bottom: 1px solid grey;
+  /* width: 25%; */
 }
 
 #note-finger-options {
@@ -114,5 +116,22 @@ select {
     flex-direction: unset;
     font-size: inherit;
     justify-content: space-around;
+  }
+
+  .note-detail {
+    border: 2px solid gray;
+    border-radius: 8px;
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  .note-detail-panel {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .note-detail-panel:first-child {
+    border-right: 1px solid grey;
+    width: 25%;
   }
 }
