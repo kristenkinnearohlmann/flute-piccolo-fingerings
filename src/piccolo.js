@@ -1,5 +1,6 @@
-const keysPiccolo = () => {
-    const keySetup = `
+const keysPiccolo = (screenSize) => {
+  console.log(screenSize);
+  const keySetup = `
         <div class="key-item key-lower">
             <svg class="key-target" id="key-th-bflat" height="63" width="18">
                 <rect x="6" y="25" height="10" width="10" stroke="black" stroke-width="2" fill="none" />
@@ -80,6 +81,6 @@ const keysPiccolo = () => {
                 </svg>
             </div>
         <div>
-    `
-    chart.innerHTML = keySetup
-}
+    `;
+  chart.innerHTML = keySetup;
+};

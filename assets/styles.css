@@ -47,19 +47,8 @@ select {
   border: 2px solid gray;
   border-radius: 8px;
   display: flex;
-  /* flex-flow: row nowrap; */
   flex-direction: column;
 }
-
-/* .note-detail-panel { */
-/* display: flex; */
-/* flex-direction: column; */
-/* } */
-
-/* .note-detail-panel:first-child {
-  border-bottom: 1px solid grey;
-  width: 100%;
-} */
 
 #note-finger-options {
   margin: 10px;
@@ -67,7 +56,6 @@ select {
 
 #note-finger-explanation {
   margin: 10px;
-  /* width: 100%; */
 }
 
 #note-finger-chart {
@@ -77,7 +65,6 @@ select {
   flex-flow: row nowrap;
   justify-content: center;
   margin: 10px;
-  /* width: 100%; */
 }
 
 .key-item-roller {
@@ -119,11 +106,8 @@ select {
   }
 
   .note-detail {
-    /* border: 2px solid gray; */
-    /* border-radius: 8px; */
     display: flex;
     flex-direction: row;
-    /* flex-flow: row nowrap; */
   }
 
   .note-detail-panel:first-child {
@@ -135,21 +119,4 @@ select {
   .note-detail-panel:last-child {
     width: calc(100% - 10px);
   }
-
-  /* .note-detail-panel {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .note-detail-panel:first-child {
-    border-bottom: none;
-    border-right: 1px solid grey;
-    width: 30%;
-  }
-
-  .note-detail-panel:last-child {
-    border-bottom: none;
-    border-right: 1px solid grey;
-    width: 70%;
-  } */
 }

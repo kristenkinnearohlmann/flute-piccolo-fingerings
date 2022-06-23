@@ -11,14 +11,19 @@ const init = () => {
   setFluteKeys();
 };
 
+const getScreenSize = () => {
+  console.log(screen.width >= 768 ? "large" : "small");
+  return screen.width >= 768 ? "large" : "small";
+};
+
 const setFluteKeys = () => {
-  keysFlute();
+  keysFlute(getScreenSize());
   setKeyPress();
   keyChoiceFlute.checked = true;
 };
 
 const setPiccoloKeys = () => {
-  keysPiccolo();
+  keysPiccolo(getScreenSize());
   setKeyPress();
   keyChoicePiccolo.checked = true;
 };
@@ -39,6 +44,21 @@ const keyPress = (key) => {
   };
 };
 
+const debounce = (func, delay) => {
+  let timeout;
+
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+
+    clearTimeout(timeout);
+    timeout = setTimeout(later, delay);
+  };
+};
+
+// event listeners
 keyChoiceFlute.addEventListener("click", (event) => {
   setFluteKeys();
 });
@@ -46,6 +66,13 @@ keyChoiceFlute.addEventListener("click", (event) => {
 keyChoicePiccolo.addEventListener("click", (event) => {
   setPiccoloKeys();
 });
+
+window.addEventListener(
+  "resize",
+  debounce(() => {
+    getScreenSize();
+  }, 250)
+);
 
 // Start app
 init();
