@@ -62,12 +62,10 @@ select {
 } */
 
 #note-finger-options {
-  border: 1px solid red;
   margin: 10px;
 }
 
 #note-finger-explanation {
-  border: 1px solid blue;
   margin: 10px;
   /* width: 100%; */
 }
@@ -120,13 +118,23 @@ select {
     justify-content: space-around;
   }
 
-  /* .note-detail {
-    border: 2px solid gray;
-    border-radius: 8px;
+  .note-detail {
+    /* border: 2px solid gray; */
+    /* border-radius: 8px; */
     display: flex;
-    flex-direction: row; */
-  /* flex-flow: row nowrap; */
-  /* } */
+    flex-direction: row;
+    /* flex-flow: row nowrap; */
+  }
+
+  .note-detail-panel:first-child {
+    border-bottom: none;
+    border-right: 1px solid grey;
+    width: 30%;
+  }
+
+  .note-detail-panel:last-child {
+    width: calc(100% - 10px);
+  }
 
   /* .note-detail-panel {
     display: flex;
