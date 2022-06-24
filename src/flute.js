@@ -6,7 +6,10 @@ const keysLarge = {
     stroke: "silver",
     strokeWidth: 3,
     fill: "none",
+    width: 40,
   },
+  thumb1: {},
+  thumb2: {},
 };
 
 // Large * 0.85
@@ -18,7 +21,10 @@ const keysSmall = {
     stroke: "silver",
     strokeWidth: 3,
     fill: "none",
+    width: 34,
   },
+  thumb1: {},
+  thumb2: {},
 };
 
 const keysFlute = (screenSize) => {
@@ -38,19 +44,19 @@ const keysFlute = (screenSize) => {
             </svg>
         </div>
         <div class="key-item">
-            <svg class="key-target" id="key-lh-1" height="40" width="40">
+            <svg class="key-target" id="key-lh-1" height="40" width="${keySize.mainRound.width}">
                 <circle cx="${keySize.mainRound.cx}" cy="${keySize.mainRound.cy}" r="${keySize.mainRound.r}" stroke="${keySize.mainRound.stroke}" stroke-width="${keySize.mainRound.strokeWidth}" fill="${keySize.mainRound.fill}" />
                 Sorry, your browser does not support inline SVG.
             </svg>
         </div>
         <div class="key-item">
-            <svg class="key-target" id="key-lh-2" height="40" width="40">
+            <svg class="key-target" id="key-lh-2" height="40" width="${keySize.mainRound.width}">
                 <circle cx="${keySize.mainRound.cx}" cy="${keySize.mainRound.cy}" r="${keySize.mainRound.r}" stroke="${keySize.mainRound.stroke}" stroke-width="${keySize.mainRound.strokeWidth}" fill="${keySize.mainRound.fill}" />
                 Sorry, your browser does not support inline SVG.
             </svg>
         </div>
         <div class="key-item">
-            <svg class="key-target" id="key-lh-3" height="40" width="40">
+            <svg class="key-target" id="key-lh-3" height="40" width="${keySize.mainRound.width}">
                 <circle cx="${keySize.mainRound.cx}" cy="${keySize.mainRound.cy}" r="${keySize.mainRound.r}" stroke="${keySize.mainRound.stroke}" stroke-width="${keySize.mainRound.strokeWidth}" fill="${keySize.mainRound.fill}" />
                 Sorry, your browser does not support inline SVG.
             </svg>
@@ -62,7 +68,7 @@ const keysFlute = (screenSize) => {
             </svg>
         </div>
         <div class="key-item">
-            <svg class="key-target" id="key-rh-1" height="40" width="40">
+            <svg class="key-target" id="key-rh-1" height="40" width="${keySize.mainRound.width}">
                 <circle cx="${keySize.mainRound.cx}" cy="${keySize.mainRound.cy}" r="${keySize.mainRound.r}" stroke="${keySize.mainRound.stroke}" stroke-width="${keySize.mainRound.strokeWidth}" fill="${keySize.mainRound.fill}" />
                 Sorry, your browser does not support inline SVG.
             </svg>
@@ -74,7 +80,7 @@ const keysFlute = (screenSize) => {
             </svg>
         </div>
         <div class="key-item">
-            <svg class="key-target" id="key-rh-2" height="40" width="40">
+            <svg class="key-target" id="key-rh-2" height="40" width="${keySize.mainRound.width}">
                 <circle cx="${keySize.mainRound.cx}" cy="${keySize.mainRound.cy}" r="${keySize.mainRound.r}" stroke="${keySize.mainRound.stroke}" stroke-width="${keySize.mainRound.strokeWidth}" fill="${keySize.mainRound.fill}" />
                 Sorry, your browser does not support inline SVG.
             </svg>
@@ -86,7 +92,7 @@ const keysFlute = (screenSize) => {
             </svg>
         </div>
         <div class="key-item">
-            <svg class="key-target" id="key-rh-3" height="40" width="40">
+            <svg class="key-target" id="key-rh-3" height="40" width="${keySize.mainRound.width}">
                 <circle cx="${keySize.mainRound.cx}" cy="${keySize.mainRound.cy}" r="${keySize.mainRound.r}" stroke="${keySize.mainRound.stroke}" stroke-width="${keySize.mainRound.strokeWidth}" fill="${keySize.mainRound.fill}" />
                 Sorry, your browser does not support inline SVG.
             </svg>
