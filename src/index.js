@@ -4,6 +4,7 @@ const chart = document.getElementById("note-finger-chart");
 const keyChoiceForm = document.getElementById("key-choice-form");
 const keyChoiceFlute = document.getElementById("flute-keys");
 const keyChoicePiccolo = document.getElementById("piccolo-keys");
+let screenSize;
 
 // Set up functions
 const init = () => {
@@ -12,7 +13,6 @@ const init = () => {
 };
 
 const getScreenSize = () => {
-  console.log(screen.width >= 768 ? "large" : "small");
   return screen.width >= 768 ? "large" : "small";
 };
 
@@ -70,7 +70,7 @@ keyChoicePiccolo.addEventListener("click", (event) => {
 window.addEventListener(
   "resize",
   debounce(() => {
-    getScreenSize();
+    keyChoiceFlute.checked ? setFluteKeys() : setPiccoloKeys();
   }, 250)
 );
 

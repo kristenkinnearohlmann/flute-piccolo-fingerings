@@ -1,5 +1,5 @@
 const keysFlute = (screenSize) => {
-  console.log(screenSize);
+  console.log("Flute keys script", screenSize);
   const keySetup = `
         <div class="key-item key-lower">
             <svg class="key-target" id="key-th-bflat" height="63" width="18">
