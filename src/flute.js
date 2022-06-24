@@ -8,7 +8,16 @@ const keysLarge = {
     fill: "none",
     width: 40,
   },
-  thumb1: {},
+  thumb1: {
+    x: 6,
+    y: 25,
+    height: 10,
+    keyWidth: 10,
+    stroke: "silver",
+    strokeWidth: 2,
+    fill: "none",
+    mainWidth: 18,
+  },
   thumb2: {},
 };
 
@@ -23,7 +32,16 @@ const keysSmall = {
     fill: "none",
     width: 34,
   },
-  thumb1: {},
+  thumb1: {
+    x: 5.1,
+    y: 21.25,
+    height: 8.5,
+    keyWidth: 8.5,
+    stroke: "silver",
+    strokeWidth: 2,
+    fill: "none",
+    mainWidth: 15.3,
+  },
   thumb2: {},
 };
 
@@ -32,8 +50,8 @@ const keysFlute = (screenSize) => {
   const keySize = screenSize === "large" ? keysLarge : keysSmall;
   const keySetup = `
         <div class="key-item key-lower">
-            <svg class="key-target" id="key-th-bflat" height="63" width="18">
-                <rect x="6" y="25" height="10" width="10" stroke="silver" stroke-width="2" fill="none" />
+            <svg class="key-target" id="key-th-bflat" height="63" width="${keySize.thumb1.mainWidth}">
+                <rect x="${keySize.thumb1.x}" y="${keySize.thumb1.y}" height="${keySize.thumb1.height}" width="${keySize.thumb1.keyWidth}" stroke="${keySize.thumb1.stroke}" stroke-width="${keySize.thumb1.strokeWidth}" fill="${keySize.thumb1.fill}" />
                 Sorry, your browser does not support inline SVG.  
             </svg>
         </div>
