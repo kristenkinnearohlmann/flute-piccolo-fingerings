@@ -4,7 +4,6 @@ const chart = document.getElementById("note-finger-chart");
 const keyChoiceForm = document.getElementById("key-choice-form");
 const keyChoiceFlute = document.getElementById("flute-keys");
 const keyChoicePiccolo = document.getElementById("piccolo-keys");
-let screenSize;
 
 // Set up functions
 const init = () => {

@@ -1,5 +1,29 @@
+const keysLarge = {
+  mainRound: {
+    cx: 20,
+    cy: 20,
+    r: 15,
+    stroke: "silver",
+    strokeWidth: 3,
+    fill: "none",
+  },
+};
+
+// Large * 0.85
+const keysSmall = {
+  mainRound: {
+    cx: 17,
+    cy: 17,
+    r: 12.75,
+    stroke: "silver",
+    strokeWidth: 3,
+    fill: "none",
+  },
+};
+
 const keysFlute = (screenSize) => {
   console.log("Flute keys script", screenSize);
+  const keySize = screenSize === "large" ? keysLarge : keysSmall;
   const keySetup = `
         <div class="key-item key-lower">
             <svg class="key-target" id="key-th-bflat" height="63" width="18">
@@ -15,19 +39,19 @@ const keysFlute = (screenSize) => {
         </div>
         <div class="key-item">
             <svg class="key-target" id="key-lh-1" height="40" width="40">
-                <circle cx="20" cy="20" r="15" stroke="silver" stroke-width="3" fill="none" />
+                <circle cx="${keySize.mainRound.cx}" cy="${keySize.mainRound.cy}" r="${keySize.mainRound.r}" stroke="${keySize.mainRound.stroke}" stroke-width="${keySize.mainRound.strokeWidth}" fill="${keySize.mainRound.fill}" />
                 Sorry, your browser does not support inline SVG.
             </svg>
         </div>
         <div class="key-item">
             <svg class="key-target" id="key-lh-2" height="40" width="40">
-                <circle cx="20" cy="20" r="15" stroke="silver" stroke-width="3" fill="none" />
+                <circle cx="${keySize.mainRound.cx}" cy="${keySize.mainRound.cy}" r="${keySize.mainRound.r}" stroke="${keySize.mainRound.stroke}" stroke-width="${keySize.mainRound.strokeWidth}" fill="${keySize.mainRound.fill}" />
                 Sorry, your browser does not support inline SVG.
             </svg>
         </div>
         <div class="key-item">
             <svg class="key-target" id="key-lh-3" height="40" width="40">
-                <circle cx="20" cy="20" r="15" stroke="silver" stroke-width="3" fill="none" />
+                <circle cx="${keySize.mainRound.cx}" cy="${keySize.mainRound.cy}" r="${keySize.mainRound.r}" stroke="${keySize.mainRound.stroke}" stroke-width="${keySize.mainRound.strokeWidth}" fill="${keySize.mainRound.fill}" />
                 Sorry, your browser does not support inline SVG.
             </svg>
         </div>
@@ -39,7 +63,7 @@ const keysFlute = (screenSize) => {
         </div>
         <div class="key-item">
             <svg class="key-target" id="key-rh-1" height="40" width="40">
-                <circle cx="20" cy="20" r="15" stroke="silver" stroke-width="3" fill="none" />
+                <circle cx="${keySize.mainRound.cx}" cy="${keySize.mainRound.cy}" r="${keySize.mainRound.r}" stroke="${keySize.mainRound.stroke}" stroke-width="${keySize.mainRound.strokeWidth}" fill="${keySize.mainRound.fill}" />
                 Sorry, your browser does not support inline SVG.
             </svg>
         </div>
@@ -51,7 +75,7 @@ const keysFlute = (screenSize) => {
         </div>
         <div class="key-item">
             <svg class="key-target" id="key-rh-2" height="40" width="40">
-                <circle cx="20" cy="20" r="15" stroke="silver" stroke-width="3" fill="none" />
+                <circle cx="${keySize.mainRound.cx}" cy="${keySize.mainRound.cy}" r="${keySize.mainRound.r}" stroke="${keySize.mainRound.stroke}" stroke-width="${keySize.mainRound.strokeWidth}" fill="${keySize.mainRound.fill}" />
                 Sorry, your browser does not support inline SVG.
             </svg>
         </div>
@@ -63,7 +87,7 @@ const keysFlute = (screenSize) => {
         </div>
         <div class="key-item">
             <svg class="key-target" id="key-rh-3" height="40" width="40">
-                <circle cx="20" cy="20" r="15" stroke="silver" stroke-width="3" fill="none" />
+                <circle cx="${keySize.mainRound.cx}" cy="${keySize.mainRound.cy}" r="${keySize.mainRound.r}" stroke="${keySize.mainRound.stroke}" stroke-width="${keySize.mainRound.strokeWidth}" fill="${keySize.mainRound.fill}" />
                 Sorry, your browser does not support inline SVG.
             </svg>
         </div>
