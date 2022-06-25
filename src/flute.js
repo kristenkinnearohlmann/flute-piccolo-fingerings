@@ -140,8 +140,8 @@ const keysFlute = (screenSize) => {
             </svg>
         </div>
         <div class="key-item key-lower">
-            <svg class="key-target" id="key-rh-tr2" height="63" width="18">
-                <ellipse cx="9" cy="24" rx="5" ry="12" stroke="silver" stroke-width="2" fill="none" />
+            <svg class="key-target" id="key-rh-tr2" height="63" width="${keySize.trill.mainWidth}">
+                <ellipse cx="${keySize.trill.cx}" cy="${keySize.trill.cy}" rx="${keySize.trill.rx}" ry="${keySize.trill.ry}" stroke="${keySize.stroke}" stroke-width="${keySize.trill.strokeWidth}" fill="${keySize.fill}" />
                 Sorry, your browser does not support inline SVG.
             </svg>
         </div>
