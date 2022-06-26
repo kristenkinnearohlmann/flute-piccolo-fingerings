@@ -45,6 +45,14 @@ const keysLarge = {
     ry: 15,
     strokeWidth: 2,
   },
+  roller: {
+    mainWidth: 22,
+    x: 1,
+    y: 1,
+    keyHeight: 6,
+    keyWidth: 20,
+    strokeWidth: 2,
+  },
 };
 
 // Large * 0.85
@@ -93,6 +101,14 @@ const keysSmall = {
     cy: 20.4,
     rx: 7.65,
     ry: 12.75,
+    strokeWidth: 2,
+  },
+  roller: {
+    mainWidth: 18.7,
+    x: 0.85,
+    y: 0.85,
+    keyHeight: 5.1,
+    keyWidth: 17,
     strokeWidth: 2,
   },
 };
@@ -175,12 +191,12 @@ const keysFlute = (screenSize) => {
         </div>
         <div>
             <div class="key-item key-item-roller">
-                <svg class="key-target" id="key-rh-broll" height="8" width="22">
-                    <rect x="1" y="1" height="6" width="20" stroke="silver" stroke-width="2" fill="none" />
+                <svg class="key-target" id="key-rh-broll" height="8" width="${keySize.roller.mainWidth}">
+                    <rect x="${keySize.roller.x}" y="${keySize.roller.y}" height="${keySize.roller.keyHeight}" width="${keySize.roller.keyWidth}" stroke="${keySize.stroke}" stroke-width="${keySize.roller.strokeWidth}" fill="${keySize.fill}" />
                     Sorry, your browser does not support inline SVG.
                 </svg>
                 <svg class="key-target" id="key-rh-croll" height="8" width="22">
-                    <rect x="1" y="1" height="6" width="20" stroke="silver" stroke-width="2" fill="none" />
+                    <rect x="${keySize.roller.x}" y="${keySize.roller.y}" height="${keySize.roller.keyHeight}" width="${keySize.roller.keyWidth}" stroke="${keySize.stroke}" stroke-width="${keySize.roller.strokeWidth}" fill="${keySize.fill}" />
                     Sorry, your browser does not support inline SVG.
                 </svg>
             </div>
