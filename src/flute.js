@@ -37,6 +37,14 @@ const keysLarge = {
     ry: 12,
     strokeWidth: 2,
   },
+  rightPinky: {
+    mainWidth: 24,
+    cx: 13,
+    cy: 24,
+    rx: 9,
+    ry: 15,
+    strokeWidth: 2,
+  },
 };
 
 // Large * 0.85
@@ -77,6 +85,14 @@ const keysSmall = {
     cy: 20.4,
     rx: 4.25,
     ry: 10.2,
+    strokeWidth: 2,
+  },
+  rightPinky: {
+    mainWidth: 20.4,
+    cx: 11.05,
+    cy: 20.4,
+    rx: 7.65,
+    ry: 12.75,
     strokeWidth: 2,
   },
 };
@@ -152,8 +168,8 @@ const keysFlute = (screenSize) => {
             </svg>
         </div>
         <div class="key-item">
-            <svg class="key-target" id="key-rh-pinky" height="40" width="24">
-            <ellipse cx="13" cy="24" rx="9" ry="15" stroke="silver" stroke-width="2" fill="none" />
+            <svg class="key-target" id="key-rh-pinky" height="40" width="${keySize.rightPinky.mainWidth}">
+            <ellipse cx="${keySize.rightPinky.cx}" cy="${keySize.rightPinky.cy}" rx="${keySize.rightPinky.rx}" ry="${keySize.rightPinky.ry}" stroke="${keySize.stroke}" stroke-width="${keySize.rightPinky.strokeWidth}" fill="${keySize.fill}" />
             Sorry, your browser does not support inline SVG.
             </svg>
         </div>
