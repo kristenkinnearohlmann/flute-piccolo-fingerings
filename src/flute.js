@@ -38,7 +38,7 @@ const keysLarge = {
     strokeWidth: 2,
   },
   rightPinky: {
-    mainWidth: 24,
+    mainWidth: 28,
     cx: 13,
     cy: 24,
     rx: 9,
@@ -104,7 +104,7 @@ const keysSmall = {
     strokeWidth: 2,
   },
   rightPinky: {
-    mainWidth: 20.4,
+    mainWidth: 23.8,
     cx: 11.05,
     cy: 20.4,
     rx: 7.65,
