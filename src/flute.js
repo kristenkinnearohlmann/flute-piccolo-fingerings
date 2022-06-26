@@ -199,7 +199,7 @@ const keysFlute = (screenSize) => {
                     <rect x="${keySize.roller.x}" y="${keySize.roller.y}" height="${keySize.roller.keyHeight}" width="${keySize.roller.keyWidth}" stroke="${keySize.stroke}" stroke-width="${keySize.strokeWidthAux}" fill="${keySize.fill}" />
                     Sorry, your browser does not support inline SVG.
                 </svg>
-                <svg class="key-target" id="key-rh-croll" height="8" width="22">
+                <svg class="key-target" id="key-rh-croll" height="8" width="${keySize.roller.mainWidth}">
                     <rect x="${keySize.roller.x}" y="${keySize.roller.y}" height="${keySize.roller.keyHeight}" width="${keySize.roller.keyWidth}" stroke="${keySize.stroke}" stroke-width="${keySize.strokeWidthAux}" fill="${keySize.fill}" />
                     Sorry, your browser does not support inline SVG.
                 </svg>
