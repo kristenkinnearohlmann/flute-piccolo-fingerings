@@ -17,12 +17,16 @@ const getScreenSize = () => {
 
 const setFluteKeys = () => {
   keysFlute(getScreenSize());
+  // TODO: Replace in key calls
+  renderKeys("flute", getScreenSize());
   setKeyPress();
   keyChoiceFlute.checked = true;
 };
 
 const setPiccoloKeys = () => {
   keysPiccolo(getScreenSize());
+  // TODO: Replace in key calls
+  renderKeys("piccolo", getScreenSize());
   setKeyPress();
   keyChoicePiccolo.checked = true;
 };
