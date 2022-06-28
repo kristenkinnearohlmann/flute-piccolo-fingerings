@@ -119,11 +119,11 @@ const keysSmallKeys = {
 
 const renderKeys = (instrument, screenSize) => {
   const keySize = screenSize === "large" ? keysLargeKeys : keysSmallKeys;
-  console.log(keySize);
+
   instrument === "flute"
     ? (keySize.stroke = "silver")
     : (keySize.stroke = "black");
-  console.log(keySize);
+
   const keySetup = `
         <div class="key-item key-lower">
             <svg class="key-target" id="key-th-bflat" height="63" width="${keySize.thumb1.mainWidth}">
@@ -200,12 +200,10 @@ const renderKeys = (instrument, screenSize) => {
         <div>
             <div class="key-item key-item-roller">
                 <svg class="key-target" id="key-rh-broll" height="8" width="${keySize.roller.mainWidth}">
-                    <rect x="${keySize.roller.x}" y="${keySize.roller.y}" height="${keySize.roller.keyHeight}" width="${keySize.roller.keyWidth}" stroke="${keySize.stroke}" stroke-width="${keySize.strokeWidthAux}" fill="${keySize.fill}" />
-                    Sorry, your browser does not support inline SVG.
+
                 </svg>
                 <svg class="key-target" id="key-rh-croll" height="8" width="${keySize.roller.mainWidth}">
-                    <rect x="${keySize.roller.x}" y="${keySize.roller.y}" height="${keySize.roller.keyHeight}" width="${keySize.roller.keyWidth}" stroke="${keySize.stroke}" stroke-width="${keySize.strokeWidthAux}" fill="${keySize.fill}" />
-                    Sorry, your browser does not support inline SVG.
+
                 </svg>
             </div>
             <div class="key-item">
@@ -217,4 +215,21 @@ const renderKeys = (instrument, screenSize) => {
         <div>
     `;
   chart.innerHTML = keySetup;
+
+  const keyRhBRoller = document.getElementById("key-rh-broll");
+  const keyRhCRoller = document.getElementById("key-rh-croll");
+
+  if (instrument === "flute") {
+    keyRhBRoller.innerHTML = `
+          <rect x="${keySize.roller.x}" y="${keySize.roller.y}" height="${keySize.roller.keyHeight}" width="${keySize.roller.keyWidth}" stroke="${keySize.stroke}" stroke-width="${keySize.strokeWidthAux}" fill="${keySize.fill}" />
+          Sorry, your browser does not support inline SVG.
+          `;
+    keyRhCRoller.innerHTML = `
+          <rect x="${keySize.roller.x}" y="${keySize.roller.y}" height="${keySize.roller.keyHeight}" width="${keySize.roller.keyWidth}" stroke="${keySize.stroke}" stroke-width="${keySize.strokeWidthAux}" fill="${keySize.fill}" />
+          Sorry, your browser does not support inline SVG.
+          `;
+  } else {
+    keyRhBRoller.innerHTML = "";
+    keyRhCRoller.innerHTML = "";
+  }
 };
