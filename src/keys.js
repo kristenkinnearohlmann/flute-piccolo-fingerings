@@ -124,6 +124,22 @@ const renderKeys = (instrument, screenSize) => {
     ? (keySize.stroke = "silver")
     : (keySize.stroke = "black");
 
+  let keyDiv = document.createElement("div");
+  keyDiv.classList.add("key-item");
+
+  let keySvg = document.createElement("svg");
+  keySvg.classList.add("key-target");
+
+  // keyLh1
+
+  /*
+  <div class="key-item">
+  <svg class="key-target" id="key-lh-1" height="40" width="${keySize.mainRound.mainWidth}">
+      <circle cx="${keySize.mainRound.cx}" cy="${keySize.mainRound.cy}" r="${keySize.mainRound.r}" stroke="${keySize.stroke}" stroke-width="${keySize.strokeWidthMain}" fill="${keySize.fill}" />
+      Sorry, your browser does not support inline SVG.
+  </svg>
+</div>
+*/
   const keySetup = `
         <div class="key-item key-lower">
             <svg class="key-target" id="key-th-bflat" height="63" width="${keySize.thumb1.mainWidth}">
