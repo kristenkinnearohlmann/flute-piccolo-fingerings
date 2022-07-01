@@ -128,9 +128,18 @@ const renderKeys = (instrument, screenSize) => {
   keyDiv.classList.add("key-item");
 
   let keySvg = document.createElement("svg");
-  keySvg.classList.add("key-target");
+  //   keySvg.classList.add("key-target");
 
   // keyLh1
+  //   keySvg.id = "key-lh-1";
+  //   keySvg.setAttribute("height", 40);
+  //   keySvg.setAttribute("width", keySize.mainRound.mainWidth);
+  //   keySvg.setAttribute("backgroundColor", "red");
+  keySvg.innerHTML = '<circle cx="50" cy="50" r="50"/>';
+  //   keySvg.height = "40";
+  //   keySvg.width = "" + keySize.mainRound.mainWidth + "";
+
+  console.log(keySvg);
 
   /*
   <div class="key-item">
@@ -248,4 +257,6 @@ const renderKeys = (instrument, screenSize) => {
     keyRhBRoller.innerHTML = "";
     keyRhCRoller.innerHTML = "";
   }
+
+  document.getElementById("note-finger-explanation").appendChild(keySvg);
 };
