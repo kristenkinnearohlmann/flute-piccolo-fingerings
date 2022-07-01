@@ -127,19 +127,16 @@ const renderKeys = (instrument, screenSize) => {
   let keyDiv = document.createElement("div");
   keyDiv.classList.add("key-item");
 
-  let keySvg = document.createElement("svg");
-  //   keySvg.classList.add("key-target");
+  let keyMain = `
+  <div class="key-item">
+    <svg class="key-target" id="key-lh-100" height="40" width="${keySize.mainRound.mainWidth}">
+        <circle cx="${keySize.mainRound.cx}" cy="${keySize.mainRound.cy}" r="${keySize.mainRound.r}" stroke="${keySize.stroke}" stroke-width="${keySize.strokeWidthMain}" fill="${keySize.fill}" />
+        Sorry, your browser does not support inline SVG.
+    </svg>
+</div>
+  `;
 
   // keyLh1
-  //   keySvg.id = "key-lh-1";
-  //   keySvg.setAttribute("height", 40);
-  //   keySvg.setAttribute("width", keySize.mainRound.mainWidth);
-  //   keySvg.setAttribute("backgroundColor", "red");
-  keySvg.innerHTML = '<circle cx="50" cy="50" r="50"/>';
-  //   keySvg.height = "40";
-  //   keySvg.width = "" + keySize.mainRound.mainWidth + "";
-
-  console.log(keySvg);
 
   /*
   <div class="key-item">
@@ -258,5 +255,9 @@ const renderKeys = (instrument, screenSize) => {
     keyRhCRoller.innerHTML = "";
   }
 
-  document.getElementById("note-finger-explanation").appendChild(keySvg);
+  console.log(chart.innerHTML);
+
+  chart.innerHTML += keyMain;
+
+  console.log(chart.innerHTML);
 };
