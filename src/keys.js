@@ -117,6 +117,15 @@ const keysSmallKeys = {
   },
 };
 
+const mainKeyIds = [
+  "key-lh-1",
+  "key-lh-2",
+  "key-lh-3",
+  "key-rh-1",
+  "key-rh-2",
+  "key-rh-3",
+];
+
 const renderKeys = (instrument, screenSize) => {
   const keySize = screenSize === "large" ? keysLargeKeys : keysSmallKeys;
 
@@ -255,9 +264,5 @@ const renderKeys = (instrument, screenSize) => {
     keyRhCRoller.innerHTML = "";
   }
 
-  console.log(chart.innerHTML);
-
   chart.innerHTML += keyMain;
-
-  console.log(chart.innerHTML);
 };
