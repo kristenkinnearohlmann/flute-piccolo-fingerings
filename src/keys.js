@@ -155,6 +155,7 @@ const renderKeys = (instrument, screenSize) => {
   </svg>
 </div>
 */
+
   const keySetup = `
         <div class="key-item key-lower">
             <svg class="key-target" id="key-th-bflat" height="63" width="${keySize.thumb1.mainWidth}">
@@ -265,4 +266,17 @@ const renderKeys = (instrument, screenSize) => {
   }
 
   chart.innerHTML += keyMain;
+
+  let svgKeyLh1 = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  svgKeyLh1.classList.add("key-target");
+  svgKeyLh1.setAttributeNS(null, "id", "key-lh-1");
+  svgKeyLh1.setAttributeNS(null, "height", "40");
+  svgKeyLh1.setAttributeNS(null, "width", keySize.mainRound.mainWidth);
+
+  svgKeyLh1.innerHTML = `
+  <circle cx="${keySize.mainRound.cx}" cy="${keySize.mainRound.cy}" r="${keySize.mainRound.r}" stroke="${keySize.stroke}" stroke-width="${keySize.strokeWidthMain}" fill="${keySize.fill}" />
+  Sorry, your browser does not support inline SVG.
+  `;
+  console.log(chart);
+  chart.appendChild(svgKeyLh1);
 };
