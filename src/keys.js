@@ -126,6 +126,8 @@ const mainKeyIds = [
   "key-rh-3",
 ];
 
+const fluteKeys = [{ id: "key-th-bflat" }, { id: "key-th" }];
+
 const renderKeys = (instrument, screenSize) => {
   const keySize = screenSize === "large" ? keysLargeKeys : keysSmallKeys;
 
