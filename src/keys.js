@@ -126,7 +126,23 @@ const mainKeyIds = [
   "key-rh-3",
 ];
 
-const fluteKeys = [{ id: "key-th-bflat" }, { id: "key-th" }];
+const keysFlutePiccolo = [
+  { id: "key-th-bflat" },
+  { id: "key-th" },
+  { id: "key-lh-1" },
+  { id: "key-lh-2" },
+  { id: "key-lh-3" },
+  { id: "key-lh-4" },
+  { id: "key-rh-1" },
+  { id: "key-rh-tr1" },
+  { id: "key-rh-2" },
+  { id: "key-rh-tr2" },
+  { id: "key-rh-3" },
+  { id: "key-rh-pinky" },
+  { id: "key-rh-broll" },
+  { id: "key-rh-croll" },
+  { id: "key-rh-csharp" },
+];
 
 const renderKeys = (instrument, screenSize) => {
   const keySize = screenSize === "large" ? keysLargeKeys : keysSmallKeys;
