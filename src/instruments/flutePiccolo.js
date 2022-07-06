@@ -117,26 +117,17 @@ const keysSmallKeys = {
   },
 };
 
-const mainKeyIds = [
-  "key-lh-1",
-  "key-lh-2",
-  "key-lh-3",
-  "key-rh-1",
-  "key-rh-2",
-  "key-rh-3",
-];
-
 const keyOrder = [
-  { id: "key-th-bflat" },
-  { id: "key-th" },
+  { id: "key-th-bflat", classes: ["key-item", "key-lower"] },
+  { id: "key-th", classes: ["key-item", "key-lower"] },
   { id: "key-lh-1" },
   { id: "key-lh-2" },
   { id: "key-lh-3" },
   { id: "key-lh-4" },
   { id: "key-rh-1" },
-  { id: "key-rh-tr1" },
+  { id: "key-rh-tr1", classes: ["key-item", "key-lower"] },
   { id: "key-rh-2" },
-  { id: "key-rh-tr2" },
+  { id: "key-rh-tr2", classes: ["key-item", "key-lower"] },
   { id: "key-rh-3" },
   { id: "key-rh-pinky" },
   { id: "key-rh-broll" },
