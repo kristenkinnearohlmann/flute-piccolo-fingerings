@@ -143,9 +143,13 @@ const keysFlutePiccolo = (instrument, screenSize) => {
     : (keySize.stroke = "black");
 
   let finalChart = document.createElement("div");
+  let keyDiv;
 
-  keyOrder.forEach((key) => {
+  keyOrder.forEach((key, index) => {
     console.log(key);
+    let keyDiv = document.createElement("div");
+    keyDiv.innerHTML = `<span>${key.id} is item number ${index}</span>`;
+    finalChart.appendChild(keyDiv);
   });
 
   console.log(finalChart);
