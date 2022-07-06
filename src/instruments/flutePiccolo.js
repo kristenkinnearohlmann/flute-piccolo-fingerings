@@ -126,7 +126,7 @@ const mainKeyIds = [
   "key-rh-3",
 ];
 
-const keysFlutePiccoloIds = [
+const keyOrder = [
   { id: "key-th-bflat" },
   { id: "key-th" },
   { id: "key-lh-1" },
