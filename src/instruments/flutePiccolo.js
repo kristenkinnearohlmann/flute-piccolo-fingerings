@@ -118,21 +118,21 @@ const keysSmallKeys = {
 };
 
 const keyOrder = [
-  { id: "key-th-bflat", classes: ["key-item", "key-lower"] },
-  { id: "key-th", classes: ["key-item", "key-lower"] },
-  { id: "key-lh-1", classes: ["key-item"] },
-  { id: "key-lh-2", classes: ["key-item"] },
-  { id: "key-lh-3", classes: ["key-item"] },
-  { id: "key-lh-4", classes: ["key-item"] },
-  { id: "key-rh-1", classes: ["key-item"] },
-  { id: "key-rh-tr1", classes: ["key-item", "key-lower"] },
-  { id: "key-rh-2", classes: ["key-item"] },
-  { id: "key-rh-tr2", classes: ["key-item", "key-lower"] },
-  { id: "key-rh-3", classes: ["key-item"] },
-  { id: "key-rh-pinky", classes: ["key-item"] },
-  { id: "key-rh-broll", classes: ["key-item", "key-item-roller"] },
-  { id: "key-rh-croll", classes: ["key-item", "key-item-roller"] },
-  { id: "key-rh-csharp", classes: ["key-item"] },
+  { id: "key-th-bflat", classNames: ["key-item", "key-lower"] },
+  { id: "key-th", classNames: ["key-item", "key-lower"] },
+  { id: "key-lh-1", classNames: ["key-item"], keyType: "main" },
+  { id: "key-lh-2", classNames: ["key-item"], keyType: "main" },
+  { id: "key-lh-3", classNames: ["key-item"], keyType: "main" },
+  { id: "key-lh-4", classNames: ["key-item"] },
+  { id: "key-rh-1", classNames: ["key-item"], keyType: "main" },
+  { id: "key-rh-tr1", classNames: ["key-item", "key-lower"] },
+  { id: "key-rh-2", classNames: ["key-item"], keyType: "main" },
+  { id: "key-rh-tr2", classNames: ["key-item", "key-lower"] },
+  { id: "key-rh-3", classNames: ["key-item"], keyType: "main" },
+  { id: "key-rh-pinky", classNames: ["key-item"] },
+  { id: "key-rh-broll", classNames: ["key-item", "key-item-roller"] },
+  { id: "key-rh-croll", classNames: ["key-item", "key-item-roller"] },
+  { id: "key-rh-csharp", classNames: ["key-item"] },
 ];
 
 const keysFlutePiccolo = (instrument, screenSize) => {
@@ -146,9 +146,21 @@ const keysFlutePiccolo = (instrument, screenSize) => {
   let keyDiv;
 
   keyOrder.forEach((key, index) => {
-    console.log(key);
     let keyDiv = document.createElement("div");
-    keyDiv.innerHTML = `<span>${key.id} is item number ${index}</span>`;
+    key.classNames.forEach((className) => {
+      keyDiv.classList.add(className);
+    });
+    if (key.keyType === "main") {
+      keyDiv.innerHTML = `
+        <svg class="key-target" id="key-lh-1" height="40" width="${keySize.mainRound.mainWidth}">
+            <circle cx="${keySize.mainRound.cx}" cy="${keySize.mainRound.cy}" r="${keySize.mainRound.r}" stroke="${keySize.stroke}" stroke-width="${keySize.strokeWidthMain}" fill="${keySize.fill}" />
+        Sorry, your browser does not support inline SVG.
+        </svg>
+    `;
+    } else {
+      keyDiv.innerHTML = `<span>${key.id} is item number ${index}</span>`;
+    }
+
     finalChart.appendChild(keyDiv);
   });
 
