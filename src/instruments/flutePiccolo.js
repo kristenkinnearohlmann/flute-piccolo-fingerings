@@ -144,6 +144,18 @@ const keyOrder = [
   { id: "key-rh-csharp" },
 ];
 
+const keyDivOpen = `
+<div class="key-item">
+`;
+
+const keyLowerDivOpen = `
+<div class="key-item key-lower">
+`;
+
+const keyRollerDivOpen = `
+<div class="key-item key-item-roller">
+`;
+
 const keysFlutePiccolo = (instrument, screenSize) => {
   const keySize = screenSize === "large" ? keysLargeKeys : keysSmallKeys;
 
@@ -151,17 +163,29 @@ const keysFlutePiccolo = (instrument, screenSize) => {
     ? (keySize.stroke = "silver")
     : (keySize.stroke = "black");
 
+  let finalChart = document.createElement("div");
+
+  keyOrder.forEach((key) => {
+    console.log(key);
+  });
+
   let keyDiv = document.createElement("div");
   keyDiv.classList.add("key-item");
 
-  let keyMain = `
-    <div class="key-item">
-      <svg class="key-target" id="key-lh-100" height="40" width="${keySize.mainRound.mainWidth}">
-          <circle cx="${keySize.mainRound.cx}" cy="${keySize.mainRound.cy}" r="${keySize.mainRound.r}" stroke="${keySize.stroke}" stroke-width="${keySize.strokeWidthMain}" fill="${keySize.fill}" />
-          Sorry, your browser does not support inline SVG.
-      </svg>
-  </div>
-    `;
+  keyDiv.innerHTML = "<span>Hello my friend, hello</span>";
+
+  finalChart.appendChild(keyDiv);
+
+  console.log(keyDiv);
+
+  keyDiv.classList.add("key-lower");
+  keyDiv.innerHTML = "<span>New edit</span>";
+
+  console.log(keyDiv);
+
+  finalChart.appendChild(keyDiv);
+
+  console.log(finalChart);
 
   // keyLh1
 
@@ -282,8 +306,6 @@ const keysFlutePiccolo = (instrument, screenSize) => {
     keyRhBRoller.innerHTML = "";
     keyRhCRoller.innerHTML = "";
   }
-
-  chart.innerHTML += keyMain;
 
   let svgKeyLh1 = document.createElementNS("http://www.w3.org/2000/svg", "svg");
   svgKeyLh1.classList.add("key-target");
