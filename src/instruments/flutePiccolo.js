@@ -120,32 +120,20 @@ const keysSmallKeys = {
 const keyOrder = [
   { id: "key-th-bflat", classes: ["key-item", "key-lower"] },
   { id: "key-th", classes: ["key-item", "key-lower"] },
-  { id: "key-lh-1" },
-  { id: "key-lh-2" },
-  { id: "key-lh-3" },
-  { id: "key-lh-4" },
-  { id: "key-rh-1" },
+  { id: "key-lh-1", classes: ["key-item"] },
+  { id: "key-lh-2", classes: ["key-item"] },
+  { id: "key-lh-3", classes: ["key-item"] },
+  { id: "key-lh-4", classes: ["key-item"] },
+  { id: "key-rh-1", classes: ["key-item"] },
   { id: "key-rh-tr1", classes: ["key-item", "key-lower"] },
-  { id: "key-rh-2" },
+  { id: "key-rh-2", classes: ["key-item"] },
   { id: "key-rh-tr2", classes: ["key-item", "key-lower"] },
-  { id: "key-rh-3" },
-  { id: "key-rh-pinky" },
-  { id: "key-rh-broll" },
-  { id: "key-rh-croll" },
-  { id: "key-rh-csharp" },
+  { id: "key-rh-3", classes: ["key-item"] },
+  { id: "key-rh-pinky", classes: ["key-item"] },
+  { id: "key-rh-broll", classes: ["key-item", "key-item-roller"] },
+  { id: "key-rh-croll", classes: ["key-item", "key-item-roller"] },
+  { id: "key-rh-csharp", classes: ["key-item"] },
 ];
-
-const keyDivOpen = `
-<div class="key-item">
-`;
-
-const keyLowerDivOpen = `
-<div class="key-item key-lower">
-`;
-
-const keyRollerDivOpen = `
-<div class="key-item key-item-roller">
-`;
 
 const keysFlutePiccolo = (instrument, screenSize) => {
   const keySize = screenSize === "large" ? keysLargeKeys : keysSmallKeys;
@@ -160,34 +148,7 @@ const keysFlutePiccolo = (instrument, screenSize) => {
     console.log(key);
   });
 
-  let keyDiv = document.createElement("div");
-  keyDiv.classList.add("key-item");
-
-  keyDiv.innerHTML = "<span>Hello my friend, hello</span>";
-
-  finalChart.appendChild(keyDiv);
-
-  console.log(keyDiv);
-
-  keyDiv.classList.add("key-lower");
-  keyDiv.innerHTML = "<span>New edit</span>";
-
-  console.log(keyDiv);
-
-  finalChart.appendChild(keyDiv);
-
   console.log(finalChart);
-
-  // keyLh1
-
-  /*
-    <div class="key-item">
-    <svg class="key-target" id="key-lh-1" height="40" width="${keySize.mainRound.mainWidth}">
-        <circle cx="${keySize.mainRound.cx}" cy="${keySize.mainRound.cy}" r="${keySize.mainRound.r}" stroke="${keySize.stroke}" stroke-width="${keySize.strokeWidthMain}" fill="${keySize.fill}" />
-        Sorry, your browser does not support inline SVG.
-    </svg>
-  </div>
-  */
 
   const keySetup = `
           <div class="key-item key-lower">
