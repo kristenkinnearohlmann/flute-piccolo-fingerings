@@ -143,7 +143,6 @@ const keysFlutePiccolo = (instrument, screenSize) => {
     : (keySize.stroke = "black");
 
   let finalChart = document.createElement("div");
-  let keyDiv;
 
   keyOrder.forEach((key, index) => {
     let keyDiv = document.createElement("div");
