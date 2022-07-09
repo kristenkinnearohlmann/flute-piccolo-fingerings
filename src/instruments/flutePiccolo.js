@@ -149,6 +149,13 @@ const keysFlutePiccolo = (instrument, screenSize) => {
     key.classNames.forEach((className) => {
       keyDiv.classList.add(className);
     });
+
+    switch (key.keyType) {
+      case "main":
+        console.log("main");
+      default:
+        console.log(key.keyType);
+    }
     if (key.keyType === "main") {
       keyDiv.innerHTML = `
         <svg class="key-target" id="key-lh-1" height="40" width="${keySize.mainRound.mainWidth}">
