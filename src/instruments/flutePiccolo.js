@@ -118,21 +118,33 @@ const keysSmallKeys = {
 };
 
 const keyOrder = [
-  { id: "key-th-bflat", classNames: ["key-item", "key-lower"] },
-  { id: "key-th", classNames: ["key-item", "key-lower"] },
+  {
+    id: "key-th-bflat",
+    classNames: ["key-item", "key-lower"],
+    keyType: "thumb1",
+  },
+  { id: "key-th", classNames: ["key-item", "key-lower"], keyType: "thumb2" },
   { id: "key-lh-1", classNames: ["key-item"], keyType: "main" },
   { id: "key-lh-2", classNames: ["key-item"], keyType: "main" },
   { id: "key-lh-3", classNames: ["key-item"], keyType: "main" },
-  { id: "key-lh-4", classNames: ["key-item"] },
+  { id: "key-lh-4", classNames: ["key-item"], keyType: "leftPinky" },
   { id: "key-rh-1", classNames: ["key-item"], keyType: "main" },
-  { id: "key-rh-tr1", classNames: ["key-item", "key-lower"] },
+  { id: "key-rh-tr1", classNames: ["key-item", "key-lower"], keyType: "trill" },
   { id: "key-rh-2", classNames: ["key-item"], keyType: "main" },
-  { id: "key-rh-tr2", classNames: ["key-item", "key-lower"] },
+  { id: "key-rh-tr2", classNames: ["key-item", "key-lower"], keyType: "trill" },
   { id: "key-rh-3", classNames: ["key-item"], keyType: "main" },
-  { id: "key-rh-pinky", classNames: ["key-item"] },
-  { id: "key-rh-broll", classNames: ["key-item", "key-item-roller"] },
-  { id: "key-rh-croll", classNames: ["key-item", "key-item-roller"] },
-  { id: "key-rh-csharp", classNames: ["key-item"] },
+  { id: "key-rh-pinky", classNames: ["key-item"], keyType: "rightPinky" },
+  {
+    id: "key-rh-broll",
+    classNames: ["key-item", "key-item-roller"],
+    keyType: "roller",
+  },
+  {
+    id: "key-rh-croll",
+    classNames: ["key-item", "key-item-roller"],
+    keyType: "roller",
+  },
+  { id: "key-rh-csharp", classNames: ["key-item"], keyType: "footKey" },
 ];
 
 const keysFlutePiccolo = (instrument, screenSize) => {
@@ -145,32 +157,32 @@ const keysFlutePiccolo = (instrument, screenSize) => {
   let finalChart = document.createElement("div");
 
   keyOrder.forEach((key, index) => {
-    let keyDiv = document.createElement("div");
-    key.classNames.forEach((className) => {
-      keyDiv.classList.add(className);
-    });
-
+    //   let keyDiv = document.createElement("div");
+    //   key.classNames.forEach((className) => {
+    //     keyDiv.classList.add(className);
+    //   });
     switch (key.keyType) {
       case "main":
         console.log("main");
+        break;
       default:
         console.log(key.keyType);
     }
-    if (key.keyType === "main") {
-      keyDiv.innerHTML = `
-        <svg class="key-target" id="key-lh-1" height="40" width="${keySize.mainRound.mainWidth}">
-            <circle cx="${keySize.mainRound.cx}" cy="${keySize.mainRound.cy}" r="${keySize.mainRound.r}" stroke="${keySize.stroke}" stroke-width="${keySize.strokeWidthMain}" fill="${keySize.fill}" />
-        Sorry, your browser does not support inline SVG.
-        </svg>
-    `;
-    } else {
-      keyDiv.innerHTML = `<span>${key.id} is item number ${index}</span>`;
-    }
+    // if (key.keyType === "main") {
+    //   keyDiv.innerHTML = `
+    //     <svg class="key-target" id="key-lh-1" height="40" width="${keySize.mainRound.mainWidth}">
+    //         <circle cx="${keySize.mainRound.cx}" cy="${keySize.mainRound.cy}" r="${keySize.mainRound.r}" stroke="${keySize.stroke}" stroke-width="${keySize.strokeWidthMain}" fill="${keySize.fill}" />
+    //     Sorry, your browser does not support inline SVG.
+    //     </svg>
+    // `;
+    // } else {
+    //   keyDiv.innerHTML = `<span>${key.id} is item number ${index}</span>`;
+    // }
 
-    finalChart.appendChild(keyDiv);
+    // finalChart.appendChild(keyDiv);
   });
 
-  console.log(finalChart);
+  // console.log(finalChart);
 
   const keySetup = `
           <div class="key-item key-lower">
