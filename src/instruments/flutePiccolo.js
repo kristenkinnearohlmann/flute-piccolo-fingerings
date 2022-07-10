@@ -184,6 +184,11 @@ const keysFlutePiccolo = (instrument, screenSize) => {
 
   // console.log(finalChart);
 
+  let mainRoundHeight = 40;
+  console.log(screenSize);
+
+  mainRoundHeight = screenSize === "small" ? mainRoundHeight * 0.85 : 40;
+
   const keySetup = `
           <div class="key-item key-lower">
               <svg class="key-target" id="key-th-bflat" height="63" width="${keySize.thumb1.mainWidth}">
@@ -198,7 +203,7 @@ const keysFlutePiccolo = (instrument, screenSize) => {
               </svg>
           </div>
           <div class="key-item">
-              <svg class="key-target" id="key-lh-1" height="40" width="${keySize.mainRound.mainWidth}">
+              <svg class="key-target" id="key-lh-1" height="${mainRoundHeight}" width="${keySize.mainRound.mainWidth}">
                   <circle cx="${keySize.mainRound.cx}" cy="${keySize.mainRound.cy}" r="${keySize.mainRound.r}" stroke="${keySize.stroke}" stroke-width="${keySize.strokeWidthMain}" fill="${keySize.fill}" />
                   Sorry, your browser does not support inline SVG.
               </svg>
