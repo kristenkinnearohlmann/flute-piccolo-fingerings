@@ -398,3 +398,11 @@ const renderPiccoloKeys = (instrument, screenSize) => {
   console.log("Reached piccolo");
   keysFlutePiccolo(instrument, screenSize);
 };
+
+const renderCommonKeys = () => {
+  // left thumb keys
+  // main keys
+  // left pinky
+  // trill keys
+  // right pinky
+};
