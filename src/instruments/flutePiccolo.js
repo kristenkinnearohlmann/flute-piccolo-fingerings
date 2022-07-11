@@ -383,7 +383,18 @@ const keysFlutePiccolo = (instrument, screenSize) => {
   }
 };
 
+const renderFlutePiccoloKeys = (instrument, screenSize) => {
+  instrument === "flute"
+    ? renderFluteKeys(instrument, screenSize)
+    : renderPiccoloKeys(instrument, screenSize);
+};
+
 const renderFluteKeys = (instrument, screenSize) => {
   console.log("Reached flute");
+  keysFlutePiccolo(instrument, screenSize);
+};
+
+const renderPiccoloKeys = (instrument, screenSize) => {
+  console.log("Reached piccolo");
   keysFlutePiccolo(instrument, screenSize);
 };
