@@ -391,11 +391,13 @@ const renderFlutePiccoloKeys = (instrument, screenSize) => {
 
 const renderFluteKeys = (instrument, screenSize) => {
   console.log("Reached flute");
+  keySize.stroke = "silver";
   keysFlutePiccolo(instrument, screenSize);
 };
 
 const renderPiccoloKeys = (instrument, screenSize) => {
   console.log("Reached piccolo");
+  keySize.stroke = "black";
   keysFlutePiccolo(instrument, screenSize);
 };
 
