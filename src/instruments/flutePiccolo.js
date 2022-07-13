@@ -1,3 +1,4 @@
+let screenSizeFactor = 0.85;
 const keysLargeKeys = {
   stroke: "silver",
   fill: "none",
