@@ -1,6 +1,7 @@
-let screenSizeFactor = 1;
+let screenSizeFactor;
 let keySize;
 let keyStrokeColor;
+let finalChart = document.createElement("div");
 const keysLargeKeys = {
   stroke: "silver",
   fill: "none",
@@ -150,14 +151,14 @@ const keyOrder = [
   { id: "key-rh-csharp", classNames: ["key-item"], keyType: "footKey" },
 ];
 
-const keysFlutePiccolo = (instrument, screenSize) => {
+const keysFlutePiccolo1 = (instrument, screenSize) => {
   const keySize = screenSize === "large" ? keysLargeKeys : keysSmallKeys;
 
   instrument === "flute"
     ? (keySize.stroke = "silver")
     : (keySize.stroke = "black");
 
-  let finalChart = document.createElement("div");
+  // let finalChart = document.createElement("div");
 
   keyOrder.forEach((key, index) => {
     //   let keyDiv = document.createElement("div");
@@ -412,10 +413,10 @@ const renderCommonKeys = () => {
 
 const renderFluteKeys = (instrument, screenSize) => {
   console.log("Reached flute");
-  keysFlutePiccolo(instrument, screenSize);
+  keysFlutePiccolo1(instrument, screenSize);
 };
 
 const renderPiccoloKeys = (instrument, screenSize) => {
   console.log("Reached piccolo");
-  keysFlutePiccolo(instrument, screenSize);
+  keysFlutePiccolo1(instrument, screenSize);
 };
