@@ -391,15 +391,14 @@ const renderFlutePiccoloKeys = (instrument, screenSize) => {
   keySize = screenSize === "large" ? keysLargeKeys : keysSmallKeys;
   screenSizeFactor = screenSize === "large" ? 1 : 0.85;
 
-  switch (instrument) {
-    case "flute":
-      keyStrokeColor = "silver";
-      renderFluteKeys(instrument, screenSize);
-      break;
-    case "piccolo":
-      keyStrokeColor = "black";
-      renderPiccoloKeys(instrument, screenSize);
-      break;
+  if (instrument === "flute") {
+    keyStrokeColor = "silver";
+    renderFluteKeys(instrument, screenSize);
+  }
+
+  if (instrument === "piccolo") {
+    keyStrokeColor = "black";
+    renderPiccoloKeys(instrument, screenSize);
   }
 };
 
