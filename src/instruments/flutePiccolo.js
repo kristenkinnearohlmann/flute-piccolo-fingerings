@@ -2,6 +2,7 @@ let screenSizeFactor;
 let keySize;
 let keyStrokeColor;
 let finalChart = document.createElement("div");
+let keyFill = "none";
 const keysLargeKeys = {
   stroke: "silver",
   fill: "none",
@@ -22,6 +23,7 @@ const keysLargeKeys = {
     keyWidth: 20,
   },
   mainRound: {
+    mainHeight: 40,
     mainWidth: 40,
     cx: 20,
     cy: 20,
@@ -393,18 +395,43 @@ const renderFlutePiccoloKeys = (instrument, screenSize) => {
 
   if (instrument === "flute") {
     keyStrokeColor = "silver";
+    renderCommonKeys();
     renderFluteKeys(instrument, screenSize);
+    chart.innerHTML += finalChart.innerHTML;
   }
 
   if (instrument === "piccolo") {
     keyStrokeColor = "black";
+    renderCommonKeys();
     renderPiccoloKeys(instrument, screenSize);
   }
+};
+
+const renderKeysFlutePiccoloMain = () => {
+  let keyDiv = document.createElement("div");
+  keyDiv.classList.add("key-item");
+  keyDiv.innerHTML = `
+  <svg class="key-target" id="key-lh-1" height="${
+    keySize.mainRound.mainHeight * screenSizeFactor
+  }" width="${keySize.mainRound.mainWidth * screenSizeFactor}">
+      <circle cx="${keySize.mainRound.cx * screenSizeFactor}" cy="${
+    keySize.mainRound.cy * screenSizeFactor
+  }" r="${keySize.mainRound.r * screenSizeFactor}" stroke="${
+    keySize.stroke
+  }" stroke-width="${
+    keySize.strokeWidthMain * screenSizeFactor
+  }" fill="${keyFill}" />
+      Sorry, your browser does not support inline SVG.
+  </svg>
+`;
+  console.log(keyDiv);
+  return keyDiv;
 };
 
 const renderCommonKeys = () => {
   // left thumb keys
   // main keys
+  finalChart.appendChild(renderKeysFlutePiccoloMain());
   // left pinky
   // trill keys
   // right pinky
