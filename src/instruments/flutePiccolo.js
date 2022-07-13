@@ -1,4 +1,6 @@
 let screenSizeFactor = 1;
+let keySize;
+let keyStrokeColor;
 const keysLargeKeys = {
   stroke: "silver",
   fill: "none",
@@ -385,23 +387,19 @@ const keysFlutePiccolo = (instrument, screenSize) => {
 };
 
 const renderFlutePiccoloKeys = (instrument, screenSize) => {
-  instrument === "flute"
-    ? renderFluteKeys(instrument, screenSize)
-    : renderPiccoloKeys(instrument, screenSize);
-};
-
-const renderFluteKeys = (instrument, screenSize) => {
-  console.log("Reached flute");
-  keySize.stroke = "silver";
+  keySize = screenSize === "large" ? keysLargeKeys : keysSmallKeys;
   screenSizeFactor = screenSize === "large" ? 1 : 0.85;
-  keysFlutePiccolo(instrument, screenSize);
-};
 
-const renderPiccoloKeys = (instrument, screenSize) => {
-  console.log("Reached piccolo");
-  keySize.stroke = "black";
-  screenSizeFactor = screenSize === "large" ? 1 : 0.85;
-  keysFlutePiccolo(instrument, screenSize);
+  switch (instrument) {
+    case "flute":
+      keyStrokeColor = "silver";
+      renderFluteKeys(instrument, screenSize);
+      break;
+    case "piccolo":
+      keyStrokeColor = "black";
+      renderPiccoloKeys(instrument, screenSize);
+      break;
+  }
 };
 
 const renderCommonKeys = () => {
@@ -410,4 +408,14 @@ const renderCommonKeys = () => {
   // left pinky
   // trill keys
   // right pinky
+};
+
+const renderFluteKeys = (instrument, screenSize) => {
+  console.log("Reached flute");
+  keysFlutePiccolo(instrument, screenSize);
+};
+
+const renderPiccoloKeys = (instrument, screenSize) => {
+  console.log("Reached piccolo");
+  keysFlutePiccolo(instrument, screenSize);
 };
