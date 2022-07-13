@@ -1,4 +1,4 @@
-let screenSizeFactor = 0.85;
+let screenSizeFactor = 1;
 const keysLargeKeys = {
   stroke: "silver",
   fill: "none",
@@ -393,12 +393,14 @@ const renderFlutePiccoloKeys = (instrument, screenSize) => {
 const renderFluteKeys = (instrument, screenSize) => {
   console.log("Reached flute");
   keySize.stroke = "silver";
+  screenSizeFactor = screenSize === "large" ? 1 : 0.85;
   keysFlutePiccolo(instrument, screenSize);
 };
 
 const renderPiccoloKeys = (instrument, screenSize) => {
   console.log("Reached piccolo");
   keySize.stroke = "black";
+  screenSizeFactor = screenSize === "large" ? 1 : 0.85;
   keysFlutePiccolo(instrument, screenSize);
 };
 
