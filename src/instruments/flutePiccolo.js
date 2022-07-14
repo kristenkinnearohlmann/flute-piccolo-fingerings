@@ -1,3 +1,4 @@
+let keyDiv;
 let screenSizeFactor;
 let keySize;
 let keyStrokeColor;
@@ -408,7 +409,7 @@ const renderFlutePiccoloKeys = (instrument, screenSize) => {
 };
 
 const renderKeysFlutePiccoloMain = () => {
-  let keyDiv = document.createElement("div");
+  keyDiv = document.createElement("div");
   keyDiv.classList.add("key-item");
   keyDiv.innerHTML = `
   <svg class="key-target" id="key-lh-1" height="${
