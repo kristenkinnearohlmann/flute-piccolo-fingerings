@@ -2,7 +2,8 @@ let keyDiv;
 let screenSizeFactor;
 let keySize;
 let keyStrokeColor;
-let finalChart = document.createElement("div");
+// let finalChart = document.createElement("div");
+let finalChart;
 let keyFill = "none";
 const keysLargeKeys = {
   stroke: "silver",
@@ -391,8 +392,10 @@ const keysFlutePiccolo1 = (instrument, screenSize) => {
 };
 
 const renderFlutePiccoloKeys = (instrument, screenSize) => {
-  keySize = screenSize === "large" ? keysLargeKeys : keysSmallKeys;
+  // TODO: Re-create size object as size agnostic, using calculation
+  keySize = keysLargeKeys;
   screenSizeFactor = screenSize === "large" ? 1 : 0.85;
+  finalChart = document.createElement("div");
 
   if (instrument === "flute") {
     keyStrokeColor = "silver";
