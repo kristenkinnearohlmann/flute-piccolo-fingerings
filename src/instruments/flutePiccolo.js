@@ -408,11 +408,11 @@ const renderFlutePiccoloKeys = (instrument, screenSize) => {
   }
 };
 
-const renderKeysFlutePiccoloMain = () => {
+const renderKeysFlutePiccoloMain = (keyId) => {
   keyDiv = document.createElement("div");
   keyDiv.classList.add("key-item");
   keyDiv.innerHTML = `
-  <svg class="key-target" id="key-lh-1" height="${
+  <svg class="key-target" id="${keyId}" height="${
     keySize.mainRound.mainHeight * screenSizeFactor
   }" width="${keySize.mainRound.mainWidth * screenSizeFactor}">
       <circle cx="${keySize.mainRound.cx * screenSizeFactor}" cy="${
@@ -432,7 +432,9 @@ const renderKeysFlutePiccoloMain = () => {
 const renderCommonKeys = () => {
   // left thumb keys
   // main keys
-  finalChart.appendChild(renderKeysFlutePiccoloMain());
+  finalChart.appendChild(renderKeysFlutePiccoloMain("key-lh-1"));
+  finalChart.appendChild(renderKeysFlutePiccoloMain("key-lh-2"));
+  finalChart.appendChild(renderKeysFlutePiccoloMain("key-lh-3"));
   // left pinky
   // trill keys
   // right pinky
