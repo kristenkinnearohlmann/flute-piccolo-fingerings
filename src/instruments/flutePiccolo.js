@@ -37,6 +37,7 @@ const keysLargeKeys = {
     d: "M 10 10 h 20 v 40 h -5 v -28 h -15 v -12",
   },
   trill: {
+    mainHeight: 63,
     mainWidth: 18,
     cx: 9,
     cy: 24,
@@ -312,36 +313,6 @@ const keysFlutePiccolo1 = (instrument, screenSize) => {
   //     `;
   const keySetup = `
   <div class="key-item">
-      <svg class="key-target" id="key-rh-1" height="40" width="${keySize.mainRound.mainWidth}">
-          <circle cx="${keySize.mainRound.cx}" cy="${keySize.mainRound.cy}" r="${keySize.mainRound.r}" stroke="${keySize.stroke}" stroke-width="${keySize.strokeWidthMain}" fill="${keySize.fill}" />
-          Sorry, your browser does not support inline SVG.
-      </svg>
-  </div>
-  <div class="key-item key-lower">
-      <svg class="key-target" id="key-rh-tr1" height="63" width="${keySize.trill.mainWidth}">
-          <ellipse cx="${keySize.trill.cx}" cy="${keySize.trill.cy}" rx="${keySize.trill.rx}" ry="${keySize.trill.ry}" stroke="${keySize.stroke}" stroke-width="${keySize.strokeWidthAux}" fill="${keySize.fill}" />
-          Sorry, your browser does not support inline SVG.
-      </svg>
-  </div>
-  <div class="key-item">
-      <svg class="key-target" id="key-rh-2" height="40" width="${keySize.mainRound.mainWidth}">
-          <circle cx="${keySize.mainRound.cx}" cy="${keySize.mainRound.cy}" r="${keySize.mainRound.r}" stroke="${keySize.stroke}" stroke-width="${keySize.strokeWidthMain}" fill="${keySize.fill}" />
-          Sorry, your browser does not support inline SVG.
-      </svg>
-  </div>
-  <div class="key-item key-lower">
-      <svg class="key-target" id="key-rh-tr2" height="63" width="${keySize.trill.mainWidth}">
-          <ellipse cx="${keySize.trill.cx}" cy="${keySize.trill.cy}" rx="${keySize.trill.rx}" ry="${keySize.trill.ry}" stroke="${keySize.stroke}" stroke-width="${keySize.strokeWidthAux}" fill="${keySize.fill}" />
-          Sorry, your browser does not support inline SVG.
-      </svg>
-  </div>
-  <div class="key-item">
-      <svg class="key-target" id="key-rh-3" height="40" width="${keySize.mainRound.mainWidth}">
-          <circle cx="${keySize.mainRound.cx}" cy="${keySize.mainRound.cy}" r="${keySize.mainRound.r}" stroke="${keySize.stroke}" stroke-width="${keySize.strokeWidthMain}" fill="${keySize.fill}" />
-          Sorry, your browser does not support inline SVG.
-      </svg>
-  </div>
-  <div class="key-item">
       <svg class="key-target" id="key-rh-pinky" height="40" width="${keySize.rightPinky.mainWidth}">
       <ellipse cx="${keySize.rightPinky.cx}" cy="${keySize.rightPinky.cy}" rx="${keySize.rightPinky.rx}" ry="${keySize.rightPinky.ry}" stroke="${keySize.stroke}" stroke-width="${keySize.strokeWidthAux}" fill="${keySize.fill}" />
       Sorry, your browser does not support inline SVG.
@@ -496,6 +467,27 @@ const renderKeysFlutePiccoloLeftPinky = (keyId, keyItem) => {
   return keyItem;
 };
 
+// trill
+const renderKeysFlutePiccoloTrill = (keyId, keyItem) => {
+  keyItem.classList.add("key-lower");
+  keyItem.innerHTML = `
+    <svg class="key-target" id="${keyId}" height="${
+    keySize.trill.mainHeight * screenSizeFactor
+  }" width="${keySize.trill.mainWidth * screenSizeFactor}">
+        <ellipse cx="${keySize.trill.cx * screenSizeFactor}" cy="${
+    keySize.trill.cy * screenSizeFactor
+  }" rx="${keySize.trill.rx * screenSizeFactor}" ry="${
+    keySize.trill.ry * screenSizeFactor
+  }" stroke="${keySize.stroke}" stroke-width="${
+    keySize.strokeWidthAux * screenSizeFactor
+  }" fill="${keySize.fill}" />
+        Sorry, your browser does not support inline SVG.
+    </svg>
+  `;
+  console.log(keyItem);
+  return keyItem;
+};
+
 const renderCommonKeys = () => {
   // left thumb keys
   finalChart.appendChild(
@@ -523,11 +515,17 @@ const renderCommonKeys = () => {
     renderKeysFlutePiccoloMain("key-rh-1", createKeyItem())
   );
   // trill 1
+  finalChart.appendChild(
+    renderKeysFlutePiccoloTrill("key-rh-tr1", createKeyItem())
+  );
   // right main 2
   finalChart.appendChild(
     renderKeysFlutePiccoloMain("key-rh-2", createKeyItem())
   );
   // trill 2
+  finalChart.appendChild(
+    renderKeysFlutePiccoloTrill("key-rh-tr2", createKeyItem())
+  );
   // right main 3
   finalChart.appendChild(
     renderKeysFlutePiccoloMain("key-rh-3", createKeyItem())
@@ -545,11 +543,6 @@ const renderPiccoloKeys = (instrument, screenSize) => {
   keysFlutePiccolo1(instrument, screenSize);
 };
 
-// { id: "key-rh-1", classNames: ["key-item"], keyType: "main" },
-// { id: "key-rh-tr1", classNames: ["key-item", "key-lower"], keyType: "trill" },
-// { id: "key-rh-2", classNames: ["key-item"], keyType: "main" },
-// { id: "key-rh-tr2", classNames: ["key-item", "key-lower"], keyType: "trill" },
-// { id: "key-rh-3", classNames: ["key-item"], keyType: "main" },
 // { id: "key-rh-pinky", classNames: ["key-item"], keyType: "rightPinky" },
 // {
 //   id: "key-rh-broll",
