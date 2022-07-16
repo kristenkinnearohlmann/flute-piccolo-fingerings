@@ -124,36 +124,6 @@ const keysSmallKeys = {
   },
 };
 
-// const keyOrder = [
-//   {
-//     id: "key-th-bflat",
-//     classNames: ["key-item", "key-lower"],
-//     keyType: "thumb1",
-//   },
-//   { id: "key-th", classNames: ["key-item", "key-lower"], keyType: "thumb2" },
-//   { id: "key-lh-1", classNames: ["key-item"], keyType: "main" },
-//   { id: "key-lh-2", classNames: ["key-item"], keyType: "main" },
-//   { id: "key-lh-3", classNames: ["key-item"], keyType: "main" },
-//   { id: "key-lh-4", classNames: ["key-item"], keyType: "leftPinky" },
-//   { id: "key-rh-1", classNames: ["key-item"], keyType: "main" },
-//   { id: "key-rh-tr1", classNames: ["key-item", "key-lower"], keyType: "trill" },
-//   { id: "key-rh-2", classNames: ["key-item"], keyType: "main" },
-//   { id: "key-rh-tr2", classNames: ["key-item", "key-lower"], keyType: "trill" },
-//   { id: "key-rh-3", classNames: ["key-item"], keyType: "main" },
-//   { id: "key-rh-pinky", classNames: ["key-item"], keyType: "rightPinky" },
-//   {
-//     id: "key-rh-broll",
-//     classNames: ["key-item", "key-item-roller"],
-//     keyType: "roller",
-//   },
-//   {
-//     id: "key-rh-croll",
-//     classNames: ["key-item", "key-item-roller"],
-//     keyType: "roller",
-//   },
-//   { id: "key-rh-csharp", classNames: ["key-item"], keyType: "footKey" },
-// ];
-
 const keysFlutePiccolo1 = (instrument, screenSize) => {
   const keySize = screenSize === "large" ? keysLargeKeys : keysSmallKeys;
 
