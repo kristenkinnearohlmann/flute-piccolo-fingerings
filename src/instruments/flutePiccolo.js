@@ -9,6 +9,7 @@ const keysLargeKeys = {
   strokeWidthMain: 3,
   strokeWidthAux: 2,
   thumb1: {
+    mainHeight: 63,
     mainWidth: 18,
     x: 6,
     y: 25,
@@ -357,23 +358,25 @@ const createKeyItem = () => {
 // thumb1
 const renderKeysFlutePiccoloThumb1 = (keyId, keyItem) => {
   keyItem.classList.add("key-lower");
-  //         <div class="key-item key-lower">
-  //             <svg class="key-target" id="key-th-bflat" height="63" width="${
-  //               keySize.thumb1.mainWidth
-  //             }">
-  //                 <rect x="${keySize.thumb1.x}" y="${
-  //   keySize.thumb1.y
-  // }" height="${keySize.thumb1.keyHeight}" width="${
-  //   keySize.thumb1.keyWidth
-  // }" stroke="${keySize.stroke}" stroke-width="${
-  //   keySize.strokeWidthAux
-  // }" fill="${keySize.fill}" />
-  //                 Sorry, your browser does not support inline SVG.
-  //             </svg>
-  //         </div>
+  keyItem.innerHTML = `
+  <svg class="key-target" id="${keyId}" height="${
+    keySize.thumb1.mainHeight * screenSizeFactor
+  }" width="${keySize.thumb1.mainWidth * screenSizeFactor}">
+      <rect x="${keySize.thumb1.x * screenSizeFactor}" y="${
+    keySize.thumb1.y * screenSizeFactor
+  }" height="${keySize.thumb1.keyHeight * screenSizeFactor}" width="${
+    keySize.thumb1.keyWidth * screenSizeFactor
+  }" stroke="${keySize.stroke}" stroke-width="${
+    keySize.strokeWidthAux * screenSizeFactor
+  }" fill="${keySize.fill}" />
+      Sorry, your browser does not support inline SVG.
+  </svg>
+  `;
+  console.log(keyItem);
+  return keyItem;
 };
-// thumb2
 
+// thumb2
 const renderKeysFlutePiccoloThumb2 = (keyId, keyItem) => {
   keyItem.classList.add("key-lower");
   keyItem.innerHTML = `
@@ -416,9 +419,9 @@ const renderKeysFlutePiccoloMain = (keyId, keyItem) => {
 
 const renderCommonKeys = () => {
   // left thumb keys
-  // finalChart.appendChild(
-  //   renderKeysFlutePiccoloThumb1("key-th-bflat", createKeyItem())
-  // );
+  finalChart.appendChild(
+    renderKeysFlutePiccoloThumb1("key-th-bflat", createKeyItem())
+  );
   finalChart.appendChild(
     renderKeysFlutePiccoloThumb2("key-th", createKeyItem())
   );
