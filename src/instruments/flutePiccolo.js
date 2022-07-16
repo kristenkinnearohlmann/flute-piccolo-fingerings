@@ -1,4 +1,3 @@
-let keyDiv;
 let screenSizeFactor;
 let keySize;
 let keyStrokeColor;
@@ -17,6 +16,7 @@ const keysLargeKeys = {
     keyWidth: 10,
   },
   thumb2: {
+    mainHeight: 63,
     mainWidth: 28,
     x: 1,
     y: 25,
@@ -348,10 +348,55 @@ const renderFlutePiccoloKeys = (instrument, screenSize) => {
   }
 };
 
-const renderKeysFlutePiccoloMain = (keyId) => {
-  keyDiv = document.createElement("div");
+const createKeyItem = () => {
+  let keyDiv = document.createElement("div");
   keyDiv.classList.add("key-item");
-  keyDiv.innerHTML = `
+  return keyDiv;
+};
+
+// thumb1
+const renderKeysFlutePiccoloThumb1 = (keyId, keyItem) => {
+  keyItem.classList.add("key-lower");
+  //         <div class="key-item key-lower">
+  //             <svg class="key-target" id="key-th-bflat" height="63" width="${
+  //               keySize.thumb1.mainWidth
+  //             }">
+  //                 <rect x="${keySize.thumb1.x}" y="${
+  //   keySize.thumb1.y
+  // }" height="${keySize.thumb1.keyHeight}" width="${
+  //   keySize.thumb1.keyWidth
+  // }" stroke="${keySize.stroke}" stroke-width="${
+  //   keySize.strokeWidthAux
+  // }" fill="${keySize.fill}" />
+  //                 Sorry, your browser does not support inline SVG.
+  //             </svg>
+  //         </div>
+};
+// thumb2
+
+const renderKeysFlutePiccoloThumb2 = (keyId, keyItem) => {
+  keyItem.classList.add("key-lower");
+  keyItem.innerHTML = `
+  <svg class="key-target" id="${keyId}" height="${
+    keySize.thumb2.mainHeight * screenSizeFactor
+  }" width="${keySize.thumb2.mainWidth * screenSizeFactor}">
+      <rect x="${keySize.thumb2.x * screenSizeFactor}" y="${
+    keySize.thumb2.y * screenSizeFactor
+  }" height="${keySize.thumb2.keyHeight * screenSizeFactor}" width="${
+    keySize.thumb2.keyWidth * screenSizeFactor
+  }" stroke="${keySize.stroke}" stroke-width="${
+    keySize.strokeWidthAux * screenSizeFactor
+  }" fill="${keySize.fill}" />
+      Sorry, your browser does not support inline SVG.
+  </svg>
+  `;
+  console.log(keyItem);
+  return keyItem;
+};
+
+// main
+const renderKeysFlutePiccoloMain = (keyId, keyItem) => {
+  keyItem.innerHTML = `
   <svg class="key-target" id="${keyId}" height="${
     keySize.mainRound.mainHeight * screenSizeFactor
   }" width="${keySize.mainRound.mainWidth * screenSizeFactor}">
@@ -365,17 +410,28 @@ const renderKeysFlutePiccoloMain = (keyId) => {
       Sorry, your browser does not support inline SVG.
   </svg>
 `;
-  console.log(keyDiv);
-  return keyDiv;
+  console.log(keyItem);
+  return keyItem;
 };
 
 const renderCommonKeys = () => {
   // left thumb keys
-
+  // finalChart.appendChild(
+  //   renderKeysFlutePiccoloThumb1("key-th-bflat", createKeyItem())
+  // );
+  finalChart.appendChild(
+    renderKeysFlutePiccoloThumb2("key-th", createKeyItem())
+  );
   // main keys
-  finalChart.appendChild(renderKeysFlutePiccoloMain("key-lh-1"));
-  finalChart.appendChild(renderKeysFlutePiccoloMain("key-lh-2"));
-  finalChart.appendChild(renderKeysFlutePiccoloMain("key-lh-3"));
+  finalChart.appendChild(
+    renderKeysFlutePiccoloMain("key-lh-1", createKeyItem())
+  );
+  finalChart.appendChild(
+    renderKeysFlutePiccoloMain("key-lh-2", createKeyItem())
+  );
+  finalChart.appendChild(
+    renderKeysFlutePiccoloMain("key-lh-3", createKeyItem())
+  );
   // left pinky
   // trill keys
   // right pinky
@@ -391,15 +447,6 @@ const renderPiccoloKeys = (instrument, screenSize) => {
   keysFlutePiccolo1(instrument, screenSize);
 };
 
-// {
-//   id: "key-th-bflat",
-//   classNames: ["key-item", "key-lower"],
-//   keyType: "thumb1",
-// },
-// { id: "key-th", classNames: ["key-item", "key-lower"], keyType: "thumb2" },
-// { id: "key-lh-1", classNames: ["key-item"], keyType: "main" },
-// { id: "key-lh-2", classNames: ["key-item"], keyType: "main" },
-// { id: "key-lh-3", classNames: ["key-item"], keyType: "main" },
 // { id: "key-lh-4", classNames: ["key-item"], keyType: "leftPinky" },
 // { id: "key-rh-1", classNames: ["key-item"], keyType: "main" },
 // { id: "key-rh-tr1", classNames: ["key-item", "key-lower"], keyType: "trill" },
