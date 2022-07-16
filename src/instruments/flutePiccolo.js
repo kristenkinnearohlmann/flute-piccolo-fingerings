@@ -480,7 +480,6 @@ const renderKeysFlutePiccoloLeftPinky = (keyId, keyItem) => {
       return parseInt(item) ? `${item * screenSizeFactor}` : item;
     })
     .join(" ");
-  console.log(keyShape);
 
   keyItem.innerHTML = `
     <svg class="key-target" id="${keyId}" height="${
@@ -505,7 +504,7 @@ const renderCommonKeys = () => {
   finalChart.appendChild(
     renderKeysFlutePiccoloThumb2("key-th", createKeyItem())
   );
-  // main keys
+  // left main keys
   finalChart.appendChild(
     renderKeysFlutePiccoloMain("key-lh-1", createKeyItem())
   );
@@ -519,7 +518,20 @@ const renderCommonKeys = () => {
   finalChart.appendChild(
     renderKeysFlutePiccoloLeftPinky("key-lh-4", createKeyItem())
   );
-  // trill keys
+  // right main 1
+  finalChart.appendChild(
+    renderKeysFlutePiccoloMain("key-rh-1", createKeyItem())
+  );
+  // trill 1
+  // right main 2
+  finalChart.appendChild(
+    renderKeysFlutePiccoloMain("key-rh-2", createKeyItem())
+  );
+  // trill 2
+  // right main 3
+  finalChart.appendChild(
+    renderKeysFlutePiccoloMain("key-rh-3", createKeyItem())
+  );
   // right pinky
 };
 
@@ -533,7 +545,6 @@ const renderPiccoloKeys = (instrument, screenSize) => {
   keysFlutePiccolo1(instrument, screenSize);
 };
 
-// { id: "key-lh-4", classNames: ["key-item"], keyType: "leftPinky" },
 // { id: "key-rh-1", classNames: ["key-item"], keyType: "main" },
 // { id: "key-rh-tr1", classNames: ["key-item", "key-lower"], keyType: "trill" },
 // { id: "key-rh-2", classNames: ["key-item"], keyType: "main" },
