@@ -32,6 +32,7 @@ const keysLargeKeys = {
     r: 15,
   },
   leftPinky: {
+    mainHeight: 60,
     mainWidth: 40,
     d: "M 10 10 h 20 v 40 h -5 v -28 h -15 v -12",
   },
@@ -311,12 +312,6 @@ const keysFlutePiccolo1 = (instrument, screenSize) => {
   //     `;
   const keySetup = `
   <div class="key-item">
-      <svg class="key-target" id="key-lh-4" height="60" width="${keySize.leftPinky.mainWidth}">
-      <path d="${keySize.leftPinky.d}" stroke="${keySize.stroke}" stroke-width="${keySize.strokeWidthAux}" fill="${keySize.fill}" />
-      Sorry, your browser does not support inline SVG.
-      </svg>
-  </div>
-  <div class="key-item">
       <svg class="key-target" id="key-rh-1" height="40" width="${keySize.mainRound.mainWidth}">
           <circle cx="${keySize.mainRound.cx}" cy="${keySize.mainRound.cy}" r="${keySize.mainRound.r}" stroke="${keySize.stroke}" stroke-width="${keySize.strokeWidthMain}" fill="${keySize.fill}" />
           Sorry, your browser does not support inline SVG.
@@ -478,7 +473,7 @@ const renderKeysFlutePiccoloMain = (keyId, keyItem) => {
 };
 
 // leftPinky
-const renderKeysFlutePiccoloLeftPinky = (keyId, keyItems) => {
+const renderKeysFlutePiccoloLeftPinky = (keyId, keyItem) => {
   const keyShape = keysLargeKeys.leftPinky.d
     .split(" ")
     .map((item) => {
@@ -486,6 +481,20 @@ const renderKeysFlutePiccoloLeftPinky = (keyId, keyItems) => {
     })
     .join(" ");
   console.log(keyShape);
+
+  keyItem.innerHTML = `
+    <svg class="key-target" id="${keyId}" height="${
+    keySize.leftPinky.mainHeight * screenSizeFactor
+  }" width="${keySize.leftPinky.mainWidth * screenSizeFactor}">
+    <path d="${keyShape}" stroke="${keySize.stroke}" stroke-width="${
+    keySize.strokeWidthAux * screenSizeFactor
+  }" fill="${keySize.fill}" />
+    Sorry, your browser does not support inline SVG.
+    </svg>
+  `;
+
+  console.log(keyItem);
+  return keyItem;
 };
 
 const renderCommonKeys = () => {
@@ -507,7 +516,9 @@ const renderCommonKeys = () => {
     renderKeysFlutePiccoloMain("key-lh-3", createKeyItem())
   );
   // left pinky
-  renderKeysFlutePiccoloLeftPinky("key-lh-4", createKeyItem());
+  finalChart.appendChild(
+    renderKeysFlutePiccoloLeftPinky("key-lh-4", createKeyItem())
+  );
   // trill keys
   // right pinky
 };
