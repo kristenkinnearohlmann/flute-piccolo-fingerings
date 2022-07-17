@@ -1,9 +1,8 @@
 let screenSizeFactor;
-let keySize;
 let keyStrokeColor;
 let finalChart;
 let keyFill = "none";
-const keysLargeKeys = {
+const keySizeValues = {
   stroke: "silver",
   fill: "none",
   strokeWidthMain: 3,
@@ -132,7 +131,7 @@ const keysSmallKeys = {
 
 const renderFlutePiccoloKeys = (instrument, screenSize) => {
   // TODO: Re-create size object as size agnostic, using calculation
-  keySize = keysLargeKeys;
+  // keySizeValues = keysLargeKeys;
   screenSizeFactor = screenSize === "large" ? 1 : 0.85;
   finalChart = document.createElement("div");
 
@@ -160,15 +159,15 @@ const renderKeysFlutePiccoloThumb1 = (keyId, keyItem) => {
   keyItem.classList.add("key-lower");
   keyItem.innerHTML = `
   <svg class="key-target" id="${keyId}" height="${
-    keySize.thumb1.mainHeight * screenSizeFactor
-  }" width="${keySize.thumb1.mainWidth * screenSizeFactor}">
-      <rect x="${keySize.thumb1.x * screenSizeFactor}" y="${
-    keySize.thumb1.y * screenSizeFactor
-  }" height="${keySize.thumb1.keyHeight * screenSizeFactor}" width="${
-    keySize.thumb1.keyWidth * screenSizeFactor
+    keySizeValues.thumb1.mainHeight * screenSizeFactor
+  }" width="${keySizeValues.thumb1.mainWidth * screenSizeFactor}">
+      <rect x="${keySizeValues.thumb1.x * screenSizeFactor}" y="${
+    keySizeValues.thumb1.y * screenSizeFactor
+  }" height="${keySizeValues.thumb1.keyHeight * screenSizeFactor}" width="${
+    keySizeValues.thumb1.keyWidth * screenSizeFactor
   }" stroke="${keyStrokeColor}" stroke-width="${
-    keySize.strokeWidthAux * screenSizeFactor
-  }" fill="${keySize.fill}" />
+    keySizeValues.strokeWidthAux * screenSizeFactor
+  }" fill="${keySizeValues.fill}" />
       Sorry, your browser does not support inline SVG.
   </svg>
   `;
@@ -180,15 +179,15 @@ const renderKeysFlutePiccoloThumb2 = (keyId, keyItem) => {
   keyItem.classList.add("key-lower");
   keyItem.innerHTML = `
   <svg class="key-target" id="${keyId}" height="${
-    keySize.thumb2.mainHeight * screenSizeFactor
-  }" width="${keySize.thumb2.mainWidth * screenSizeFactor}">
-      <rect x="${keySize.thumb2.x * screenSizeFactor}" y="${
-    keySize.thumb2.y * screenSizeFactor
-  }" height="${keySize.thumb2.keyHeight * screenSizeFactor}" width="${
-    keySize.thumb2.keyWidth * screenSizeFactor
+    keySizeValues.thumb2.mainHeight * screenSizeFactor
+  }" width="${keySizeValues.thumb2.mainWidth * screenSizeFactor}">
+      <rect x="${keySizeValues.thumb2.x * screenSizeFactor}" y="${
+    keySizeValues.thumb2.y * screenSizeFactor
+  }" height="${keySizeValues.thumb2.keyHeight * screenSizeFactor}" width="${
+    keySizeValues.thumb2.keyWidth * screenSizeFactor
   }" stroke="${keyStrokeColor}" stroke-width="${
-    keySize.strokeWidthAux * screenSizeFactor
-  }" fill="${keySize.fill}" />
+    keySizeValues.strokeWidthAux * screenSizeFactor
+  }" fill="${keySizeValues.fill}" />
       Sorry, your browser does not support inline SVG.
   </svg>
   `;
@@ -199,14 +198,14 @@ const renderKeysFlutePiccoloThumb2 = (keyId, keyItem) => {
 const renderKeysFlutePiccoloMain = (keyId, keyItem) => {
   keyItem.innerHTML = `
   <svg class="key-target" id="${keyId}" height="${
-    keySize.mainRound.mainHeight * screenSizeFactor
-  }" width="${keySize.mainRound.mainWidth * screenSizeFactor}">
-      <circle cx="${keySize.mainRound.cx * screenSizeFactor}" cy="${
-    keySize.mainRound.cy * screenSizeFactor
+    keySizeValues.mainRound.mainHeight * screenSizeFactor
+  }" width="${keySizeValues.mainRound.mainWidth * screenSizeFactor}">
+      <circle cx="${keySizeValues.mainRound.cx * screenSizeFactor}" cy="${
+    keySizeValues.mainRound.cy * screenSizeFactor
   }" r="${
-    keySize.mainRound.r * screenSizeFactor
+    keySizeValues.mainRound.r * screenSizeFactor
   }" stroke="${keyStrokeColor}" stroke-width="${
-    keySize.strokeWidthMain * screenSizeFactor
+    keySizeValues.strokeWidthMain * screenSizeFactor
   }" fill="${keyFill}" />
       Sorry, your browser does not support inline SVG.
   </svg>
@@ -216,7 +215,7 @@ const renderKeysFlutePiccoloMain = (keyId, keyItem) => {
 
 // leftPinky
 const renderKeysFlutePiccoloLeftPinky = (keyId, keyItem) => {
-  const keyShape = keysLargeKeys.leftPinky.d
+  const keyShape = keySizeValues.leftPinky.d
     .split(" ")
     .map((item) => {
       return parseInt(item) ? `${item * screenSizeFactor}` : item;
@@ -225,11 +224,11 @@ const renderKeysFlutePiccoloLeftPinky = (keyId, keyItem) => {
 
   keyItem.innerHTML = `
     <svg class="key-target" id="${keyId}" height="${
-    keySize.leftPinky.mainHeight * screenSizeFactor
-  }" width="${keySize.leftPinky.mainWidth * screenSizeFactor}">
+    keySizeValues.leftPinky.mainHeight * screenSizeFactor
+  }" width="${keySizeValues.leftPinky.mainWidth * screenSizeFactor}">
     <path d="${keyShape}" stroke="${keyStrokeColor}" stroke-width="${
-    keySize.strokeWidthAux * screenSizeFactor
-  }" fill="${keySize.fill}" />
+    keySizeValues.strokeWidthAux * screenSizeFactor
+  }" fill="${keySizeValues.fill}" />
     Sorry, your browser does not support inline SVG.
     </svg>
   `;
@@ -242,15 +241,15 @@ const renderKeysFlutePiccoloTrill = (keyId, keyItem) => {
   keyItem.classList.add("key-lower");
   keyItem.innerHTML = `
     <svg class="key-target" id="${keyId}" height="${
-    keySize.trill.mainHeight * screenSizeFactor
-  }" width="${keySize.trill.mainWidth * screenSizeFactor}">
-        <ellipse cx="${keySize.trill.cx * screenSizeFactor}" cy="${
-    keySize.trill.cy * screenSizeFactor
-  }" rx="${keySize.trill.rx * screenSizeFactor}" ry="${
-    keySize.trill.ry * screenSizeFactor
+    keySizeValues.trill.mainHeight * screenSizeFactor
+  }" width="${keySizeValues.trill.mainWidth * screenSizeFactor}">
+        <ellipse cx="${keySizeValues.trill.cx * screenSizeFactor}" cy="${
+    keySizeValues.trill.cy * screenSizeFactor
+  }" rx="${keySizeValues.trill.rx * screenSizeFactor}" ry="${
+    keySizeValues.trill.ry * screenSizeFactor
   }" stroke="${keyStrokeColor}" stroke-width="${
-    keySize.strokeWidthAux * screenSizeFactor
-  }" fill="${keySize.fill}" />
+    keySizeValues.strokeWidthAux * screenSizeFactor
+  }" fill="${keySizeValues.fill}" />
         Sorry, your browser does not support inline SVG.
     </svg>
   `;
@@ -261,15 +260,15 @@ const renderKeysFlutePiccoloTrill = (keyId, keyItem) => {
 const renderKeysFlutePiccoloRightPinky = (keyId, keyItem) => {
   keyItem.innerHTML = `
   <svg class="key-target" id="${keyId}" height="${
-    keySize.rightPinky.mainHeight * screenSizeFactor
-  }" width="${keySize.rightPinky.mainWidth * screenSizeFactor}">
-  <ellipse cx="${keySize.rightPinky.cx * screenSizeFactor}" cy="${
-    keySize.rightPinky.cy * screenSizeFactor
-  }" rx="${keySize.rightPinky.rx * screenSizeFactor}" ry="${
-    keySize.rightPinky.ry * screenSizeFactor
+    keySizeValues.rightPinky.mainHeight * screenSizeFactor
+  }" width="${keySizeValues.rightPinky.mainWidth * screenSizeFactor}">
+  <ellipse cx="${keySizeValues.rightPinky.cx * screenSizeFactor}" cy="${
+    keySizeValues.rightPinky.cy * screenSizeFactor
+  }" rx="${keySizeValues.rightPinky.rx * screenSizeFactor}" ry="${
+    keySizeValues.rightPinky.ry * screenSizeFactor
   }" stroke="${keyStrokeColor}" stroke-width="${
-    keySize.strokeWidthAux * screenSizeFactor
-  }" fill="${keySize.fill}" />
+    keySizeValues.strokeWidthAux * screenSizeFactor
+  }" fill="${keySizeValues.fill}" />
   Sorry, your browser does not support inline SVG.
   </svg>
   `;
@@ -278,30 +277,28 @@ const renderKeysFlutePiccoloRightPinky = (keyId, keyItem) => {
 
 // rollers
 const updateRollersContent = (instrument) => {
-  console.log(instrument);
   return instrument === "piccolo"
     ? ""
     : `
-      <rect x="${keySize.roller.x * screenSizeFactor}" y="${
-        keySize.roller.y * screenSizeFactor
-      }" height="${keySize.roller.keyHeight * screenSizeFactor}" width="${
-        keySize.roller.keyWidth * screenSizeFactor
+      <rect x="${keySizeValues.roller.x * screenSizeFactor}" y="${
+        keySizeValues.roller.y * screenSizeFactor
+      }" height="${keySizeValues.roller.keyHeight * screenSizeFactor}" width="${
+        keySizeValues.roller.keyWidth * screenSizeFactor
       }" stroke="${keyStrokeColor}" stroke-width="${
-        keySize.strokeWidthAux * screenSizeFactor
-      }" fill="${keySize.fill}" />
+        keySizeValues.strokeWidthAux * screenSizeFactor
+      }" fill="${keySizeValues.fill}" />
       Sorry, your browser does not support inline SVG.
   `;
 };
 
 const renderKeysFlutePiccoloRollers = (keyId, keyItem, instrument) => {
   keyItem.classList.add("key-item-roller");
-  console.log("Render instrument for rollers", instrument);
   // both rollers are added to the same div
   keyId.forEach((keyId) => {
     keyItem.innerHTML += `
     <svg class="key-target" id="${keyId}" height="${
-      keySize.roller.mainHeight * screenSizeFactor
-    }" width="${keySize.roller.mainWidth * screenSizeFactor}">
+      keySizeValues.roller.mainHeight * screenSizeFactor
+    }" width="${keySizeValues.roller.mainWidth * screenSizeFactor}">
     ${updateRollersContent(instrument)}
     </svg>
     `;
@@ -314,15 +311,15 @@ const renderKeysFlutePiccoloFootKey = (keyId, keyItem) => {
   // TODO: Finish fixing
   keyItem.innerHTML = `
   <svg class="key-target" id="${keyId}" height="${
-    keySize.footKey.mainHeight * screenSizeFactor
-  }" width="${keySize.footKey.mainWidth * screenSizeFactor}">
-  <rect x="${keySize.footKey.x * screenSizeFactor}" y="${
-    keySize.footKey.y * screenSizeFactor
-  }" height="${keySize.footKey.keyHeight * screenSizeFactor}" width="${
-    keySize.footKey.keyWidth * screenSizeFactor
+    keySizeValues.footKey.mainHeight * screenSizeFactor
+  }" width="${keySizeValues.footKey.mainWidth * screenSizeFactor}">
+  <rect x="${keySizeValues.footKey.x * screenSizeFactor}" y="${
+    keySizeValues.footKey.y * screenSizeFactor
+  }" height="${keySizeValues.footKey.keyHeight * screenSizeFactor}" width="${
+    keySizeValues.footKey.keyWidth * screenSizeFactor
   }" stroke="${keyStrokeColor}" stroke-width="${
-    keySize.strokeWidthAux * screenSizeFactor
-  }" fill="${keySize.fill}" />
+    keySizeValues.strokeWidthAux * screenSizeFactor
+  }" fill="${keySizeValues.fill}" />
   Sorry, your browser does not support inline SVG.
 </svg>
   `;
