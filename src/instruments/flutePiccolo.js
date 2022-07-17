@@ -61,6 +61,7 @@ const keysLargeKeys = {
     keyWidth: 20,
   },
   footKey: {
+    mainHeight: 20,
     mainWidth: 28,
     x: 1,
     y: 2,
@@ -181,7 +182,7 @@ const renderFlutePiccoloKeys = (instrument, screenSize) => {
   keySize = keysLargeKeys;
   screenSizeFactor = screenSize === "large" ? 1 : 0.85;
   finalChart = document.createElement("div");
-  console.log(instrument);
+
   if (instrument === "flute") {
     keyStrokeColor = "silver";
     renderCommonKeys();
@@ -348,6 +349,27 @@ const renderKeysFlutePiccoloRollers = (keyId, keyItem) => {
   return keyItem;
 };
 
+// foot key
+const renderKeysFlutePiccoloFootKey = (keyId, keyItem) => {
+  // TODO: Finish fixing
+  keyItem.innerHTML = `
+  <svg class="key-target" id="${keyId}" height="${
+    keySize.footKey.mainHeight * screenSizeFactor
+  }" width="${keySize.footKey.mainWidth * screenSizeFactor}">
+  <rect x="${keySize.footKey.x * screenSizeFactor}" y="${
+    keySize.footKey.y * screenSizeFactor
+  }" height="${keySize.footKey.keyHeight * screenSizeFactor}" width="${
+    keySize.footKey.keyWidth * screenSizeFactor
+  }" stroke="${keyStrokeColor}" stroke-width="${
+    keySize.strokeWidthAux * screenSizeFactor
+  }" fill="${keySize.fill}" />
+  Sorry, your browser does not support inline SVG.
+</svg>
+  `;
+  console.log(keyItem);
+  return keyItem;
+};
+
 const renderCommonKeys = () => {
   // left thumb keys
   finalChart.appendChild(
@@ -397,54 +419,25 @@ const renderCommonKeys = () => {
   // right rollers and foot key
   let rollerDiv = document.createElement("div");
   // rollers
-  // rollerDiv.appendChild(
-  //   renderKeysFlutePiccoloRollers(
-  //     ["key-rh-broll1", "key-rh-croll1"],
-  //     createKeyItem()
-  //   )
-  // );
+  rollerDiv.appendChild(
+    renderKeysFlutePiccoloRollers(
+      ["key-rh-broll1", "key-rh-croll1"],
+      createKeyItem()
+    )
+  );
   // foot key
-
+  rollerDiv.appendChild(
+    renderKeysFlutePiccoloFootKey("key-rh-csharp", createKeyItem())
+  );
+  console.log(rollerDiv);
   // add right rollers and foot key
-  // finalChart.appendChild(rollerDiv);
+  finalChart.appendChild(rollerDiv);
 };
 
 const renderFluteKeys = (instrument, screenSize) => {
   console.log("Reached flute");
+
   keysFlutePiccolo1(instrument, screenSize);
-
-  const keyRhBRoller = document.getElementById("key-rh-broll1");
-  const keyRhCRoller = document.getElementById("key-rh-croll1");
-
-  console.log(keyRhBRoller);
-
-  // keyRhBRoller.innerHTML = `
-  //           <rect x="${keySize.roller.x}" y="${keySize.roller.y}" height="${keySize.roller.keyHeight}" width="${keySize.roller.keyWidth}" stroke="${keySize.stroke}" stroke-width="${keySize.strokeWidthAux}" fill="${keySize.fill}" />
-  //           Sorry, your browser does not support inline SVG.
-  //           `;
-
-  // TODO: Refactor to function
-  // keyRhBRoller.innerHTML = `
-  //           <rect x="${keySize.roller.x * screenSizeFactor}" y="${
-  //   keySize.roller.y * screenSizeFactor
-  // }" height="${keySize.roller.keyHeight * screenSizeFactor}" width="${
-  //   keySize.roller.keyWidth * screenSizeFactor
-  // }" stroke="${keyStrokeColor}" stroke-width="${
-  //   keySize.strokeWidthAux * screenSizeFactor
-  // }" fill="${keySize.fill}" />
-  //           Sorry, your browser does not support inline SVG.
-  //           `;
-  console.log(keyRhBRoller);
-  // keyRhCRoller.innerHTML = `
-  //           <rect x="${keySize.roller.x * screenSizeFactor}" y="${
-  //   keySize.roller.y * screenSizeFactor
-  // }" height="${keySize.roller.keyHeight * screenSizeFactor}" width="${
-  //   keySize.roller.keyWidth * screenSizeFactor
-  // }" stroke="${keyStrokeColor}" stroke-width="${
-  //   keySize.strokeWidthAux * screenSizeFactor
-  // }" fill="${keySize.fill}" />
-  //           Sorry, your browser does not support inline SVG.
-  //           `;
 };
 
 const renderPiccoloKeys = (instrument, screenSize) => {
