@@ -3,8 +3,6 @@ let keyStrokeColor;
 let finalChart;
 let keyFill = "none";
 const keySizeValues = {
-  stroke: "silver",
-  fill: "none",
   strokeWidthMain: 3,
   strokeWidthAux: 2,
   thumb1: {
@@ -69,69 +67,7 @@ const keySizeValues = {
   },
 };
 
-// Large * 0.85
-const keysSmallKeys = {
-  stroke: "silver",
-  fill: "none",
-  strokeWidthMain: 3,
-  strokeWidthAux: 2,
-  thumb1: {
-    mainWidth: 15.3,
-    x: 5.1,
-    y: 21.25,
-    keyHeight: 8.5,
-    keyWidth: 8.5,
-  },
-  thumb2: {
-    mainWidth: 23.8,
-    x: 0.85,
-    y: 21.25,
-    keyHeight: 8.5,
-    keyWidth: 17,
-  },
-  mainRound: {
-    mainWidth: 34,
-    cx: 17,
-    cy: 17,
-    r: 12.75,
-  },
-  leftPinky: {
-    mainWidth: 34,
-    d: "M 8.5 8.5 h 17 v 34 h -4.25 v -23.8 h -12.75 v -10.2",
-  },
-  trill: {
-    mainWidth: 15.3,
-    cx: 7.65,
-    cy: 20.4,
-    rx: 4.25,
-    ry: 10.2,
-  },
-  rightPinky: {
-    mainWidth: 23.8,
-    cx: 11.05,
-    cy: 20.4,
-    rx: 7.65,
-    ry: 12.75,
-  },
-  roller: {
-    mainWidth: 18.7,
-    x: 0.85,
-    y: 0.85,
-    keyHeight: 5.1,
-    keyWidth: 17,
-  },
-  footKey: {
-    mainWidth: 23.8,
-    x: 0.85,
-    y: 1.7,
-    keyHeight: 12.75,
-    keyWidth: 17,
-  },
-};
-
 const renderFlutePiccoloKeys = (instrument, screenSize) => {
-  // TODO: Re-create size object as size agnostic, using calculation
-  // keySizeValues = keysLargeKeys;
   screenSizeFactor = screenSize === "large" ? 1 : 0.85;
   finalChart = document.createElement("div");
 
@@ -167,7 +103,7 @@ const renderKeysFlutePiccoloThumb1 = (keyId, keyItem) => {
     keySizeValues.thumb1.keyWidth * screenSizeFactor
   }" stroke="${keyStrokeColor}" stroke-width="${
     keySizeValues.strokeWidthAux * screenSizeFactor
-  }" fill="${keySizeValues.fill}" />
+  }" fill="${keyFill}" />
       Sorry, your browser does not support inline SVG.
   </svg>
   `;
@@ -187,7 +123,7 @@ const renderKeysFlutePiccoloThumb2 = (keyId, keyItem) => {
     keySizeValues.thumb2.keyWidth * screenSizeFactor
   }" stroke="${keyStrokeColor}" stroke-width="${
     keySizeValues.strokeWidthAux * screenSizeFactor
-  }" fill="${keySizeValues.fill}" />
+  }" fill="${keyFill}" />
       Sorry, your browser does not support inline SVG.
   </svg>
   `;
@@ -228,7 +164,7 @@ const renderKeysFlutePiccoloLeftPinky = (keyId, keyItem) => {
   }" width="${keySizeValues.leftPinky.mainWidth * screenSizeFactor}">
     <path d="${keyShape}" stroke="${keyStrokeColor}" stroke-width="${
     keySizeValues.strokeWidthAux * screenSizeFactor
-  }" fill="${keySizeValues.fill}" />
+  }" fill="${keyFill}" />
     Sorry, your browser does not support inline SVG.
     </svg>
   `;
@@ -249,7 +185,7 @@ const renderKeysFlutePiccoloTrill = (keyId, keyItem) => {
     keySizeValues.trill.ry * screenSizeFactor
   }" stroke="${keyStrokeColor}" stroke-width="${
     keySizeValues.strokeWidthAux * screenSizeFactor
-  }" fill="${keySizeValues.fill}" />
+  }" fill="${keyFill}" />
         Sorry, your browser does not support inline SVG.
     </svg>
   `;
@@ -268,7 +204,7 @@ const renderKeysFlutePiccoloRightPinky = (keyId, keyItem) => {
     keySizeValues.rightPinky.ry * screenSizeFactor
   }" stroke="${keyStrokeColor}" stroke-width="${
     keySizeValues.strokeWidthAux * screenSizeFactor
-  }" fill="${keySizeValues.fill}" />
+  }" fill="${keyFill}" />
   Sorry, your browser does not support inline SVG.
   </svg>
   `;
@@ -286,7 +222,7 @@ const updateRollersContent = (instrument) => {
         keySizeValues.roller.keyWidth * screenSizeFactor
       }" stroke="${keyStrokeColor}" stroke-width="${
         keySizeValues.strokeWidthAux * screenSizeFactor
-      }" fill="${keySizeValues.fill}" />
+      }" fill="${keyFill}" />
       Sorry, your browser does not support inline SVG.
   `;
 };
@@ -308,7 +244,6 @@ const renderKeysFlutePiccoloRollers = (keyId, keyItem, instrument) => {
 
 // foot key
 const renderKeysFlutePiccoloFootKey = (keyId, keyItem) => {
-  // TODO: Finish fixing
   keyItem.innerHTML = `
   <svg class="key-target" id="${keyId}" height="${
     keySizeValues.footKey.mainHeight * screenSizeFactor
@@ -319,7 +254,7 @@ const renderKeysFlutePiccoloFootKey = (keyId, keyItem) => {
     keySizeValues.footKey.keyWidth * screenSizeFactor
   }" stroke="${keyStrokeColor}" stroke-width="${
     keySizeValues.strokeWidthAux * screenSizeFactor
-  }" fill="${keySizeValues.fill}" />
+  }" fill="${keyFill}" />
   Sorry, your browser does not support inline SVG.
 </svg>
   `;
