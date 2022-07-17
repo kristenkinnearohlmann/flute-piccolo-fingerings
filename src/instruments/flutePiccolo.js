@@ -214,7 +214,6 @@ const renderKeysFlutePiccoloThumb1 = (keyId, keyItem) => {
       Sorry, your browser does not support inline SVG.
   </svg>
   `;
-  console.log(keyItem);
   return keyItem;
 };
 
@@ -235,7 +234,6 @@ const renderKeysFlutePiccoloThumb2 = (keyId, keyItem) => {
       Sorry, your browser does not support inline SVG.
   </svg>
   `;
-  console.log(keyItem);
   return keyItem;
 };
 
@@ -255,7 +253,6 @@ const renderKeysFlutePiccoloMain = (keyId, keyItem) => {
       Sorry, your browser does not support inline SVG.
   </svg>
 `;
-  console.log(keyItem);
   return keyItem;
 };
 
@@ -279,7 +276,6 @@ const renderKeysFlutePiccoloLeftPinky = (keyId, keyItem) => {
     </svg>
   `;
 
-  console.log(keyItem);
   return keyItem;
 };
 
@@ -300,7 +296,6 @@ const renderKeysFlutePiccoloTrill = (keyId, keyItem) => {
         Sorry, your browser does not support inline SVG.
     </svg>
   `;
-  console.log(keyItem);
   return keyItem;
 };
 
@@ -320,7 +315,6 @@ const renderKeysFlutePiccoloRightPinky = (keyId, keyItem) => {
   Sorry, your browser does not support inline SVG.
   </svg>
   `;
-  console.log(keyItem);
   return keyItem;
 };
 
@@ -337,8 +331,6 @@ const renderKeysFlutePiccoloRollers = (keyId, keyItem) => {
     </svg>
     `;
   });
-
-  console.log(keyItem);
   return keyItem;
 };
 
@@ -359,7 +351,6 @@ const renderKeysFlutePiccoloFootKey = (keyId, keyItem) => {
   Sorry, your browser does not support inline SVG.
 </svg>
   `;
-  console.log(keyItem);
   return keyItem;
 };
 
@@ -414,7 +405,7 @@ const renderCommonKeys = () => {
   // rollers
   rollerDiv.appendChild(
     renderKeysFlutePiccoloRollers(
-      ["key-rh-broll1", "key-rh-croll1"],
+      ["key-rh-broll", "key-rh-croll"],
       createKeyItem()
     )
   );
@@ -428,9 +419,11 @@ const renderCommonKeys = () => {
 };
 
 const updateRollers = (instrument, screenSize) => {
-  console.log(instrument, screenSize);
   let keyRhBRoller = document.getElementById("key-rh-broll");
   let keyRhCRoller = document.getElementById("key-rh-croll");
+
+  console.log("B roll yet", keyRhBRoller);
+  console.log("C roll yet", keyRhCRoller);
 
   // if (instrument === "flute") {
   //   keyRhBRoller.innerHTML = `
