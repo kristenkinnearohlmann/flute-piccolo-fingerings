@@ -178,14 +178,14 @@ const renderFlutePiccoloKeys = (instrument, screenSize) => {
 
   if (instrument === "flute") {
     keyStrokeColor = "silver";
-    renderCommonKeys();
+    renderCommonKeys(instrument);
     renderFluteKeys(instrument, screenSize);
     chart.innerHTML = finalChart.innerHTML;
   }
 
   if (instrument === "piccolo") {
     keyStrokeColor = "black";
-    renderCommonKeys();
+    renderCommonKeys(instrument);
     renderPiccoloKeys(instrument, screenSize);
     chart.innerHTML = finalChart.innerHTML;
   }
@@ -319,15 +319,46 @@ const renderKeysFlutePiccoloRightPinky = (keyId, keyItem) => {
 };
 
 // rollers
-const renderKeysFlutePiccoloRollers = (keyId, keyItem) => {
+const updateRollersContent = (instrument) => {
+  console.log(instrument);
+  return instrument === "piccolo"
+    ? ""
+    : `
+      <rect x="${keySize.roller.x * screenSizeFactor}" y="${
+        keySize.roller.y * screenSizeFactor
+      }" height="${keySize.roller.keyHeight * screenSizeFactor}" width="${
+        keySize.roller.keyWidth * screenSizeFactor
+      }" stroke="${keyStrokeColor}" stroke-width="${
+        keySize.strokeWidthAux * screenSizeFactor
+      }" fill="${keySize.fill}" />
+      Sorry, your browser does not support inline SVG.
+  `;
+
+  // if (instrument === "flute") {
+  //   keyRhBRoller.innerHTML = `
+  //           <rect x="${keySize.roller.x}" y="${keySize.roller.y}" height="${keySize.roller.keyHeight}" width="${keySize.roller.keyWidth}" stroke="${keySize.stroke}" stroke-width="${keySize.strokeWidthAux}" fill="${keySize.fill}" />
+  //           Sorry, your browser does not support inline SVG.
+  //           `;
+  //   keyRhCRoller.innerHTML = `
+  //           <rect x="${keySize.roller.x}" y="${keySize.roller.y}" height="${keySize.roller.keyHeight}" width="${keySize.roller.keyWidth}" stroke="${keySize.stroke}" stroke-width="${keySize.strokeWidthAux}" fill="${keySize.fill}" />
+  //           Sorry, your browser does not support inline SVG.
+  //           `;
+  // } else {
+  //   keyRhBRoller.innerHTML = "";
+  //   keyRhCRoller.innerHTML = "";
+  // }
+};
+
+const renderKeysFlutePiccoloRollers = (keyId, keyItem, instrument) => {
   keyItem.classList.add("key-item-roller");
+  console.log("Render instrument for rollers", instrument);
   // both rollers are added to the same div
   keyId.forEach((keyId) => {
     keyItem.innerHTML += `
     <svg class="key-target" id="${keyId}" height="${
       keySize.roller.mainHeight * screenSizeFactor
     }" width="${keySize.roller.mainWidth * screenSizeFactor}">
-
+    ${updateRollersContent(instrument)}
     </svg>
     `;
   });
@@ -354,7 +385,7 @@ const renderKeysFlutePiccoloFootKey = (keyId, keyItem) => {
   return keyItem;
 };
 
-const renderCommonKeys = () => {
+const renderCommonKeys = (instrument) => {
   // left thumb keys
   finalChart.appendChild(
     renderKeysFlutePiccoloThumb1("key-th-bflat", createKeyItem())
@@ -403,10 +434,12 @@ const renderCommonKeys = () => {
   // right rollers and foot key
   let rollerDiv = document.createElement("div");
   // rollers
+  console.log("Common keys instruemnt", instrument);
   rollerDiv.appendChild(
     renderKeysFlutePiccoloRollers(
       ["key-rh-broll", "key-rh-croll"],
-      createKeyItem()
+      createKeyItem(),
+      instrument
     )
   );
   // foot key
@@ -418,36 +451,12 @@ const renderCommonKeys = () => {
   finalChart.appendChild(rollerDiv);
 };
 
-const updateRollers = (instrument, screenSize) => {
-  let keyRhBRoller = document.getElementById("key-rh-broll");
-  let keyRhCRoller = document.getElementById("key-rh-croll");
-
-  console.log("B roll yet", keyRhBRoller);
-  console.log("C roll yet", keyRhCRoller);
-
-  // if (instrument === "flute") {
-  //   keyRhBRoller.innerHTML = `
-  //           <rect x="${keySize.roller.x}" y="${keySize.roller.y}" height="${keySize.roller.keyHeight}" width="${keySize.roller.keyWidth}" stroke="${keySize.stroke}" stroke-width="${keySize.strokeWidthAux}" fill="${keySize.fill}" />
-  //           Sorry, your browser does not support inline SVG.
-  //           `;
-  //   keyRhCRoller.innerHTML = `
-  //           <rect x="${keySize.roller.x}" y="${keySize.roller.y}" height="${keySize.roller.keyHeight}" width="${keySize.roller.keyWidth}" stroke="${keySize.stroke}" stroke-width="${keySize.strokeWidthAux}" fill="${keySize.fill}" />
-  //           Sorry, your browser does not support inline SVG.
-  //           `;
-  // } else {
-  //   keyRhBRoller.innerHTML = "";
-  //   keyRhCRoller.innerHTML = "";
-  // }
-};
-
 const renderFluteKeys = (instrument, screenSize) => {
   console.log("Reached flute");
-  updateRollers(instrument, screenSize);
   keysFlutePiccolo1(instrument, screenSize);
 };
 
 const renderPiccoloKeys = (instrument, screenSize) => {
   console.log("Reached piccolo");
-  updateRollers(instrument, screenSize);
   keysFlutePiccolo1(instrument, screenSize);
 };
