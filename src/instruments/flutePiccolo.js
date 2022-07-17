@@ -45,6 +45,7 @@ const keysLargeKeys = {
     ry: 12,
   },
   rightPinky: {
+    mainHeight: 40,
     mainWidth: 28,
     cx: 13,
     cy: 24,
@@ -134,190 +135,9 @@ const keysFlutePiccolo1 = (instrument, screenSize) => {
     ? (keySize.stroke = "silver")
     : (keySize.stroke = "black");
 
-  let mainRoundHeight = 40;
   console.log(screenSize);
 
-  // const keySetup = `
-  //         <div class="key-item key-lower">
-  //             <svg class="key-target" id="key-th-bflat" height="63" width="${
-  //               keySize.thumb1.mainWidth
-  //             }">
-  //                 <rect x="${keySize.thumb1.x}" y="${
-  //   keySize.thumb1.y
-  // }" height="${keySize.thumb1.keyHeight}" width="${
-  //   keySize.thumb1.keyWidth
-  // }" stroke="${keySize.stroke}" stroke-width="${
-  //   keySize.strokeWidthAux
-  // }" fill="${keySize.fill}" />
-  //                 Sorry, your browser does not support inline SVG.
-  //             </svg>
-  //         </div>
-  //         <div class="key-item key-lower">
-  //             <svg class="key-target" id="key-th" height="63" width="${
-  //               keySize.thumb2.mainWidth
-  //             }">
-  //                 <rect x="${keySize.thumb2.x}" y="${
-  //   keySize.thumb2.y
-  // }" height="${keySize.thumb2.keyHeight}" width="20" stroke="${
-  //   keySize.stroke
-  // }" stroke-width="${keySize.strokeWidthAux}" fill="${keySize.fill}" />
-  //                 Sorry, your browser does not support inline SVG.
-  //             </svg>
-  //         </div>
-  //         <div class="key-item">
-  //             <svg class="key-target" id="key-lh-1" height="${
-  //               screenSize === "small" ? mainRoundHeight * 0.85 : 40
-  //             }" width="${keySize.mainRound.mainWidth}">
-  //                 <circle cx="${keySize.mainRound.cx}" cy="${
-  //   keySize.mainRound.cy
-  // }" r="${keySize.mainRound.r}" stroke="${keySize.stroke}" stroke-width="${
-  //   keySize.strokeWidthMain
-  // }" fill="${keySize.fill}" />
-  //                 Sorry, your browser does not support inline SVG.
-  //             </svg>
-  //         </div>
-  //         <div class="key-item">
-  //             <svg class="key-target" id="key-lh-2" height="40" width="${
-  //               keySize.mainRound.mainWidth
-  //             }">
-  //                 <circle cx="${keySize.mainRound.cx}" cy="${
-  //   keySize.mainRound.cy
-  // }" r="${keySize.mainRound.r}" stroke="${keySize.stroke}" stroke-width="${
-  //   keySize.strokeWidthMain
-  // }" fill="${keySize.fill}" />
-  //                 Sorry, your browser does not support inline SVG.
-  //             </svg>
-  //         </div>
-  //         <div class="key-item">
-  //             <svg class="key-target" id="key-lh-3" height="40" width="${
-  //               keySize.mainRound.mainWidth
-  //             }">
-  //                 <circle cx="${keySize.mainRound.cx}" cy="${
-  //   keySize.mainRound.cy
-  // }" r="${keySize.mainRound.r}" stroke="${keySize.stroke}" stroke-width="${
-  //   keySize.strokeWidthMain
-  // }" fill="${keySize.fill}" />
-  //                 Sorry, your browser does not support inline SVG.
-  //             </svg>
-  //         </div>
-  //         <div class="key-item">
-  //             <svg class="key-target" id="key-lh-4" height="60" width="${
-  //               keySize.leftPinky.mainWidth
-  //             }">
-  //             <path d="${keySize.leftPinky.d}" stroke="${
-  //   keySize.stroke
-  // }" stroke-width="${keySize.strokeWidthAux}" fill="${keySize.fill}" />
-  //             Sorry, your browser does not support inline SVG.
-  //             </svg>
-  //         </div>
-  //         <div class="key-item">
-  //             <svg class="key-target" id="key-rh-1" height="40" width="${
-  //               keySize.mainRound.mainWidth
-  //             }">
-  //                 <circle cx="${keySize.mainRound.cx}" cy="${
-  //   keySize.mainRound.cy
-  // }" r="${keySize.mainRound.r}" stroke="${keySize.stroke}" stroke-width="${
-  //   keySize.strokeWidthMain
-  // }" fill="${keySize.fill}" />
-  //                 Sorry, your browser does not support inline SVG.
-  //             </svg>
-  //         </div>
-  //         <div class="key-item key-lower">
-  //             <svg class="key-target" id="key-rh-tr1" height="63" width="${
-  //               keySize.trill.mainWidth
-  //             }">
-  //                 <ellipse cx="${keySize.trill.cx}" cy="${
-  //   keySize.trill.cy
-  // }" rx="${keySize.trill.rx}" ry="${keySize.trill.ry}" stroke="${
-  //   keySize.stroke
-  // }" stroke-width="${keySize.strokeWidthAux}" fill="${keySize.fill}" />
-  //                 Sorry, your browser does not support inline SVG.
-  //             </svg>
-  //         </div>
-  //         <div class="key-item">
-  //             <svg class="key-target" id="key-rh-2" height="40" width="${
-  //               keySize.mainRound.mainWidth
-  //             }">
-  //                 <circle cx="${keySize.mainRound.cx}" cy="${
-  //   keySize.mainRound.cy
-  // }" r="${keySize.mainRound.r}" stroke="${keySize.stroke}" stroke-width="${
-  //   keySize.strokeWidthMain
-  // }" fill="${keySize.fill}" />
-  //                 Sorry, your browser does not support inline SVG.
-  //             </svg>
-  //         </div>
-  //         <div class="key-item key-lower">
-  //             <svg class="key-target" id="key-rh-tr2" height="63" width="${
-  //               keySize.trill.mainWidth
-  //             }">
-  //                 <ellipse cx="${keySize.trill.cx}" cy="${
-  //   keySize.trill.cy
-  // }" rx="${keySize.trill.rx}" ry="${keySize.trill.ry}" stroke="${
-  //   keySize.stroke
-  // }" stroke-width="${keySize.strokeWidthAux}" fill="${keySize.fill}" />
-  //                 Sorry, your browser does not support inline SVG.
-  //             </svg>
-  //         </div>
-  //         <div class="key-item">
-  //             <svg class="key-target" id="key-rh-3" height="40" width="${
-  //               keySize.mainRound.mainWidth
-  //             }">
-  //                 <circle cx="${keySize.mainRound.cx}" cy="${
-  //   keySize.mainRound.cy
-  // }" r="${keySize.mainRound.r}" stroke="${keySize.stroke}" stroke-width="${
-  //   keySize.strokeWidthMain
-  // }" fill="${keySize.fill}" />
-  //                 Sorry, your browser does not support inline SVG.
-  //             </svg>
-  //         </div>
-  //         <div class="key-item">
-  //             <svg class="key-target" id="key-rh-pinky" height="40" width="${
-  //               keySize.rightPinky.mainWidth
-  //             }">
-  //             <ellipse cx="${keySize.rightPinky.cx}" cy="${
-  //   keySize.rightPinky.cy
-  // }" rx="${keySize.rightPinky.rx}" ry="${keySize.rightPinky.ry}" stroke="${
-  //   keySize.stroke
-  // }" stroke-width="${keySize.strokeWidthAux}" fill="${keySize.fill}" />
-  //             Sorry, your browser does not support inline SVG.
-  //             </svg>
-  //         </div>
-  //         <div>
-  //             <div class="key-item key-item-roller">
-  //                 <svg class="key-target" id="key-rh-broll" height="8" width="${
-  //                   keySize.roller.mainWidth
-  //                 }">
-
-  //                 </svg>
-  //                 <svg class="key-target" id="key-rh-croll" height="8" width="${
-  //                   keySize.roller.mainWidth
-  //                 }">
-
-  //                 </svg>
-  //             </div>
-  //             <div class="key-item">
-  //                 <svg class="key-target" id="key-rh-csharp" height="20" width="${
-  //                   keySize.footKey.mainWidth
-  //                 }">
-  //                     <rect x="${keySize.footKey.x}" y="${
-  //   keySize.footKey.y
-  // }" height="${keySize.footKey.keyHeight}" width="${
-  //   keySize.footKey.keyWidth
-  // }" stroke="${keySize.stroke}" stroke-width="${
-  //   keySize.strokeWidthAux
-  // }" fill="${keySize.fill}" />
-  //                     Sorry, your browser does not support inline SVG.
-  //                 </svg>
-  //             </div>
-  //         <div>
-  //     `;
   const keySetup = `
-  <div class="key-item">
-      <svg class="key-target" id="key-rh-pinky" height="40" width="${keySize.rightPinky.mainWidth}">
-      <ellipse cx="${keySize.rightPinky.cx}" cy="${keySize.rightPinky.cy}" rx="${keySize.rightPinky.rx}" ry="${keySize.rightPinky.ry}" stroke="${keySize.stroke}" stroke-width="${keySize.strokeWidthAux}" fill="${keySize.fill}" />
-      Sorry, your browser does not support inline SVG.
-      </svg>
-  </div>
   <div>
       <div class="key-item key-item-roller">
           <svg class="key-target" id="key-rh-broll" height="8" width="${keySize.roller.mainWidth}">
@@ -360,7 +180,7 @@ const renderFlutePiccoloKeys = (instrument, screenSize) => {
   keySize = keysLargeKeys;
   screenSizeFactor = screenSize === "large" ? 1 : 0.85;
   finalChart = document.createElement("div");
-
+  console.log(instrument);
   if (instrument === "flute") {
     keyStrokeColor = "silver";
     renderCommonKeys();
@@ -372,6 +192,7 @@ const renderFlutePiccoloKeys = (instrument, screenSize) => {
     keyStrokeColor = "black";
     renderCommonKeys();
     renderPiccoloKeys(instrument, screenSize);
+    chart.innerHTML += finalChart.innerHTML;
   }
 };
 
@@ -392,7 +213,7 @@ const renderKeysFlutePiccoloThumb1 = (keyId, keyItem) => {
     keySize.thumb1.y * screenSizeFactor
   }" height="${keySize.thumb1.keyHeight * screenSizeFactor}" width="${
     keySize.thumb1.keyWidth * screenSizeFactor
-  }" stroke="${keySize.stroke}" stroke-width="${
+  }" stroke="${keyStrokeColor}" stroke-width="${
     keySize.strokeWidthAux * screenSizeFactor
   }" fill="${keySize.fill}" />
       Sorry, your browser does not support inline SVG.
@@ -413,7 +234,7 @@ const renderKeysFlutePiccoloThumb2 = (keyId, keyItem) => {
     keySize.thumb2.y * screenSizeFactor
   }" height="${keySize.thumb2.keyHeight * screenSizeFactor}" width="${
     keySize.thumb2.keyWidth * screenSizeFactor
-  }" stroke="${keySize.stroke}" stroke-width="${
+  }" stroke="${keyStrokeColor}" stroke-width="${
     keySize.strokeWidthAux * screenSizeFactor
   }" fill="${keySize.fill}" />
       Sorry, your browser does not support inline SVG.
@@ -431,9 +252,9 @@ const renderKeysFlutePiccoloMain = (keyId, keyItem) => {
   }" width="${keySize.mainRound.mainWidth * screenSizeFactor}">
       <circle cx="${keySize.mainRound.cx * screenSizeFactor}" cy="${
     keySize.mainRound.cy * screenSizeFactor
-  }" r="${keySize.mainRound.r * screenSizeFactor}" stroke="${
-    keySize.stroke
-  }" stroke-width="${
+  }" r="${
+    keySize.mainRound.r * screenSizeFactor
+  }" stroke="${keyStrokeColor}" stroke-width="${
     keySize.strokeWidthMain * screenSizeFactor
   }" fill="${keyFill}" />
       Sorry, your browser does not support inline SVG.
@@ -456,7 +277,7 @@ const renderKeysFlutePiccoloLeftPinky = (keyId, keyItem) => {
     <svg class="key-target" id="${keyId}" height="${
     keySize.leftPinky.mainHeight * screenSizeFactor
   }" width="${keySize.leftPinky.mainWidth * screenSizeFactor}">
-    <path d="${keyShape}" stroke="${keySize.stroke}" stroke-width="${
+    <path d="${keyShape}" stroke="${keyStrokeColor}" stroke-width="${
     keySize.strokeWidthAux * screenSizeFactor
   }" fill="${keySize.fill}" />
     Sorry, your browser does not support inline SVG.
@@ -478,11 +299,31 @@ const renderKeysFlutePiccoloTrill = (keyId, keyItem) => {
     keySize.trill.cy * screenSizeFactor
   }" rx="${keySize.trill.rx * screenSizeFactor}" ry="${
     keySize.trill.ry * screenSizeFactor
-  }" stroke="${keySize.stroke}" stroke-width="${
+  }" stroke="${keyStrokeColor}" stroke-width="${
     keySize.strokeWidthAux * screenSizeFactor
   }" fill="${keySize.fill}" />
         Sorry, your browser does not support inline SVG.
     </svg>
+  `;
+  console.log(keyItem);
+  return keyItem;
+};
+
+// rightPinky
+const renderKeysFlutePiccoloRightPinky = (keyId, keyItem) => {
+  keyItem.innerHTML = `
+  <svg class="key-target" id="${keyId}" height="${
+    keySize.rightPinky.mainHeight * screenSizeFactor
+  }" width="${keySize.rightPinky.mainWidth * screenSizeFactor}">
+  <ellipse cx="${keySize.rightPinky.cx * screenSizeFactor}" cy="${
+    keySize.rightPinky.cy * screenSizeFactor
+  }" rx="${keySize.rightPinky.rx * screenSizeFactor}" ry="${
+    keySize.rightPinky.ry * screenSizeFactor
+  }" stroke="${keyStrokeColor}" stroke-width="${
+    keySize.strokeWidthAux * screenSizeFactor
+  }" fill="${keySize.fill}" />
+  Sorry, your browser does not support inline SVG.
+  </svg>
   `;
   console.log(keyItem);
   return keyItem;
@@ -531,6 +372,10 @@ const renderCommonKeys = () => {
     renderKeysFlutePiccoloMain("key-rh-3", createKeyItem())
   );
   // right pinky
+  finalChart.appendChild(
+    renderKeysFlutePiccoloRightPinky("key-rh-pinky", createKeyItem())
+  );
+  // right extended keys
 };
 
 const renderFluteKeys = (instrument, screenSize) => {
@@ -543,7 +388,6 @@ const renderPiccoloKeys = (instrument, screenSize) => {
   keysFlutePiccolo1(instrument, screenSize);
 };
 
-// { id: "key-rh-pinky", classNames: ["key-item"], keyType: "rightPinky" },
 // {
 //   id: "key-rh-broll",
 //   classNames: ["key-item", "key-item-roller"],
