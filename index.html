@@ -23,24 +23,12 @@
     <main>
       <form class="note-options">
         <div>
-          <span>Instrument:</span>
-          <label for="flute-keys">
-            <input
-              type="radio"
-              id="flute-keys"
-              name="key-choice"
-              value="Flute"
-            />
-            Flute
-          </label>
-          <label for="piccolo-keys">
-            <input
-              type="radio"
-              id="piccolo-keys"
-              name="key-choice"
-              value="Piccolo"
-            />
-            Piccolo
+          <label for="key-choice"
+            >Instrument:
+            <select id="key-choice" name="key-choice">
+              <option value="flute">Flute</option>
+              <option value="piccolo">Piccolo</option>
+            </select>
           </label>
         </div>
         <div>
