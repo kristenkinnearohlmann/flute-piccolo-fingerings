@@ -324,3 +324,7 @@ const renderCommonKeys = (instrument) => {
   // add right rollers and foot key
   finalChart.appendChild(rollerDiv);
 };
+
+const getOctaves = () => {};
+
+const getPitches = () => {};
