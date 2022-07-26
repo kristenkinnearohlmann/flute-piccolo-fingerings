@@ -357,8 +357,10 @@ const getOctaves = (instrument) => {
   }
 };
 
-const getPitches = () => {
+const getPitches = (instrument) => {
   // check for instrument
   // serve pitch choices
   // C, C# Db, D, D# Eb, E, E# Fb, F, F# Gb, G, G# Ab, A, A# Bb, B, B# Cb
+  console.log(instrument);
+  console.log(octaveChoice);
 };
