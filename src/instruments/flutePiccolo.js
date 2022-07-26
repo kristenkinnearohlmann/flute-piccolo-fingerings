@@ -337,6 +337,8 @@ const getOctaves = (instrument) => {
   // low B is octave 3
   // middle C is octave 3+
 
+  octaveChoice.innerHTML = `<option value="0"></option>`;
+
   if (instrument === "flute") {
     let octaves = generateNumberRange(3, 6);
     octaves.forEach((octave) => {
