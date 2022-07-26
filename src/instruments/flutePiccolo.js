@@ -328,7 +328,15 @@ const renderCommonKeys = (instrument) => {
 const getOctaves = (instrument) => {
   // check for instrument
   // serve octave choices based on pitch
-  console.log("Octaves for", instrument);
+  if (instrument === "flute") {
+    console.log("Octaves for", instrument);
+    console.log("3,4,5,6");
+  }
+
+  if (instrument === "piccolo") {
+    console.log("Octaves for", instrument);
+    console.log("4,5,6,7");
+  }
 };
 
 const getPitches = () => {
