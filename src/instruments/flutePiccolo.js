@@ -1,3 +1,4 @@
+let octaveChoice = document.getElementById("octave-choice");
 let screenSizeFactor;
 let keyStrokeColor;
 let finalChart;
@@ -65,6 +66,13 @@ const keySizeValues = {
     keyHeight: 15,
     keyWidth: 20,
   },
+};
+
+// functional programming version of range for JS
+// https://dev.to/ycmjason/how-to-create-range-in-javascript-539i
+const generateNumberRange = (start, end) => {
+  if (start === end) return [start];
+  return [start, ...generateNumberRange(start + 1, end)];
 };
 
 const renderFlutePiccoloKeys = (instrument, screenSize) => {
@@ -326,16 +334,27 @@ const renderCommonKeys = (instrument) => {
 };
 
 const getOctaves = (instrument) => {
-  // check for instrument
-  // serve octave choices based on pitch
+  // low B is octave 3
+  // middle C is octave 3+
+
   if (instrument === "flute") {
-    console.log("Octaves for", instrument);
-    console.log("3,4,5,6");
+    let octaves = generateNumberRange(3, 6);
+    octaves.forEach((octave) => {
+      let opt = document.createElement("option");
+      opt.value = octave;
+      opt.textContent = octave;
+      octaveChoice.appendChild(opt);
+    });
   }
 
   if (instrument === "piccolo") {
-    console.log("Octaves for", instrument);
-    console.log("4,5,6,7");
+    let octaves = generateNumberRange(4, 7);
+    octaves.forEach((octave) => {
+      let opt = document.createElement("option");
+      opt.value = octave;
+      opt.textContent = octave;
+      octaveChoice.appendChild(opt);
+    });
   }
 };
 
