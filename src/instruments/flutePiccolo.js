@@ -325,13 +325,14 @@ const renderCommonKeys = (instrument) => {
   finalChart.appendChild(rollerDiv);
 };
 
+const getOctaves = (instrument) => {
+  // check for instrument
+  // serve octave choices based on pitch
+  console.log("Octaves for", instrument);
+};
+
 const getPitches = () => {
   // check for instrument
   // serve pitch choices
   // C, C# Db, D, D# Eb, E, E# Fb, F, F# Gb, G, G# Ab, A, A# Bb, B, B# Cb
-};
-
-const getOctaves = () => {
-  // check for instrument
-  // serve octave choices based on pitch
 };

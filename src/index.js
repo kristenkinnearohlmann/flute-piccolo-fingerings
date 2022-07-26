@@ -18,11 +18,13 @@ const getScreenSize = () => {
 
 const setFluteKeys = () => {
   renderKeys("flute", getScreenSize());
+  getOctaves("flute");
   setKeyPress();
 };
 
 const setPiccoloKeys = () => {
   renderKeys("piccolo", getScreenSize());
+  getOctaves("piccolo");
   setKeyPress();
 };
 
