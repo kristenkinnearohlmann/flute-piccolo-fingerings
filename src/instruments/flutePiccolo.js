@@ -333,6 +333,15 @@ const renderCommonKeys = (instrument) => {
   finalChart.appendChild(rollerDiv);
 };
 
+const generateOctaveOptions = (octaves) => {
+  octaves.forEach((octave) => {
+    let opt = document.createElement("option");
+    opt.value = octave;
+    opt.textContent = octave;
+    octaveChoice.appendChild(opt);
+  });
+};
+
 const getOctaves = (instrument) => {
   // low B is octave 3
   // middle C is octave 3+
@@ -340,23 +349,11 @@ const getOctaves = (instrument) => {
   octaveChoice.innerHTML = `<option value="0"></option>`;
 
   if (instrument === "flute") {
-    let octaves = generateNumberRange(3, 6);
-    octaves.forEach((octave) => {
-      let opt = document.createElement("option");
-      opt.value = octave;
-      opt.textContent = octave;
-      octaveChoice.appendChild(opt);
-    });
+    generateOctaveOptions(generateNumberRange(3, 6));
   }
 
   if (instrument === "piccolo") {
-    let octaves = generateNumberRange(4, 7);
-    octaves.forEach((octave) => {
-      let opt = document.createElement("option");
-      opt.value = octave;
-      opt.textContent = octave;
-      octaveChoice.appendChild(opt);
-    });
+    generateOctaveOptions(generateNumberRange(4, 7));
   }
 };
 
