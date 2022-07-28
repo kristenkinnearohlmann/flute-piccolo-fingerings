@@ -363,4 +363,8 @@ const getPitches = (instrument) => {
   // C, C# Db, D, D# Eb, E, E# Fb, F, F# Gb, G, G# Ab, A, A# Bb, B, B# Cb
   console.log(instrument);
   console.log(octaveChoice);
+  let pitches = {
+    1: ["C"],
+    2: ["C#", "Db"],
+  };
 };
