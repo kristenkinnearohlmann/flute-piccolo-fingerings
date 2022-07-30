@@ -1,5 +1,3 @@
-let octaveChoice = document.getElementById("octave-choice");
-let pitchChoice = document.getElementById("pitch-choice");
 let screenSizeFactor;
 let keyStrokeColor;
 let finalChart;
@@ -343,7 +341,7 @@ const generateOctaveOptions = (octaves) => {
   });
 };
 
-const getOctaves = (instrument) => {
+const getOctaves = (instrument, octaveChoice) => {
   // low B is octave 3
   // middle C is octave 3+
 
@@ -358,10 +356,22 @@ const getOctaves = (instrument) => {
   }
 };
 
-const getPitches = (instrument) => {
+const getPitches = (instrument, octaveChoice) => {
   // check for instrument
   // serve pitch choices
   // C, C# Db, D, D# Eb, E, E# Fb, F, F# Gb, G, G# Ab, A, A# Bb, B, B# Cb
+  // <option value="1">C</option>
+  // <option value="2">C&sharp;/D&flat;</option>
+  // <option value="3">D</option>
+  // <option value="4">D&sharp;/E&flat;</option>
+  // <option value="5">E</option>
+  // <option value="6">F</option>
+  // <option value="7">F&sharp;/G&flat;</option>
+  // <option value="8">G</option>
+  // <option value="9">G&sharp;/A&flat;</option>
+  // <option value="10">A</option>
+  // <option value="11">A&sharp;/B&flat;</option>
+  // <option value="12">B</option>
   console.log(instrument);
   console.log(octaveChoice);
   let pitches = {

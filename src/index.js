@@ -5,6 +5,8 @@ const keyChoiceForm = document.getElementById("key-choice-form");
 const keyChoiceFlute = document.getElementById("flute-keys");
 const keyChoicePiccolo = document.getElementById("piccolo-keys");
 const keyChoice = document.getElementById("key-choice");
+let octaveChoice = document.getElementById("octave-choice");
+let pitchChoice = document.getElementById("pitch-choice");
 
 // Set up functions
 const init = () => {
@@ -18,15 +20,13 @@ const getScreenSize = () => {
 
 const setFluteKeys = () => {
   renderKeys("flute", getScreenSize());
-  getOctaves("flute");
-  getPitches("flute");
+  getOctaves("flute", octaveChoice);
   setKeyPress();
 };
 
 const setPiccoloKeys = () => {
   renderKeys("piccolo", getScreenSize());
-  getOctaves("piccolo");
-  getPitches("piccolo");
+  getOctaves("piccolo", octaveChoice);
   setKeyPress();
 };
 
@@ -70,6 +70,12 @@ window.addEventListener(
     keyChoice.value === "flute" ? setFluteKeys() : setPiccoloKeys();
   }, 250)
 );
+
+octaveChoice.addEventListener("change", (event) => {
+  console.log(event);
+  console.log(octaveChoice);
+  console.log(pitchChoice);
+});
 
 // Start app
 init();
