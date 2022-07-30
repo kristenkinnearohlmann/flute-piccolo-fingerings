@@ -1,4 +1,5 @@
 let octaveChoice = document.getElementById("octave-choice");
+let pitchChoice = document.getElementById("pitch-choice");
 let screenSizeFactor;
 let keyStrokeColor;
 let finalChart;
@@ -377,4 +378,6 @@ const getPitches = (instrument) => {
     11: ["A#", "Bb"],
     12: ["B", "Cb"],
   };
+
+  pitchChoice.innerHTML = `<option value="0"></option>`;
 };
