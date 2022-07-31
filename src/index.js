@@ -11,24 +11,31 @@ let pitchChoice = document.getElementById("pitch-choice");
 // Set up functions
 const init = () => {
   console.log("Start fingerings app");
-  setFluteKeys();
+  // setFluteKeys();
+  setInstrumentKeys("flute");
 };
 
 const getScreenSize = () => {
   return screen.width >= 768 ? "large" : "small";
 };
 
-const setFluteKeys = () => {
-  renderKeys("flute", getScreenSize());
-  getOctaves("flute", octaveChoice);
+const setInstrumentKeys = (instrument) => {
+  renderKeys(instrument, getScreenSize());
+  getOctaves(instrument, octaveChoice);
   setKeyPress();
 };
 
-const setPiccoloKeys = () => {
-  renderKeys("piccolo", getScreenSize());
-  getOctaves("piccolo", octaveChoice);
-  setKeyPress();
-};
+// const setFluteKeys = () => {
+//   renderKeys("flute", getScreenSize());
+//   getOctaves("flute", octaveChoice);
+//   setKeyPress();
+// };
+
+// const setPiccoloKeys = () => {
+//   renderKeys("piccolo", getScreenSize());
+//   getOctaves("piccolo", octaveChoice);
+//   setKeyPress();
+// };
 
 const setKeyPress = () => {
   console.log("setKeyPress Function");
@@ -61,13 +68,15 @@ const debounce = (func, delay) => {
 };
 
 keyChoice.addEventListener("change", (event) => {
-  keyChoice.value === "flute" ? setFluteKeys() : setPiccoloKeys();
+  // keyChoice.value === "flute" ? setFluteKeys() : setPiccoloKeys();
+  setInstrumentKeys(keyChoice.value);
 });
 
 window.addEventListener(
   "resize",
   debounce(() => {
-    keyChoice.value === "flute" ? setFluteKeys() : setPiccoloKeys();
+    // keyChoice.value === "flute" ? setFluteKeys() : setPiccoloKeys();
+    setInstrumentKeys(keyChoice.value);
   }, 250)
 );
 
