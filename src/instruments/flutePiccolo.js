@@ -374,6 +374,7 @@ const getPitches = (instrument, octaveChoice) => {
   // <option value="12">B</option>
   console.log(instrument);
   console.log(octaveChoice);
+  // TODO: Determine if this can be moved to keys
   let pitches = {
     1: ["B#", "C"],
     2: ["C#", "Db"],
