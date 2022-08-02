@@ -332,15 +332,6 @@ const renderCommonKeys = (instrument) => {
   finalChart.appendChild(rollerDiv);
 };
 
-const generateOctaveOptions = (octaves) => {
-  octaves.forEach((octave) => {
-    let opt = document.createElement("option");
-    opt.value = octave;
-    opt.textContent = octave;
-    octaveChoice.appendChild(opt);
-  });
-};
-
 const getOctaves = (instrument, octaveChoice) => {
   // low B is octave 3
   // middle C is octave 3+

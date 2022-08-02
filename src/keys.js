@@ -1,3 +1,12 @@
+const generateOctaveOptions = (octaves) => {
+  octaves.forEach((octave) => {
+    let opt = document.createElement("option");
+    opt.value = octave;
+    opt.textContent = octave;
+    octaveChoice.appendChild(opt);
+  });
+};
+
 const renderKeys = (instrument, screenSize) => {
   switch (instrument) {
     case "flute":
