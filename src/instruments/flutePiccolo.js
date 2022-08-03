@@ -381,5 +381,24 @@ const getPitches = (instrument, octaveChoice) => {
     12: ["B", "Cb"],
   };
 
+  // Flute
+  // B3
+  // C4
+  // ...
+  // C5
+  // ...
+  // C6
+  // ...
+  // C7
+
+  // Piccolo
+  // D4
+  // ...
+  // D5
+  // ...
+  // D6
+  // ...
+  // C7
+
   pitchChoice.innerHTML = `<option value="0"></option>`;
 };
