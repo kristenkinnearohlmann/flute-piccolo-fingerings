@@ -20,7 +20,7 @@ const getScreenSize = () => {
 
 const setInstrumentKeys = (instrument) => {
   renderKeys(instrument, getScreenSize());
-  getOctaves(instrument, octaveChoice);
+  getOctavesAndPitches(instrument, octaveChoice);
   setKeyPress();
 };
 

@@ -332,7 +332,7 @@ const renderCommonKeys = (instrument) => {
   finalChart.appendChild(rollerDiv);
 };
 
-const getOctaves = (instrument, octaveChoice) => {
+const getOctavesAndPitches = (instrument, octaveChoice) => {
   // low B is octave 3
   // middle C is octave 3+
 
