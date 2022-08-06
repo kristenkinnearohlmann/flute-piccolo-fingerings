@@ -345,9 +345,11 @@ const getOctaves = (instrument, octaveChoice) => {
   if (instrument === "piccolo") {
     generateOctaveOptions(generateNumberRange(4, 7));
   }
+
+  getPitches(instrument);
 };
 
-const getPitches = (instrument, octaveChoice) => {
+const getPitches = (instrument) => {
   // check for instrument
   // serve pitch choices
   // C, C# Db, D, D# Eb, E, E# Fb, F, F# Gb, G, G# Ab, A, A# Bb, B, B# Cb
@@ -363,8 +365,8 @@ const getPitches = (instrument, octaveChoice) => {
   // <option value="10">A</option>
   // <option value="11">A&sharp;/B&flat;</option>
   // <option value="12">B</option>
-  console.log(instrument);
-  console.log(octaveChoice);
+  console.log("instrument", instrument);
+  console.log("chosen octave", octaveChoice);
   // TODO: Determine if this can be moved to keys
   let pitches = {
     1: ["B#", "C"],
