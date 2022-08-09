@@ -332,6 +332,7 @@ const renderCommonKeys = (instrument) => {
   finalChart.appendChild(rollerDiv);
 };
 
+// TODO: Have octave and pitch reference each other
 const getOctavesAndPitches = (instrument, octaveChoice) => {
   // low B is octave 3
   // middle C is octave 3+
