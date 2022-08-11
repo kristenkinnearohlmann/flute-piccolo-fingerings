@@ -7,6 +7,7 @@ const keyChoicePiccolo = document.getElementById("piccolo-keys");
 const keyChoice = document.getElementById("key-choice");
 let octaveChoice = document.getElementById("octave-choice");
 let pitchChoice = document.getElementById("pitch-choice");
+let octaves = [1, 2, 3, 4, 5, 6, 7];
 
 // Set up functions
 const init = () => {
