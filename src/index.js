@@ -8,6 +8,20 @@ const keyChoice = document.getElementById("key-choice");
 let octaveChoice = document.getElementById("octave-choice");
 let pitchChoice = document.getElementById("pitch-choice");
 let octaves = [1, 2, 3, 4, 5, 6, 7];
+let pitches = {
+  1: ["B#", "C"],
+  2: ["C#", "Db"],
+  3: ["D"],
+  4: ["D#", "Eb"],
+  5: ["E"],
+  6: ["E#", "F"],
+  7: ["F#", "Gb"],
+  8: ["G"],
+  9: ["G#", "Ab"],
+  10: ["A"],
+  11: ["A#", "Bb"],
+  12: ["B", "Cb"],
+};
 
 // Set up functions
 const init = () => {
