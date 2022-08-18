@@ -369,20 +369,6 @@ const getPitches = (instrument) => {
   console.log("instrument", instrument);
   console.log("chosen octave", octaveChoice);
   // TODO: Determine if this can be moved to keys
-  let pitches = {
-    1: ["B#", "C"],
-    2: ["C#", "Db"],
-    3: ["D"],
-    4: ["D#", "Eb"],
-    5: ["E"],
-    6: ["E#", "F"],
-    7: ["F#", "Gb"],
-    8: ["G"],
-    9: ["G#", "Ab"],
-    10: ["A"],
-    11: ["A#", "Bb"],
-    12: ["B", "Cb"],
-  };
 
   // Flute
   // B3
