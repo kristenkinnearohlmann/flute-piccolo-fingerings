@@ -67,13 +67,6 @@ const keySizeValues = {
   },
 };
 
-// functional programming version of range for JS
-// https://dev.to/ycmjason/how-to-create-range-in-javascript-539i
-const generateNumberRange = (start, end) => {
-  if (start === end) return [start];
-  return [start, ...generateNumberRange(start + 1, end)];
-};
-
 const renderFlutePiccoloKeys = (instrument, screenSize) => {
   screenSizeFactor = screenSize === "large" ? 1 : 0.85;
   finalChart = document.createElement("div");
