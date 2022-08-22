@@ -27,7 +27,6 @@ let pitches = {
 const init = () => {
   console.log("Start fingerings app");
   // TODO: Populate instruments
-  // TODO: Populate octaves
   generateOctaveOptions(generateNumberRange(0, 8));
   // TODO: Populate pitches
   setInstrumentKeys("flute");
