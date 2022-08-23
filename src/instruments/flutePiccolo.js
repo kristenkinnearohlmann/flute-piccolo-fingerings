@@ -345,42 +345,9 @@ const getOctavesAndPitches = (instrument, octaveChoice) => {
 
 const getPitches = (instrument) => {
   // check for instrument
-  // serve pitch choices
-  // C, C# Db, D, D# Eb, E, E# Fb, F, F# Gb, G, G# Ab, A, A# Bb, B, B# Cb
-  // <option value="1">C</option>
-  // <option value="2">C&sharp;/D&flat;</option>
-  // <option value="3">D</option>
-  // <option value="4">D&sharp;/E&flat;</option>
-  // <option value="5">E</option>
-  // <option value="6">F</option>
-  // <option value="7">F&sharp;/G&flat;</option>
-  // <option value="8">G</option>
-  // <option value="9">G&sharp;/A&flat;</option>
-  // <option value="10">A</option>
-  // <option value="11">A&sharp;/B&flat;</option>
-  // <option value="12">B</option>
+
   console.log("instrument", instrument);
   console.log("chosen octave", octaveChoice);
-  // TODO: Determine if this can be moved to keys
-
-  // Flute
-  // B3
-  // C4
-  // ...
-  // C5
-  // ...
-  // C6
-  // ...
-  // C7
-
-  // Piccolo
-  // D4
-  // ...
-  // D5
-  // ...
-  // D6
-  // ...
-  // C7
 
   pitchChoice.innerHTML = `<option value="0"></option>`;
 };
