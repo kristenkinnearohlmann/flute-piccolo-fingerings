@@ -5,8 +5,8 @@ const keyChoiceForm = document.getElementById("key-choice-form");
 const keyChoiceFlute = document.getElementById("flute-keys");
 const keyChoicePiccolo = document.getElementById("piccolo-keys");
 const keyChoice = document.getElementById("key-choice");
-let octaveChoice = document.getElementById("octave-choice");
-let pitchChoice = document.getElementById("pitch-choice");
+// let octaveChoice = document.getElementById("octave-choice");
+// let pitchChoice = document.getElementById("pitch-choice");
 // let octaves = [1, 2, 3, 4, 5, 6, 7];
 // let pitches = {
 //   1: ["B#", "C"],
@@ -29,6 +29,7 @@ const init = () => {
   // TODO: Populate instruments
   generateOctaveOptions(generateNumberRange(0, 8));
   // TODO: Populate pitches
+
   // setInstrumentKeys("flute");
 };
 

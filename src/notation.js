@@ -1,3 +1,6 @@
+let octaveChoice = document.getElementById("octave-choice");
+let pitchChoice = document.getElementById("pitch-choice");
+
 let octaves = [1, 2, 3, 4, 5, 6, 7];
 let pitches = {
   1: ["B#", "C"],
@@ -19,6 +22,17 @@ let pitches = {
 const generateNumberRange = (start, end) => {
   if (start === end) return [start];
   return [start, ...generateNumberRange(start + 1, end)];
+};
+
+const generatePitchOptions = () => {
+  // TODO: Process initial pitches set at top of this file
+  pitches = ["C", "D", "E", "F", "G", "A", "B"];
+  pitches.forEach((pitch) => {
+    let opt = document.createElement("option");
+    opt.value = pitch;
+    opt.textContent = pitch;
+    pitchChoice.appendChild(opt);
+  });
 };
 
 const generateOctaveOptions = (octaves) => {
