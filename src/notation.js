@@ -1,3 +1,19 @@
+let octaves = [1, 2, 3, 4, 5, 6, 7];
+let pitches = {
+  1: ["B#", "C"],
+  2: ["C#", "Db"],
+  3: ["D"],
+  4: ["D#", "Eb"],
+  5: ["E"],
+  6: ["E#", "F"],
+  7: ["F#", "Gb"],
+  8: ["G"],
+  9: ["G#", "Ab"],
+  10: ["A"],
+  11: ["A#", "Bb"],
+  12: ["B", "Cb"],
+};
+
 // functional programming version of range for JS
 // https://dev.to/ycmjason/how-to-create-range-in-javascript-539i
 const generateNumberRange = (start, end) => {
