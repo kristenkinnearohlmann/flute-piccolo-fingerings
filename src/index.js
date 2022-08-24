@@ -29,7 +29,7 @@ const init = () => {
   // TODO: Populate instruments
   generateOctaveOptions(generateNumberRange(0, 8));
   // TODO: Populate pitches
-
+  generatePitchOptions();
   // setInstrumentKeys("flute");
 };
 
