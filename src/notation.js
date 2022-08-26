@@ -26,7 +26,9 @@ const generateNumberRange = (start, end) => {
 
 const generatePitchOptions = () => {
   // TODO: Process initial pitches set at top of this file
-  console.log(pitches);
+  for (pitch in pitches) {
+    console.log(pitch);
+  }
   pitches = ["C", "D", "E", "F", "G", "A", "B"];
   pitches.forEach((pitch) => {
     let opt = document.createElement("option");
