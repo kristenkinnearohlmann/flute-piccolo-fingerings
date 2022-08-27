@@ -29,6 +29,7 @@ const generatePitchOptions = () => {
   for (const [pitch, value] of Object.entries(pitches)) {
     console.log(pitch);
     console.log(value);
+    console.log(value.join("/"));
   }
   pitches = ["C", "D", "E", "F", "G", "A", "B"];
   pitches.forEach((pitch) => {
