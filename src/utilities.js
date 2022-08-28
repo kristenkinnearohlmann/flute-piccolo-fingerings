@@ -1,1 +1,3 @@
-const populateDropdownList = () => {};
+const populateDropdownList = () => {
+  console.log("Utilities run here");
+};

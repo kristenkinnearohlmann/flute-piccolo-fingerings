@@ -30,6 +30,7 @@ const generatePitchOptions = () => {
     console.log(pitch);
     console.log(value);
     console.log(value.join("/"));
+    console.log(populateDropdownList());
   }
   pitches = ["C", "D", "E", "F", "G", "A", "B"];
   pitches.forEach((pitch) => {
