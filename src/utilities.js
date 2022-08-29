@@ -5,6 +5,12 @@ const generateNumberRange = (start, end) => {
   return [start, ...generateNumberRange(start + 1, end)];
 };
 
-const populateDropdownList = (listData) => {
+const populateDropdownList = (listData, listElement) => {
   console.log("Utilities run here");
+  //   octaves.forEach((octave) => {
+  //     let opt = document.createElement("option");
+  //     opt.value = octave;
+  //     opt.textContent = octave;
+  //     octaveChoice.appendChild(opt);
+  //   });
 };
