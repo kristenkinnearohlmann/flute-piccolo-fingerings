@@ -19,28 +19,23 @@ let pitches = {
 
 const generatePitchOptions = () => {
   // TODO: Process initial pitches set at top of this file
-  for (const [pitch, value] of Object.entries(pitches)) {
-    console.log(pitch);
-    console.log(value);
-    console.log(value.join("/"));
-    console.log(populateDropdownList());
-  }
-  pitches = ["C", "D", "E", "F", "G", "A", "B"];
-  pitches.forEach((pitch) => {
-    let opt = document.createElement("option");
-    opt.value = pitch;
-    opt.textContent = pitch;
-    pitchChoice.appendChild(opt);
-  });
+  // for (const [pitch, value] of Object.entries(pitches)) {
+  //   console.log(pitch);
+  //   console.log(value);
+  //   console.log(value.join("/"));
+  //   console.log(populateDropdownList());
+  // }
+  // pitches = ["C", "D", "E", "F", "G", "A", "B"];
+  // pitches.forEach((pitch) => {
+  //   let opt = document.createElement("option");
+  //   opt.value = pitch;
+  //   opt.textContent = pitch;
+  //   pitchChoice.appendChild(opt);
+  // });
 };
 
 const generateOctaveOptions = (octaves) => {
-  // octaves.forEach((octave) => {
-  //   let opt = document.createElement("option");
-  //   opt.value = octave;
-  //   opt.textContent = octave;
-  //   octaveChoice.appendChild(opt);
-  // });
+  populateDropdownList(octaves, octaveChoice);
 };
 
 // serve pitch choices
