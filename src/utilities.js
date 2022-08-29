@@ -7,10 +7,10 @@ const generateNumberRange = (start, end) => {
 
 const populateDropdownList = (listData, listElement) => {
   console.log("Utilities run here");
-  //   octaves.forEach((octave) => {
-  //     let opt = document.createElement("option");
-  //     opt.value = octave;
-  //     opt.textContent = octave;
-  //     octaveChoice.appendChild(opt);
-  //   });
+  listData.forEach((listItem) => {
+    let opt = document.createElement("option");
+    opt.value = listItem;
+    opt.textContent = listItem;
+    listElement.appendChild(opt);
+  });
 };
