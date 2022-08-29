@@ -17,13 +17,6 @@ let pitches = {
   12: ["B", "Cb"],
 };
 
-// // functional programming version of range for JS
-// // https://dev.to/ycmjason/how-to-create-range-in-javascript-539i
-// const generateNumberRange = (start, end) => {
-//   if (start === end) return [start];
-//   return [start, ...generateNumberRange(start + 1, end)];
-// };
-
 const generatePitchOptions = () => {
   // TODO: Process initial pitches set at top of this file
   for (const [pitch, value] of Object.entries(pitches)) {
