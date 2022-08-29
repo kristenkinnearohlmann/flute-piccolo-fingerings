@@ -5,6 +5,6 @@ const generateNumberRange = (start, end) => {
   return [start, ...generateNumberRange(start + 1, end)];
 };
 
-const populateDropdownList = () => {
+const populateDropdownList = (listData) => {
   console.log("Utilities run here");
 };
