@@ -21,21 +21,10 @@ const generatePitchOptions = () => {
   // TODO: Process initial pitches set at top of this file
   let pitchItems = [];
   for (const [pitch, value] of Object.entries(pitches)) {
-    console.log(pitch);
-    console.log(value);
-    console.log(value.join("/"));
     pitchItems.push(value.join("/"));
   }
-  console.log(pitchItems);
-  // console.log(populateDropdownList());
 
-  // pitches = ["C", "D", "E", "F", "G", "A", "B"];
-  // pitches.forEach((pitch) => {
-  //   let opt = document.createElement("option");
-  //   opt.value = pitch;
-  //   opt.textContent = pitch;
-  //   pitchChoice.appendChild(opt);
-  // });
+  populateDropdownList(pitchItems, pitchChoice);
 };
 
 const generateOctaveOptions = (octaves) => {
