@@ -343,12 +343,3 @@ const getOctavesAndPitches = (instrument, octaveChoice) => {
   console.log("Get pitches from utils");
   getPitches(instrument);
 };
-
-// const getPitches = (instrument) => {
-//   // check for instrument
-
-//   console.log("instrument", instrument);
-//   console.log("chosen octave", octaveChoice);
-
-//   pitchChoice.innerHTML = `<option value="0"></option>`;
-// };

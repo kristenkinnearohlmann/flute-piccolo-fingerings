@@ -19,8 +19,6 @@ let pitches = {
 };
 
 const generateInstrumentOptions = () => {
-  // <option value="flute">Flute</option>
-  // <option value="piccolo">Piccolo</option>
   populateDropdownList(["Flute", "Piccolo"], instrumentChoice);
 };
 
