@@ -30,6 +30,15 @@ const generateOctaveOptions = (octaves) => {
   populateDropdownList(octaves, octaveChoice);
 };
 
+const getPitches = (instrument) => {
+  // check for instrument
+
+  console.log("instrument", instrument);
+  console.log("chosen octave", octaveChoice);
+
+  pitchChoice.innerHTML = `<option value="0"></option>`;
+};
+
 // TODO: Determine if this can be moved to keys
 
 // Flute

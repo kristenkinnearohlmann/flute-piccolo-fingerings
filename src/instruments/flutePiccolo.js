@@ -329,7 +329,7 @@ const renderCommonKeys = (instrument) => {
 const getOctavesAndPitches = (instrument, octaveChoice) => {
   // low B is octave 3
   // middle C is octave 3+
-
+  console.log("In octaves and pitches");
   octaveChoice.innerHTML = `<option value="0"></option>`;
 
   if (instrument === "flute") {
@@ -340,14 +340,15 @@ const getOctavesAndPitches = (instrument, octaveChoice) => {
     generateOctaveOptions(generateNumberRange(4, 7));
   }
 
+  console.log("Get pitches from utils");
   getPitches(instrument);
 };
 
-const getPitches = (instrument) => {
-  // check for instrument
+// const getPitches = (instrument) => {
+//   // check for instrument
 
-  console.log("instrument", instrument);
-  console.log("chosen octave", octaveChoice);
+//   console.log("instrument", instrument);
+//   console.log("chosen octave", octaveChoice);
 
-  pitchChoice.innerHTML = `<option value="0"></option>`;
-};
+//   pitchChoice.innerHTML = `<option value="0"></option>`;
+// };
