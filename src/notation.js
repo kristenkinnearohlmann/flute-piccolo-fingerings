@@ -17,6 +17,15 @@ let pitches = {
   12: ["B", "Cb"],
 };
 
+const generateInstrumentOptions = () => {
+  // <option value="flute">Flute</option>
+  // <option value="piccolo">Piccolo</option>
+};
+
+const generateOctaveOptions = (octaves) => {
+  populateDropdownList(octaves, octaveChoice);
+};
+
 const generatePitchOptions = () => {
   let pitchItems = [];
   for (const [pitch, value] of Object.entries(pitches)) {
@@ -24,10 +33,6 @@ const generatePitchOptions = () => {
   }
 
   populateDropdownList(pitchItems, pitchChoice);
-};
-
-const generateOctaveOptions = (octaves) => {
-  populateDropdownList(octaves, octaveChoice);
 };
 
 const getPitches = (instrument) => {

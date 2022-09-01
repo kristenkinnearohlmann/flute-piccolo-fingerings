@@ -27,8 +27,8 @@ const keyChoice = document.getElementById("key-choice");
 const init = () => {
   console.log("Start fingerings app");
   // TODO: Populate instruments
+  generateInstrumentOptions();
   generateOctaveOptions(generateNumberRange(0, 8));
-  // TODO: Populate pitches
   generatePitchOptions();
   // setInstrumentKeys("flute");
 };
