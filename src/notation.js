@@ -1,3 +1,4 @@
+let instrumentChoice = document.getElementById("instrument-choice");
 let octaveChoice = document.getElementById("octave-choice");
 let pitchChoice = document.getElementById("pitch-choice");
 
@@ -20,6 +21,7 @@ let pitches = {
 const generateInstrumentOptions = () => {
   // <option value="flute">Flute</option>
   // <option value="piccolo">Piccolo</option>
+  populateDropdownList(["Flute", "Piccolo"], instrumentChoice);
 };
 
 const generateOctaveOptions = (octaves) => {
