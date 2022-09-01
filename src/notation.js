@@ -23,7 +23,9 @@ const generateInstrumentOptions = () => {
 };
 
 const generateOctaveOptions = (octaves) => {
+  console.log(octaves);
   populateDropdownList(octaves, octaveChoice);
+  console.log(octaveChoice);
 };
 
 const generatePitchOptions = () => {

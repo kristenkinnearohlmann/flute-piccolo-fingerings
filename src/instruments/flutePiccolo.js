@@ -330,7 +330,7 @@ const getOctavesAndPitches = (instrument, octaveChoice) => {
   // low B is octave 3
   // middle C is octave 3+
   console.log("In octaves and pitches");
-  octaveChoice.innerHTML = `<option value="0"></option>`;
+  // octaveChoice.innerHTML = `<option value="0"></option>`;
 
   if (instrument === "flute") {
     generateOctaveOptions(generateNumberRange(3, 6));

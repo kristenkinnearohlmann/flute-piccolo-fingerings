@@ -10,11 +10,9 @@ const keyChoice = document.getElementById("instrument-choice");
 // Set up functions
 const init = () => {
   console.log("Start fingerings app");
-  // TODO: Populate instruments
   generateInstrumentOptions();
   generateOctaveOptions(generateNumberRange(0, 8));
   generatePitchOptions();
-  // setInstrumentKeys("flute");
 };
 
 const getScreenSize = () => {
@@ -68,11 +66,11 @@ window.addEventListener(
   }, 250)
 );
 
-octaveChoice.addEventListener("change", (event) => {
-  console.log(event);
-  console.log(octaveChoice);
-  console.log(pitchChoice);
-});
+// octaveChoice.addEventListener("change", (event) => {
+//   console.log(event);
+//   console.log(octaveChoice);
+//   console.log(pitchChoice);
+// });
 
 // Start app
 init();
