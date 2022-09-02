@@ -72,5 +72,10 @@ window.addEventListener(
 //   console.log(pitchChoice);
 // });
 
+pitchChoice.addEventListener("change", (event) => {
+  console.log("Change pitch choice", event);
+  console.log(instrumentChoice.value);
+});
+
 // Start app
 init();
