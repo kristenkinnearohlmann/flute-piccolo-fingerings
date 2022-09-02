@@ -1,4 +1,4 @@
-let instrumentChoice = document.getElementById("instrument-choice");
+// let instrumentChoice = document.getElementById("instrument-choice");
 let octaveChoice = document.getElementById("octave-choice");
 let pitchChoice = document.getElementById("pitch-choice");
 

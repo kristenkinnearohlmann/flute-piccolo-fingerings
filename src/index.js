@@ -5,7 +5,7 @@ const keyChoiceForm = document.getElementById("key-choice-form");
 const keyChoiceFlute = document.getElementById("flute-keys");
 const keyChoicePiccolo = document.getElementById("piccolo-keys");
 // const keyChoice = document.getElementById("key-choice");
-const keyChoice = document.getElementById("instrument-choice");
+const instrumentChoice = document.getElementById("instrument-choice");
 
 // Set up functions
 const init = () => {
@@ -55,14 +55,14 @@ const debounce = (func, delay) => {
   };
 };
 
-keyChoice.addEventListener("change", (event) => {
-  setInstrumentKeys(keyChoice.value);
+instrumentChoice.addEventListener("change", (event) => {
+  setInstrumentKeys(instrumentChoice.value);
 });
 
 window.addEventListener(
   "resize",
   debounce(() => {
-    setInstrumentKeys(keyChoice.value);
+    setInstrumentKeys(instrumentChoice.value);
   }, 250)
 );
 
