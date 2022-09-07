@@ -15,66 +15,78 @@ const init = () => {
   generatePitchOptions();
 };
 
-const getScreenSize = () => {
-  return screen.width >= 768 ? "large" : "small";
-};
+// const getScreenSize = () => {
+//   return screen.width >= 768 ? "large" : "small";
+// };
 
-const setInstrumentKeys = (instrument) => {
-  renderKeys(instrument, getScreenSize());
-  getOctavesAndPitches(instrument, octaveChoice);
-  setKeyPress();
-};
+// const setInstrumentKeys = (instrument) => {
+//   renderKeys(instrument, getScreenSize());
+//   getOctavesAndPitches(instrument, octaveChoice);
+//   setKeyPress();
+// };
 
-const setKeyPress = () => {
-  console.log("setKeyPress Function");
-  Array.from(keyTargets).forEach((element) => {
-    let key = element;
-    element.addEventListener("click", keyPress(key));
-  });
-};
+// const setKeyPress = () => {
+//   console.log("setKeyPress Function");
+//   Array.from(keyTargets).forEach((element) => {
+//     let key = element;
+//     element.addEventListener("click", keyPress(key));
+//   });
+// };
 
-const keyPress = (key) => {
-  return function curried_func(e) {
-    console.log("keyPress Function");
-    console.log(key);
-    console.log(key.id);
-  };
-};
+// const keyPress = (key) => {
+//   return function curried_func(e) {
+//     console.log("keyPress Function");
+//     console.log(key);
+//     console.log(key.id);
+//   };
+// };
 
-const debounce = (func, delay) => {
-  let timeout;
+// const debounce = (func, delay) => {
+//   let timeout;
 
-  return function executedFunction(...args) {
-    const later = () => {
-      clearTimeout(timeout);
-      func(...args);
-    };
+//   return function executedFunction(...args) {
+//     const later = () => {
+//       clearTimeout(timeout);
+//       func(...args);
+//     };
 
-    clearTimeout(timeout);
-    timeout = setTimeout(later, delay);
-  };
-};
+//     clearTimeout(timeout);
+//     timeout = setTimeout(later, delay);
+//   };
+// };
 
-instrumentChoice.addEventListener("change", (event) => {
-  setInstrumentKeys(instrumentChoice.value);
-});
-
-window.addEventListener(
-  "resize",
-  debounce(() => {
-    setInstrumentKeys(instrumentChoice.value);
-  }, 250)
-);
-
-// octaveChoice.addEventListener("change", (event) => {
-//   console.log(event);
-//   console.log(octaveChoice);
-//   console.log(pitchChoice);
+// instrumentChoice.addEventListener("change", (event) => {
+//   setInstrumentKeys(instrumentChoice.value);
 // });
 
+// window.addEventListener(
+//   "resize",
+//   debounce(() => {
+//     setInstrumentKeys(instrumentChoice.value);
+//   }, 250)
+// );
+
+// // octaveChoice.addEventListener("change", (event) => {
+// //   console.log(event);
+// //   console.log(octaveChoice);
+// //   console.log(pitchChoice);
+// // });
+
+// pitchChoice.addEventListener("change", (event) => {
+//   console.log("Change pitch choice", event);
+//   console.log(instrumentChoice.value);
+// });
+
+instrumentChoice.addEventListener("change", (event) => {
+  console.log(instrumentChoice.value, octaveChoice.value, pitchChoice.value);
+});
+
+octaveChoice.addEventListener("change", (event) => {
+  console.log(instrumentChoice.value, octaveChoice.value, pitchChoice.value);
+});
+
 pitchChoice.addEventListener("change", (event) => {
-  console.log("Change pitch choice", event);
-  console.log(instrumentChoice.value);
+  console.log(instrumentChoice.value, octaveChoice.value, pitchChoice.value);
 });
 
 // Start app
