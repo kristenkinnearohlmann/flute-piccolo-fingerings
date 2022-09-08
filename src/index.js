@@ -79,6 +79,9 @@ const init = () => {
 
 instrumentChoice.addEventListener("change", (event) => {
   console.log(instrumentChoice.value, octaveChoice.value, pitchChoice.value);
+  if (instrumentChoice.value) {
+    console.log("Instrument selected");
+  }
 });
 
 octaveChoice.addEventListener("change", (event) => {
