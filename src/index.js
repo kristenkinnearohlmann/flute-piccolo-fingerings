@@ -82,6 +82,7 @@ instrumentChoice.addEventListener("change", (event) => {
     console.log("Instrument selected");
     console.log(instrumentChoice.value, octaveChoice.value, pitchChoice.value);
     // TODO: Wire together instrument, octave, pitches
+    // TODO: Ensure check on instrument first
   }
 });
 
