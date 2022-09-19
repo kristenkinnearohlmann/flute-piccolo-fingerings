@@ -24,6 +24,7 @@ const generateInstrumentOptions = () => {
 
 const generateOctaveOptions = (instrument = "") => {
   console.log("The instrument selected ", instrument);
+  console.log(fluteOctaves);
   const octaves = instrument ? "" : generateNumberRange(0, 8);
   populateDropdownList(octaves, octaveChoice);
 };
