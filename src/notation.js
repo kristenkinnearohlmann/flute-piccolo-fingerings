@@ -22,7 +22,9 @@ const generateInstrumentOptions = () => {
   populateDropdownList(["Flute", "Piccolo"], instrumentChoice);
 };
 
-const generateOctaveOptions = (octaves) => {
+const generateOctaveOptions = (instrument = "") => {
+  console.log("The instrument selected ", instrument);
+  const octaves = instrument ? "" : generateNumberRange(0, 8);
   populateDropdownList(octaves, octaveChoice);
 };
 
