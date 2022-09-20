@@ -17,7 +17,15 @@ let pitches = {
   11: ["A#", "Bb"],
   12: ["B", "Cb"],
 };
-
+let instrumentOctaves = {
+  flute: {
+    3: {},
+    4: {},
+    5: {},
+    6: {},
+  },
+  piccolo: {},
+};
 const generateInstrumentOptions = () => {
   populateDropdownList(["Flute", "Piccolo"], instrumentChoice);
 };
@@ -25,8 +33,9 @@ const generateInstrumentOptions = () => {
 const generateOctaveOptions = (instrument = "") => {
   console.log("The instrument selected ", instrument);
   console.log(fluteOctaves);
-  const octaves = instrument ? "" : generateNumberRange(0, 8);
-  populateDropdownList(octaves, octaveChoice);
+  console.log(instrument);
+  // const octaves = instrument ? "" : generateNumberRange(0, 8);
+  // populateDropdownList(octaves, octaveChoice);
 };
 
 const generatePitchOptions = () => {

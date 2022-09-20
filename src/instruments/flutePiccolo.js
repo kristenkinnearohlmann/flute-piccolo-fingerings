@@ -1,9 +1,3 @@
-let fluteOctaves = {
-  3: {},
-  4: {},
-  5: {},
-  6: {},
-};
 let screenSizeFactor;
 let keyStrokeColor;
 let finalChart;
