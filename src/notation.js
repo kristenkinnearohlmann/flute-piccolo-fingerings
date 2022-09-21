@@ -24,7 +24,7 @@ let instrumentOctaves = {
     5: {},
     6: {},
   },
-  piccolo: {},
+  piccolo: { 4: {}, 5: {}, 6: {}, 7: {} },
 };
 const generateInstrumentOptions = () => {
   populateDropdownList(["Flute", "Piccolo"], instrumentChoice);
