@@ -32,10 +32,11 @@ const generateInstrumentOptions = () => {
 
 const generateOctaveOptions = (instrument = "") => {
   console.log("The instrument selected ", instrument);
-  console.log(fluteOctaves);
   console.log(instrument);
+  console.log(instrumentOctaves[instrument.toLowerCase()]);
   // const octaves = instrument ? "" : generateNumberRange(0, 8);
-  // populateDropdownList(octaves, octaveChoice);
+  const octavesToGenerate = generateNumberRange(0, 8);
+  populateDropdownList(octavesToGenerate, octaveChoice);
 };
 
 const generatePitchOptions = () => {
