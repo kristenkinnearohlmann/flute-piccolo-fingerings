@@ -32,9 +32,13 @@ const generateInstrumentOptions = () => {
 
 const generateOctaveOptions = (instrument = "") => {
   console.log("The instrument selected ", instrument);
-  console.log(instrument);
+  // console.log(instrument);
   console.log(instrumentOctaves[instrument.toLowerCase()]);
-  // const octaves = instrument ? "" : generateNumberRange(0, 8);
+  if (instrument)
+    console.log(Object.keys(instrumentOctaves[instrument.toLowerCase()]));
+  // const octavesToGenerate = instrument
+  //   ? instrumentOctaves[instrument.toLowerCase()].keys()
+  //   : generateNumberRange(0, 8);
   const octavesToGenerate = generateNumberRange(0, 8);
   populateDropdownList(octavesToGenerate, octaveChoice);
 };
