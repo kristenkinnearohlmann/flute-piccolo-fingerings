@@ -31,16 +31,17 @@ const generateInstrumentOptions = () => {
 };
 
 const generateOctaveOptions = (instrument = "") => {
-  console.log("The instrument selected ", instrument);
-  // console.log(instrument);
-  console.log(instrumentOctaves[instrument.toLowerCase()]);
-  if (instrument)
-    console.log(Object.keys(instrumentOctaves[instrument.toLowerCase()]));
-  // const octavesToGenerate = instrument
-  //   ? instrumentOctaves[instrument.toLowerCase()].keys()
-  //   : generateNumberRange(0, 8);
-  const octavesToGenerate = generateNumberRange(0, 8);
-  populateDropdownList(octavesToGenerate, octaveChoice);
+  let octaveMin = 0;
+  let octaveMax = 8;
+
+  if (instrument) {
+    let selectedOctaves = Object.keys(
+      instrumentOctaves[instrument.toLowerCase()]
+    );
+    octaveMin = parseInt(selectedOctaves.shift());
+    octaveMax = parseInt(selectedOctaves.pop());
+  }
+  populateDropdownList(generateNumberRange(octaveMin, octaveMax), octaveChoice);
 };
 
 const generatePitchOptions = () => {
