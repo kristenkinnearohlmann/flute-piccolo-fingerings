@@ -6,6 +6,11 @@ const generateNumberRange = (start, end) => {
 };
 
 const populateDropdownList = (listData, listElement) => {
+  let optDefault = document.createElement("option");
+  optDefault.value = "";
+  optDefault.text = "";
+  listElement.appendChild(optDefault);
+
   listData.forEach((listItem) => {
     let opt = document.createElement("option");
     opt.value = listItem;
