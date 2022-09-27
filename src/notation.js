@@ -34,10 +34,14 @@ const generateOctaveOptions = (instrument = "") => {
   let octaveMin = 0;
   let octaveMax = 8;
 
+  console.log("In generateOctaveOptions", instrument);
+
   if (instrument) {
     let selectedOctaves = Object.keys(
       instrumentOctaves[instrument.toLowerCase()]
     );
+
+    console.log(selectedOctaves);
     octaveMin = parseInt(selectedOctaves.shift());
     octaveMax = parseInt(selectedOctaves.pop());
   }

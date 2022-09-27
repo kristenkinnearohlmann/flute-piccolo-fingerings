@@ -78,15 +78,13 @@ const init = () => {
 // });
 
 instrumentChoice.addEventListener("change", (event) => {
-  if (instrumentChoice.value) {
-    console.log("Instrument selected");
-    console.log(instrumentChoice.value, octaveChoice.value, pitchChoice.value);
-    generateOctaveOptions(instrumentChoice.value);
-    // TODO: Wire together instrument, octave, pitches
-    // TODO: Ensure check on instrument first
-    // TODO: Cross-check octave and pitch on changes
-    // TODO: Anything additional to account for?
-  }
+  console.log("instrumentChoice change, Instrument selected");
+  console.log(instrumentChoice.value, octaveChoice.value, pitchChoice.value);
+  generateOctaveOptions(instrumentChoice.value);
+  // TODO: Wire together instrument, octave, pitches
+  // TODO: Ensure check on instrument first
+  // TODO: Cross-check octave and pitch on changes
+  // TODO: Anything additional to account for?
 });
 
 octaveChoice.addEventListener("change", (event) => {

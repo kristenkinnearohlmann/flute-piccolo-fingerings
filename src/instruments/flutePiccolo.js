@@ -332,13 +332,13 @@ const getOctavesAndPitches = (instrument, octaveChoice) => {
   console.log("In octaves and pitches");
   // octaveChoice.innerHTML = `<option value="0"></option>`;
 
-  if (instrument === "flute") {
-    generateOctaveOptions(generateNumberRange(3, 6));
-  }
+  // if (instrument === "flute") {
+  //   generateOctaveOptions(generateNumberRange(3, 6));
+  // }
 
-  if (instrument === "piccolo") {
-    generateOctaveOptions(generateNumberRange(4, 7));
-  }
+  // if (instrument === "piccolo") {
+  //   generateOctaveOptions(generateNumberRange(4, 7));
+  // }
 
   console.log("Get pitches from utils");
   getPitches(instrument);
