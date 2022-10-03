@@ -81,7 +81,7 @@ instrumentChoice.addEventListener("change", (event) => {
   console.log("instrumentChoice change, Instrument selected");
   console.log(instrumentChoice.value, octaveChoice.value, pitchChoice.value);
   generateOctaveOptions(instrumentChoice.value);
-  // TODO: Fix pitches per octaves
+  // TODO: Add pitches per octaves
   // TODO: Wire together instrument, octave, pitches
   // TODO: Cross-check octave and pitch on changes
 });
