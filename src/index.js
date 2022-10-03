@@ -84,7 +84,6 @@ instrumentChoice.addEventListener("change", (event) => {
   // TODO: Fix pitches per octaves
   // TODO: Wire together instrument, octave, pitches
   // TODO: Cross-check octave and pitch on changes
-  // TODO: Anything additional to account for?
 });
 
 octaveChoice.addEventListener("change", (event) => {
