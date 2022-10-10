@@ -118,6 +118,9 @@ const generateOctaveOptions = (instrument = "") => {
 
 const generatePitchOptions = (instrument = "") => {
   console.log(instrument);
+  if (instrument) {
+    console.log(instrumentOctaves[instrument.toLowerCase()]);
+  }
   let pitchItems = [];
   for (const [pitch, value] of Object.entries(pitches)) {
     pitchItems.push(value.join("/"));
