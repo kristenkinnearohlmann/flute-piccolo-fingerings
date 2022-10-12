@@ -120,6 +120,13 @@ const generatePitchOptions = (instrument = "") => {
   console.log(instrument);
   if (instrument) {
     console.log(instrumentOctaves[instrument.toLowerCase()]);
+    for (let octave in instrumentOctaves[instrument.toLowerCase()]) {
+      console.log(
+        `${octave} contains ${
+          instrumentOctaves[instrument.toLowerCase()][octave]
+        }`
+      );
+    }
   }
   let pitchItems = [];
   for (const [pitch, value] of Object.entries(pitches)) {
