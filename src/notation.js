@@ -129,7 +129,9 @@ const generatePitchOptions = (instrument = "") => {
       for (let pitchSet in instrumentOctaves[instrument.toLowerCase()][
         octave
       ]) {
-        console.log(pitchSet);
+        console.log(
+          instrumentOctaves[instrument.toLowerCase()][octave][pitchSet]
+        );
       }
     }
   }
