@@ -118,6 +118,8 @@ const generateOctaveOptions = (instrument = "") => {
 
 const generatePitchOptions = (instrument = "") => {
   console.log(instrument);
+  let pitchValues = [];
+
   if (instrument) {
     console.log(instrumentOctaves[instrument.toLowerCase()]);
     for (let octave in instrumentOctaves[instrument.toLowerCase()]) {
@@ -133,9 +135,18 @@ const generatePitchOptions = (instrument = "") => {
           // TODO: Create single set of pitches for display
           instrumentOctaves[instrument.toLowerCase()][octave][pitchSet]
         );
+        if (
+          !pitchValues.includes(
+            instrumentOctaves[instrument.toLowerCase()][octave][pitchSet]
+          )
+        )
+          pitchValues.push(
+            instrumentOctaves[instrument.toLowerCase()][octave][pitchSet]
+          );
       }
     }
   }
+  console.log(pitchValues);
   let pitchItems = [];
   for (const [pitch, value] of Object.entries(pitches)) {
     pitchItems.push(value.join("/"));
