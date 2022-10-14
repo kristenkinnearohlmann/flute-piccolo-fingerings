@@ -130,6 +130,7 @@ const generatePitchOptions = (instrument = "") => {
         octave
       ]) {
         console.log(
+          // TODO: Create single set of pitches for display
           instrumentOctaves[instrument.toLowerCase()][octave][pitchSet]
         );
       }
