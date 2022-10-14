@@ -135,14 +135,11 @@ const generatePitchOptions = (instrument = "") => {
           // TODO: Create single set of pitches for display
           instrumentOctaves[instrument.toLowerCase()][octave][pitchSet]
         );
-        if (
-          !pitchValues.includes(
-            instrumentOctaves[instrument.toLowerCase()][octave][pitchSet]
-          )
-        )
-          pitchValues.push(
-            instrumentOctaves[instrument.toLowerCase()][octave][pitchSet]
+        let pitchConcat =
+          instrumentOctaves[instrument.toLowerCase()][octave][pitchSet].join(
+            "/"
           );
+        if (!pitchValues.includes(pitchConcat)) pitchValues.push(pitchConcat);
       }
     }
   }
