@@ -131,14 +131,11 @@ const generatePitchOptions = (instrument = "") => {
       for (let pitchSet in instrumentOctaves[instrument.toLowerCase()][
         octave
       ]) {
-        console.log(
-          // TODO: Create single set of pitches for display
-          instrumentOctaves[instrument.toLowerCase()][octave][pitchSet]
-        );
         let pitchConcat =
           instrumentOctaves[instrument.toLowerCase()][octave][pitchSet].join(
             "/"
           );
+        // TODO: Confirm pitch changes and pass to populator
         if (!pitchValues.includes(pitchConcat)) pitchValues.push(pitchConcat);
       }
     }
