@@ -123,11 +123,6 @@ const generatePitchOptions = (instrument = "") => {
   if (instrument) {
     console.log(instrumentOctaves[instrument.toLowerCase()]);
     for (let octave in instrumentOctaves[instrument.toLowerCase()]) {
-      // console.log(
-      //   `${octave} contains ${
-      //     instrumentOctaves[instrument.toLowerCase()][octave]
-      //   }`
-      // );
       for (let pitchSet in instrumentOctaves[instrument.toLowerCase()][
         octave
       ]) {
