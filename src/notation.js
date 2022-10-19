@@ -124,10 +124,11 @@ const generatePitchOptions = (instrument = "", octave = "") => {
     instrumentOctaves[instrument.toLowerCase()][octave]
   );
   let pitchSet = instrumentOctaves[instrument.toLowerCase()][octave];
-  let pitchValues = [];
+  let pitchItems = [];
 
   for (let pitch in pitchSet) {
     console.log(pitchSet[pitch].join("/"));
+    pitchItems.push(pitchSet[pitch].join("/"));
   }
 
   // if (instrument) {
@@ -152,7 +153,7 @@ const generatePitchOptions = (instrument = "", octave = "") => {
   //   pitchItems.push(value.join("/"));
   // }
 
-  // populateDropdownList(pitchItems, pitchChoice);
+  populateDropdownList(pitchItems, pitchChoice);
 };
 
 const getPitches = (instrument) => {
