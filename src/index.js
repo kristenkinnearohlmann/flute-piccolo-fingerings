@@ -89,7 +89,7 @@ instrumentChoice.addEventListener("change", (event) => {
 
 octaveChoice.addEventListener("change", (event) => {
   console.log(instrumentChoice.value, octaveChoice.value, pitchChoice.value);
-  generatePitchOptions(instrumentChoice.value);
+  generatePitchOptions(instrumentChoice.value, octaveChoice.value);
 });
 
 pitchChoice.addEventListener("change", (event) => {

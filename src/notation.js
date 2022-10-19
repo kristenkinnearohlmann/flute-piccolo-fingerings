@@ -116,7 +116,7 @@ const generateOctaveOptions = (instrument = "") => {
   populateDropdownList(generateNumberRange(octaveMin, octaveMax), octaveChoice);
 };
 
-const generatePitchOptions = (instrument = "") => {
+const generatePitchOptions = (instrument = "", octave = "") => {
   console.log(instrument);
   let pitchValues = [];
 
