@@ -123,31 +123,36 @@ const generatePitchOptions = (instrument = "", octave = "") => {
     "What's available for this instrument",
     instrumentOctaves[instrument.toLowerCase()][octave]
   );
+  let pitchSet = instrumentOctaves[instrument.toLowerCase()][octave];
   let pitchValues = [];
 
-  if (instrument) {
-    console.log(instrumentOctaves[instrument.toLowerCase()]);
-    for (let octave in instrumentOctaves[instrument.toLowerCase()]) {
-      for (let pitchSet in instrumentOctaves[instrument.toLowerCase()][
-        octave
-      ]) {
-        let pitchConcat =
-          instrumentOctaves[instrument.toLowerCase()][octave][pitchSet].join(
-            "/"
-          );
-        // TODO: Confirm pitch changes and pass to populator
-        // TODO: Sort by key first?
-        if (!pitchValues.includes(pitchConcat)) pitchValues.push(pitchConcat);
-      }
-    }
-  }
-  console.log(pitchValues);
-  let pitchItems = [];
-  for (const [pitch, value] of Object.entries(pitches)) {
-    pitchItems.push(value.join("/"));
+  for (let pitch in pitchSet) {
+    console.log(pitchSet[pitch].join("/"));
   }
 
-  populateDropdownList(pitchItems, pitchChoice);
+  // if (instrument) {
+  //   console.log(instrumentOctaves[instrument.toLowerCase()]);
+  //   for (let octave in instrumentOctaves[instrument.toLowerCase()]) {
+  //     for (let pitchSet in instrumentOctaves[instrument.toLowerCase()][
+  //       octave
+  //     ]) {
+  //       let pitchConcat =
+  //         instrumentOctaves[instrument.toLowerCase()][octave][pitchSet].join(
+  //           "/"
+  //         );
+  //       // TODO: Confirm pitch changes and pass to populator
+  //       // TODO: Sort by key first?
+  //       if (!pitchValues.includes(pitchConcat)) pitchValues.push(pitchConcat);
+  //     }
+  //   }
+  // }
+  // console.log(pitchValues);
+  // let pitchItems = [];
+  // for (const [pitch, value] of Object.entries(pitches)) {
+  //   pitchItems.push(value.join("/"));
+  // }
+
+  // populateDropdownList(pitchItems, pitchChoice);
 };
 
 const getPitches = (instrument) => {
