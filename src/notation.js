@@ -131,6 +131,7 @@ const generatePitchOptions = (instrument = "") => {
             "/"
           );
         // TODO: Confirm pitch changes and pass to populator
+        // TODO: Sort by key first?
         if (!pitchValues.includes(pitchConcat)) pitchValues.push(pitchConcat);
       }
     }
