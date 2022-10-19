@@ -118,6 +118,11 @@ const generateOctaveOptions = (instrument = "") => {
 
 const generatePitchOptions = (instrument = "", octave = "") => {
   console.log(instrument);
+  console.log(octave);
+  console.log(
+    "What's available for this instrument",
+    instrumentOctaves[instrument.toLowerCase()][octave]
+  );
   let pitchValues = [];
 
   if (instrument) {
