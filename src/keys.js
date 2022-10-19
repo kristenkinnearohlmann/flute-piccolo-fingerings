@@ -9,6 +9,6 @@ const renderKeys = (instrument, screenSize) => {
       renderFlutePiccoloKeys(instrument, screenSize);
       break;
     default:
-      console.log("This instrument is not defined.");
+      console.warn("This instrument is not defined.");
   }
 };

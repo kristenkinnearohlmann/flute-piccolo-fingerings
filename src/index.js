@@ -11,8 +11,6 @@ const instrumentChoice = document.getElementById("instrument-choice");
 const init = () => {
   console.log("Start fingerings app");
   generateInstrumentOptions();
-  // generateOctaveOptions();
-  // generatePitchOptions();
 };
 
 // const getScreenSize = () => {
@@ -66,29 +64,11 @@ const init = () => {
 //   }, 250)
 // );
 
-// // octaveChoice.addEventListener("change", (event) => {
-// //   console.log(event);
-// //   console.log(octaveChoice);
-// //   console.log(pitchChoice);
-// // });
-
-// pitchChoice.addEventListener("change", (event) => {
-//   console.log("Change pitch choice", event);
-//   console.log(instrumentChoice.value);
-// });
-
 instrumentChoice.addEventListener("change", (event) => {
-  // console.log("instrumentChoice change, Instrument selected");
-  // console.log(instrumentChoice.value, octaveChoice.value, pitchChoice.value);
   generateOctaveOptions(instrumentChoice.value);
-  // TODO: Add pitches per octaves
-  // generatePitchOptions(instrumentChoice.value);
-  // TODO: Wire together instrument, octave, pitches
-  // TODO: Cross-check octave and pitch on changes
 });
 
 octaveChoice.addEventListener("change", (event) => {
-  // console.log(instrumentChoice.value, octaveChoice.value, pitchChoice.value);
   generatePitchOptions(instrumentChoice.value, octaveChoice.value);
 });
 

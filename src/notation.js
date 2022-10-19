@@ -1,4 +1,3 @@
-// let instrumentChoice = document.getElementById("instrument-choice");
 let octaveChoice = document.getElementById("octave-choice");
 let pitchChoice = document.getElementById("pitch-choice");
 
@@ -102,14 +101,11 @@ const generateOctaveOptions = (instrument = "") => {
   let octaveMin = 0;
   let octaveMax = 8;
 
-  console.log("In generateOctaveOptions", instrument);
-
   if (instrument) {
     let selectedOctaves = Object.keys(
       instrumentOctaves[instrument.toLowerCase()]
     );
 
-    console.log(selectedOctaves);
     octaveMin = parseInt(selectedOctaves.shift());
     octaveMax = parseInt(selectedOctaves.pop());
   }
@@ -117,41 +113,12 @@ const generateOctaveOptions = (instrument = "") => {
 };
 
 const generatePitchOptions = (instrument = "", octave = "") => {
-  console.log(instrument);
-  console.log(octave);
-  console.log(
-    "What's available for this instrument",
-    instrumentOctaves[instrument.toLowerCase()][octave]
-  );
   let pitchSet = instrumentOctaves[instrument.toLowerCase()][octave];
   let pitchItems = [];
 
   for (let pitch in pitchSet) {
-    console.log(pitchSet[pitch].join("/"));
     pitchItems.push(pitchSet[pitch].join("/"));
   }
-
-  // if (instrument) {
-  //   console.log(instrumentOctaves[instrument.toLowerCase()]);
-  //   for (let octave in instrumentOctaves[instrument.toLowerCase()]) {
-  //     for (let pitchSet in instrumentOctaves[instrument.toLowerCase()][
-  //       octave
-  //     ]) {
-  //       let pitchConcat =
-  //         instrumentOctaves[instrument.toLowerCase()][octave][pitchSet].join(
-  //           "/"
-  //         );
-  //       // TODO: Confirm pitch changes and pass to populator
-  //       // TODO: Sort by key first?
-  //       if (!pitchValues.includes(pitchConcat)) pitchValues.push(pitchConcat);
-  //     }
-  //   }
-  // }
-  // console.log(pitchValues);
-  // let pitchItems = [];
-  // for (const [pitch, value] of Object.entries(pitches)) {
-  //   pitchItems.push(value.join("/"));
-  // }
 
   populateDropdownList(pitchItems, pitchChoice);
 };
@@ -164,24 +131,3 @@ const getPitches = (instrument) => {
 
   pitchChoice.innerHTML = `<option value="0"></option>`;
 };
-
-// TODO: Determine if this can be moved to keys
-
-// Flute
-// B3
-// C4
-// ...
-// C5
-// ...
-// C6
-// ...
-// C7
-
-// Piccolo
-// D4
-// ...
-// D5
-// ...
-// D6
-// ...
-// C7
