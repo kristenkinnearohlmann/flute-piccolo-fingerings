@@ -65,14 +65,17 @@ const init = () => {
 // );
 
 instrumentChoice.addEventListener("change", (event) => {
+  // TODO: Clear octave and pitch on change?
   generateOctaveOptions(instrumentChoice.value);
 });
 
 octaveChoice.addEventListener("change", (event) => {
+  // TODO: Any additional actions on change?
   generatePitchOptions(instrumentChoice.value, octaveChoice.value);
 });
 
 pitchChoice.addEventListener("change", (event) => {
+  // TODO: Any additional actions on change?
   console.log(instrumentChoice.value, octaveChoice.value, pitchChoice.value);
 });
 
