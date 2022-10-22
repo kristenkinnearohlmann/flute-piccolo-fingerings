@@ -76,6 +76,7 @@ octaveChoice.addEventListener("change", (event) => {
 
 pitchChoice.addEventListener("change", (event) => {
   // TODO: Any additional actions on change?
+  // TODO: Confirm changes on change to octave
   console.log(instrumentChoice.value, octaveChoice.value, pitchChoice.value);
 });
 
