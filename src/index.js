@@ -65,7 +65,7 @@ const init = () => {
 // );
 
 instrumentChoice.addEventListener("change", (event) => {
-  // TODO: Clear octave and pitch on change?
+  // TODO: On instrument change, if octave and pitch populated, clear
   generateOctaveOptions(instrumentChoice.value);
 });
 
