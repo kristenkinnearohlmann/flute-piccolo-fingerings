@@ -4,7 +4,6 @@ const chart = document.getElementById("note-finger-chart");
 const keyChoiceForm = document.getElementById("key-choice-form");
 const keyChoiceFlute = document.getElementById("flute-keys");
 const keyChoicePiccolo = document.getElementById("piccolo-keys");
-// const keyChoice = document.getElementById("key-choice");
 const instrumentChoice = document.getElementById("instrument-choice");
 
 // Set up functions
