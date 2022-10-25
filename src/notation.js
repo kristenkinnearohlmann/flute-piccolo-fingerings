@@ -109,16 +109,27 @@ const generateOctaveOptions = (instrument = "") => {
     octaveMin = parseInt(selectedOctaves.shift());
     octaveMax = parseInt(selectedOctaves.pop());
   }
-  populateDropdownList(generateNumberRange(octaveMin, octaveMax), octaveChoice);
+
+  instrument
+    ? populateDropdownList(
+        generateNumberRange(octaveMin, octaveMax),
+        octaveChoice
+      )
+    : populateDropdownList([], octaveChoice);
 };
 
 const generatePitchOptions = (instrument = "", octave = "") => {
-  let pitchSet = instrumentOctaves[instrument.toLowerCase()][octave];
   let pitchItems = [];
 
-  for (let pitch in pitchSet) {
-    pitchItems.push(pitchSet[pitch].join("/"));
+  if (instrument) {
+    let pitchSet = instrumentOctaves[instrument.toLowerCase()][octave];
+
+    for (let pitch in pitchSet) {
+      pitchItems.push(pitchSet[pitch].join("/"));
+    }
   }
+
+  console.log(pitchItems);
 
   populateDropdownList(pitchItems, pitchChoice);
 };

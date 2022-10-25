@@ -66,6 +66,7 @@ const init = () => {
 instrumentChoice.addEventListener("change", (event) => {
   // TODO: On instrument change, if octave and pitch populated, clear
   generateOctaveOptions(instrumentChoice.value);
+  generatePitchOptions(instrumentChoice.value);
 });
 
 octaveChoice.addEventListener("change", (event) => {
