@@ -129,8 +129,6 @@ const generatePitchOptions = (instrument = "", octave = "") => {
     }
   }
 
-  console.log(pitchItems);
-
   populateDropdownList(pitchItems, pitchChoice);
 };
 

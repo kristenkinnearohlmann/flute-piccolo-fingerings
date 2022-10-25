@@ -64,20 +64,16 @@ const init = () => {
 // );
 
 instrumentChoice.addEventListener("change", (event) => {
-  // TODO: On instrument change, if octave and pitch populated, clear
   generateOctaveOptions(instrumentChoice.value);
   generatePitchOptions(instrumentChoice.value);
 });
 
 octaveChoice.addEventListener("change", (event) => {
-  // TODO: Any additional actions on change?
   generatePitchOptions(instrumentChoice.value, octaveChoice.value);
 });
 
 pitchChoice.addEventListener("change", (event) => {
-  // TODO: Any additional actions on change?
-  // TODO: Confirm changes on change to octave
-  // TODO: Leave in place?
+  // TODO: Implement creation of fingering options
   console.log(instrumentChoice.value, octaveChoice.value, pitchChoice.value);
 });
 
