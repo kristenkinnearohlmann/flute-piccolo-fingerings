@@ -134,7 +134,7 @@ const generatePitchOptions = (instrument = "", octave = "") => {
 
 const getPitches = (instrument) => {
   // check for instrument
-
+  // TODO: Is this needed?
   console.log("instrument", instrument);
   console.log("chosen octave", octaveChoice);
 
