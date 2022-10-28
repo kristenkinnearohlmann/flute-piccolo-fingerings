@@ -5,6 +5,7 @@ const keyChoiceForm = document.getElementById("key-choice-form");
 const keyChoiceFlute = document.getElementById("flute-keys");
 const keyChoicePiccolo = document.getElementById("piccolo-keys");
 const instrumentChoice = document.getElementById("instrument-choice");
+const getListButton = document.getElementById("get-list");
 
 // Set up functions
 const init = () => {
@@ -75,6 +76,11 @@ octaveChoice.addEventListener("change", (event) => {
 pitchChoice.addEventListener("change", (event) => {
   // TODO: Implement creation of fingering options
   console.log(instrumentChoice.value, octaveChoice.value, pitchChoice.value);
+});
+
+getListButton.addEventListener("click", (event) => {
+  event.preventDefault;
+  console.log("Button clicked!");
 });
 
 // Start app
