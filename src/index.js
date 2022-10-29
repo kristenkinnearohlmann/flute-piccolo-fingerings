@@ -13,6 +13,11 @@ const init = () => {
   generateInstrumentOptions();
 };
 
+const getChartList = (event) => {
+  event.preventDefault;
+  console.log("Button clicked");
+};
+
 // const getScreenSize = () => {
 //   return screen.width >= 768 ? "large" : "small";
 // };
@@ -78,10 +83,10 @@ pitchChoice.addEventListener("change", (event) => {
   console.log(instrumentChoice.value, octaveChoice.value, pitchChoice.value);
 });
 
-getListButton.addEventListener("click", (event) => {
-  event.preventDefault;
-  console.log("Button clicked!");
-});
+// getListButton.addEventListener("click", (event) => {
+//   event.preventDefault;
+//   console.log("Button clicked!");
+// });
 
 // Start app
 init();
