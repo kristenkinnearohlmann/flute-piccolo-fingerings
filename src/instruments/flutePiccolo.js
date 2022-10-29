@@ -340,6 +340,6 @@ const getOctavesAndPitches = (instrument, octaveChoice) => {
   //   generateOctaveOptions(generateNumberRange(4, 7));
   // }
 
-  console.log("Get pitches from utils");
-  getPitches(instrument);
+  // console.log("Get pitches from utils");
+  // getPitches(instrument);
 };
