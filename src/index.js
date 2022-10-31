@@ -14,6 +14,7 @@ const init = () => {
 };
 
 const getChartList = (event) => {
+  // TODO: Determine how to prevent dropdowns from changing
   event.preventDefault;
   console.log("Button clicked");
 };
