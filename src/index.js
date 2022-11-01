@@ -74,15 +74,18 @@ const init = () => {
 // );
 
 instrumentChoice.addEventListener("change", (event) => {
+  // TODO: Implement check on currentInstrument, currentOctave, currentPitch
   generateOctaveOptions(instrumentChoice.value);
   generatePitchOptions(instrumentChoice.value);
 });
 
 octaveChoice.addEventListener("change", (event) => {
+  // TODO: Implement check on currentInstrument, currentOctave, currentPitch
   generatePitchOptions(instrumentChoice.value, octaveChoice.value);
 });
 
 pitchChoice.addEventListener("change", (event) => {
+  // TODO: Implement check on currentInstrument, currentOctave, currentPitch
   // TODO: Implement creation of fingering options
   console.log(instrumentChoice.value, octaveChoice.value, pitchChoice.value);
 });
