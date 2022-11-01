@@ -6,6 +6,9 @@ const keyChoiceFlute = document.getElementById("flute-keys");
 const keyChoicePiccolo = document.getElementById("piccolo-keys");
 const instrumentChoice = document.getElementById("instrument-choice");
 const getListButton = document.getElementById("get-list");
+let currentInstrument;
+let currentOctave;
+let currentPitch;
 
 // Set up functions
 const init = () => {
