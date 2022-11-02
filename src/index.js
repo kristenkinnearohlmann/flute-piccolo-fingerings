@@ -75,6 +75,7 @@ const init = () => {
 
 instrumentChoice.addEventListener("change", (event) => {
   // TODO: Implement check on currentInstrument, currentOctave, currentPitch
+  event.preventDefault;
   generateOctaveOptions(instrumentChoice.value);
   generatePitchOptions(instrumentChoice.value);
 });
@@ -92,6 +93,12 @@ pitchChoice.addEventListener("change", (event) => {
 
 getListButton.addEventListener("submit", (event) => {
   event.preventDefault;
+  console.log(
+    "Clicked submit",
+    instrumentChoice.value,
+    octaveChoice.value,
+    pitchChoice.value
+  );
   console.log("Button clicked!");
 });
 
