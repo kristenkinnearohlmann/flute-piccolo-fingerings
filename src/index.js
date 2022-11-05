@@ -93,6 +93,9 @@ pitchChoice.addEventListener("change", (event) => {
 
 getListButton.addEventListener("submit", (event) => {
   event.preventDefault;
+  const inst = instrumentChoice.value;
+  const oct = octaveChoice.value;
+  const pit = pitchChoice.value;
   console.log(
     "Clicked submit",
     instrumentChoice.value,
@@ -100,6 +103,9 @@ getListButton.addEventListener("submit", (event) => {
     pitchChoice.value
   );
   console.log("Button clicked!");
+  instrumentChoice.value = inst;
+  octaveChoice.value = oct;
+  pitchChoice.value = pit;
 });
 
 // Start app
