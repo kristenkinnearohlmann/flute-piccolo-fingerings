@@ -6,7 +6,7 @@ const keyChoiceFlute = document.getElementById("flute-keys");
 const keyChoicePiccolo = document.getElementById("piccolo-keys");
 const instrumentChoice = document.getElementById("instrument-choice");
 const getListButton = document.getElementById("get-list");
-let currentInstrument;
+let;
 let currentOctave;
 let currentPitch;
 
@@ -75,7 +75,7 @@ const init = () => {
 
 instrumentChoice.addEventListener("change", (event) => {
   // TODO: Implement check on currentInstrument, currentOctave, currentPitch
-  event.preventDefault;
+  currentInstrument = instrumentChoice.value;
   generateOctaveOptions(instrumentChoice.value);
   generatePitchOptions(instrumentChoice.value);
 });
