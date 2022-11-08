@@ -95,6 +95,7 @@ pitchChoice.addEventListener("change", (event) => {
 
 getListButton.addEventListener("submit", (event) => {
   // TODO: WHy doesn't this work as expected?
+  // TODO: Can I reset when submitting?
   event.preventDefault;
   const inst = instrumentChoice.value;
   const oct = octaveChoice.value;
