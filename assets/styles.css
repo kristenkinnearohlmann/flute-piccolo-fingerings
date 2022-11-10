@@ -41,6 +41,8 @@ main {
 select {
   font-family: inherit;
   font-size: inherit;
+  /* TODO: define width better, add to media query, choose a standard width */
+  width: 150px;
 }
 
 .note-detail {
