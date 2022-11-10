@@ -5,7 +5,7 @@ const keyChoiceForm = document.getElementById("key-choice-form");
 const keyChoiceFlute = document.getElementById("flute-keys");
 const keyChoicePiccolo = document.getElementById("piccolo-keys");
 const instrumentChoice = document.getElementById("instrument-choice");
-const getListButton = document.getElementById("get-list");
+// const getListButton = document.getElementById("get-list");
 let currentInstrument;
 let currentOctave;
 let currentPitch;
@@ -93,24 +93,24 @@ pitchChoice.addEventListener("change", (event) => {
   console.log(instrumentChoice.value, octaveChoice.value, pitchChoice.value);
 });
 
-getListButton.addEventListener("submit", (event) => {
-  // TODO: WHy doesn't this work as expected?
-  // TODO: Can I reset when submitting?
-  event.preventDefault;
-  const inst = instrumentChoice.value;
-  const oct = octaveChoice.value;
-  const pit = pitchChoice.value;
-  console.log(
-    "Clicked submit",
-    instrumentChoice.value,
-    octaveChoice.value,
-    pitchChoice.value
-  );
-  console.log("Button clicked!");
-  instrumentChoice.value = inst;
-  octaveChoice.value = oct;
-  pitchChoice.value = pit;
-});
+// getListButton.addEventListener("submit", (event) => {
+//   // TODO: WHy doesn't this work as expected?
+//   // TODO: Can I reset when submitting?
+//   event.preventDefault;
+//   const inst = instrumentChoice.value;
+//   const oct = octaveChoice.value;
+//   const pit = pitchChoice.value;
+//   console.log(
+//     "Clicked submit",
+//     instrumentChoice.value,
+//     octaveChoice.value,
+//     pitchChoice.value
+//   );
+//   console.log("Button clicked!");
+//   instrumentChoice.value = inst;
+//   octaveChoice.value = oct;
+//   pitchChoice.value = pit;
+// });
 
 document.getElementById("new-button").addEventListener("click", () => {
   console.log("You clicked the new button");
