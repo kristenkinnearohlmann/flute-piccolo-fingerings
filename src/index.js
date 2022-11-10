@@ -112,5 +112,8 @@ getListButton.addEventListener("submit", (event) => {
   pitchChoice.value = pit;
 });
 
+document.getElementById("new-button").addEventListener("click", () => {
+  console.log("You clicked the new button");
+});
 // Start app
 init();
