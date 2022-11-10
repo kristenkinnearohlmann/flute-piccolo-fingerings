@@ -113,7 +113,12 @@ pitchChoice.addEventListener("change", (event) => {
 // });
 
 document.getElementById("new-button").addEventListener("click", () => {
-  console.log("You clicked the new button");
+  console.log(
+    "You clicked the new button",
+    instrumentChoice.value,
+    octaveChoice.value,
+    pitchChoice.value
+  );
 });
 // Start app
 init();
