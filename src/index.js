@@ -6,7 +6,8 @@ const keyChoiceFlute = document.getElementById("flute-keys");
 const keyChoicePiccolo = document.getElementById("piccolo-keys");
 const instrumentChoice = document.getElementById("instrument-choice");
 const selectButton = document.getElementById("select-button");
-const resetBUtton = document.getElementById("reset-button");
+const resetButton = document.getElementById("reset-button");
+const fingerExplanation = document.getElementById("note-finger-explanation");
 let currentInstrument;
 let currentOctave;
 let currentPitch;
@@ -101,9 +102,10 @@ selectButton.addEventListener("click", () => {
     octaveChoice.value,
     pitchChoice.value
   );
+  fingerExplanation.innerText = `${instrumentChoice.value} ${octaveChoice.value} ${pitchChoice.value}`;
 });
 
-resetBUtton.addEventListener("click", () => {
+resetButton.addEventListener("click", () => {
   console.log("Reset dropdowns");
 });
 
