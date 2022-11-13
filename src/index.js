@@ -94,12 +94,6 @@ pitchChoice.addEventListener("change", (event) => {
 });
 
 selectButton.addEventListener("click", () => {
-  console.log(
-    "You clicked the new button",
-    instrumentChoice.value,
-    octaveChoice.value,
-    pitchChoice.value
-  );
   fingerExplanation.innerText = `${instrumentChoice.value} ${octaveChoice.value} ${pitchChoice.value}`;
   getChartList(instrumentChoice.value, octaveChoice.value, pitchChoice.value);
 });
