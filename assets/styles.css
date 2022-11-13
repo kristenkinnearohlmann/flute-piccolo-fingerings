@@ -41,6 +41,7 @@ main {
 select {
   font-family: inherit;
   font-size: inherit;
+  width: 5rem;
 }
 
 .note-detail {
