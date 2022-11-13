@@ -41,8 +41,6 @@ main {
 select {
   font-family: inherit;
   font-size: inherit;
-  /* TODO: define width better, add to media query, choose a standard width */
-  width: 8rem;
 }
 
 .note-detail {
@@ -99,6 +97,11 @@ select {
 @media only screen and (min-width: 768px) {
   body {
     font-size: 2rem;
+  }
+
+  select {
+    /* TODO: define width better, add to media query, choose a standard width */
+    width: 8rem;
   }
 
   .note-options {
