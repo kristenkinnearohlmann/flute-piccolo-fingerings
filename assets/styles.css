@@ -47,6 +47,7 @@ select {
 button {
   font-family: inherit;
   font-size: 0.95rem;
+  margin: 3px 0;
 }
 
 .note-detail {
