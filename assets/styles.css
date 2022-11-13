@@ -100,7 +100,6 @@ select {
   }
 
   select {
-    /* TODO: define width better, add to media query, choose a standard width */
     width: 8rem;
   }
 
