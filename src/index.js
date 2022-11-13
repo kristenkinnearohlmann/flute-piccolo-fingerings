@@ -18,11 +18,9 @@ const init = () => {
   generateInstrumentOptions();
 };
 
-// const getChartList = (event) => {
-//   // TODO: Determine how to prevent dropdowns from changing
-//   event.preventDefault;
-//   console.log("Button clicked");
-// };
+const getChartList = (instrument, octave, pitch) => {
+  console.log("Get chart list for", instrument, octave, pitch);
+};
 
 // const getScreenSize = () => {
 //   return screen.width >= 768 ? "large" : "small";
@@ -103,6 +101,7 @@ selectButton.addEventListener("click", () => {
     pitchChoice.value
   );
   fingerExplanation.innerText = `${instrumentChoice.value} ${octaveChoice.value} ${pitchChoice.value}`;
+  getChartList(instrumentChoice.value, octaveChoice.value, pitchChoice.value);
 });
 
 resetButton.addEventListener("click", () => {
