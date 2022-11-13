@@ -44,6 +44,11 @@ select {
   width: 5rem;
 }
 
+button {
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
 .note-detail {
   border: 2px solid gray;
   border-radius: 8px;
