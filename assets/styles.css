@@ -17,6 +17,10 @@ main {
   width: 95%;
 }
 
+.no-display {
+  display: none;
+}
+
 .banner {
   background-color: pink;
   border: 2px solid red;
