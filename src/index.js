@@ -95,9 +95,11 @@ pitchChoice.addEventListener("change", (event) => {
 });
 
 selectButton.addEventListener("click", () => {
-  noteResult.style.display = "block";
-  fingerExplanation.innerText = `${instrumentChoice.value} ${octaveChoice.value} ${pitchChoice.value}`;
-  getChartList(instrumentChoice.value, octaveChoice.value, pitchChoice.value);
+  if (instrumentChoice.value && octaveChoice.value && pitchChoice.value) {
+    noteResult.style.display = "block";
+    fingerExplanation.innerText = `${instrumentChoice.value} ${octaveChoice.value} ${pitchChoice.value}`;
+    getChartList(instrumentChoice.value, octaveChoice.value, pitchChoice.value);
+  }
 });
 
 resetButton.addEventListener("click", () => {
