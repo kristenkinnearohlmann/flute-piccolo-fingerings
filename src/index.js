@@ -101,8 +101,10 @@ selectButton.addEventListener("click", () => {
 });
 
 resetButton.addEventListener("click", () => {
-  console.log("Reset dropdowns");
   noteResult.style.display = "none";
+  generateInstrumentOptions();
+  generateOctaveOptions();
+  generatePitchOptions();
 });
 
 // Start app
