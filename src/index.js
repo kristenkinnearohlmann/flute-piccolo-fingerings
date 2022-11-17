@@ -7,6 +7,7 @@ const keyChoicePiccolo = document.getElementById("piccolo-keys");
 const instrumentChoice = document.getElementById("instrument-choice");
 const selectButton = document.getElementById("select-button");
 const resetButton = document.getElementById("reset-button");
+const noteResult = document.getElementById("note-result");
 const fingerExplanation = document.getElementById("note-finger-explanation");
 let currentInstrument;
 let currentOctave;
@@ -94,12 +95,14 @@ pitchChoice.addEventListener("change", (event) => {
 });
 
 selectButton.addEventListener("click", () => {
+  noteResult.style.display = "block";
   fingerExplanation.innerText = `${instrumentChoice.value} ${octaveChoice.value} ${pitchChoice.value}`;
   getChartList(instrumentChoice.value, octaveChoice.value, pitchChoice.value);
 });
 
 resetButton.addEventListener("click", () => {
   console.log("Reset dropdowns");
+  noteResult.style.display = "none";
 });
 
 // Start app
