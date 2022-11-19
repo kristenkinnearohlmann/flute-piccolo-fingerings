@@ -98,7 +98,6 @@ selectButton.addEventListener("click", () => {
     fingerExplanation.innerText = `${instrumentChoice.value} ${octaveChoice.value} ${pitchChoice.value}`;
     getChartList(instrumentChoice.value, octaveChoice.value, pitchChoice.value);
   }
-  // TODO: Implement check on currentInstrument, currentOctave, currentPitch
   // TODO: Implement creation of fingering options
 });
 
