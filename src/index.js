@@ -97,8 +97,8 @@ selectButton.addEventListener("click", () => {
     noteResult.style.display = "block";
     fingerExplanation.innerText = `${instrumentChoice.value} ${octaveChoice.value} ${pitchChoice.value}`;
     getChartList(instrumentChoice.value, octaveChoice.value, pitchChoice.value);
+    // TODO: Implement creation of fingering options
   }
-  // TODO: Implement creation of fingering options
 });
 
 resetButton.addEventListener("click", () => {
