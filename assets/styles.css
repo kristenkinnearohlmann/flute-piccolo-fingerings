@@ -17,14 +17,14 @@ main {
   width: 95%;
 }
 
-.display-status {
-  display: none;
-}
-
 .banner {
   background-color: pink;
   border: 2px solid red;
   text-align: center;
+}
+
+.display-status {
+  display: none;
 }
 
 .note-options {
