@@ -61,7 +61,7 @@ button {
   flex-direction: column;
 }
 
-#note-finger-options {
+.note-finger-options {
   margin: 10px;
 }
 
