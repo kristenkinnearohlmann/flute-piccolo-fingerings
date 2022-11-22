@@ -131,12 +131,3 @@ const generatePitchOptions = (instrument = "", octave = "") => {
 
   populateDropdownList(pitchItems, pitchChoice);
 };
-
-// const getPitches = (instrument) => {
-//   // check for instrument
-//   // TODO: Is this needed?
-//   console.log("instrument", instrument);
-//   console.log("chosen octave", octaveChoice);
-
-//   pitchChoice.innerHTML = `<option value="0"></option>`;
-// };
