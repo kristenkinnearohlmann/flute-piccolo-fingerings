@@ -61,8 +61,11 @@ button {
   flex-direction: column;
 }
 
+.note-detail-panel {
+  padding: 10px;
+}
+
 .note-finger-options {
-  margin: 10px;
 }
 
 .note-finger-explanation {
