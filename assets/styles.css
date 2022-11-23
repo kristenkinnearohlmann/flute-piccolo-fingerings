@@ -65,11 +65,11 @@ button {
   margin: 10px;
 }
 
-#note-finger-explanation {
+.note-finger-explanation {
   margin: 10px;
 }
 
-#note-finger-chart {
+.note-finger-chart {
   border: 1px solid black;
   align-items: center;
   display: flex;
