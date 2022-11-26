@@ -8,7 +8,7 @@ const instrumentChoice = document.getElementById("instrument-choice");
 const selectButton = document.getElementById("select-button");
 const resetButton = document.getElementById("reset-button");
 const noteResult = document.getElementById("note-result");
-const fingerExplanation = document.getElementById("note-finger-explanation");
+const fingerExplanation = document.getElementById("finger-explanation");
 let currentInstrument;
 let currentOctave;
 let currentPitch;
