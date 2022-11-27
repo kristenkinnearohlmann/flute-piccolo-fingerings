@@ -1,4 +1,6 @@
 const explanationPane = document.getElementById("note-finger-explanation");
+const fluteKeys = {};
+const piccoloKeys = {};
 
 const renderKeys = (instrument, screenSize) => {
   switch (instrument) {
