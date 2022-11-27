@@ -1,5 +1,23 @@
 const explanationPane = document.getElementById("note-finger-explanation");
-const fluteKeys = { 3: {}, 4: {}, 5: {}, 6: {} };
+const fluteKeys = {
+  3: {},
+  4: {
+    1: [],
+    2: [],
+    3: [{ title: "Basic", description: "", keys: [] }],
+    4: [],
+    5: [],
+    6: [],
+    7: [],
+    8: [],
+    9: [],
+    10: [],
+    11: [],
+    12: [],
+  },
+  5: {},
+  6: {},
+};
 const piccoloKeys = { 3: {}, 4: {}, 5: {}, 6: {} };
 
 const renderKeys = (instrument, screenSize) => {
