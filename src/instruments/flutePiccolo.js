@@ -227,14 +227,16 @@ const updateRollersContent = (instrument) => {
   `;
 };
 
-const renderKeysFlutePiccoloRollers = (keyId, keyName, keyItem, instrument) => {
+const renderKeysFlutePiccoloRollers = (keyObj, keyItem, instrument) => {
   keyItem.classList.add("key-item-roller");
   // both rollers are added to the same div
-  keyId.forEach((keyId) => {
+  keyObj.forEach((key) => {
     keyItem.innerHTML += `
-    <svg class="key-target" id="${keyId}" data-key-name="${keyName}" height="${
-      keySizeValues.roller.mainHeight * screenSizeFactor
-    }" width="${keySizeValues.roller.mainWidth * screenSizeFactor}">
+    <svg class="key-target" id="${key.keyId}" data-key-name="${
+      key.keyName
+    }" height="${keySizeValues.roller.mainHeight * screenSizeFactor}" width="${
+      keySizeValues.roller.mainWidth * screenSizeFactor
+    }">
     ${updateRollersContent(instrument)}
     </svg>
     `;
@@ -312,7 +314,10 @@ const renderCommonKeys = (instrument) => {
   // rollers
   rollerDiv.appendChild(
     renderKeysFlutePiccoloRollers(
-      ["key-rh-broll", "key-rh-croll"],
+      [
+        { keyId: "r1", keyName: "key-rh-broll" },
+        { keyId: "r2", keyName: "key-rh-croll" },
+      ],
       createKeyItem(),
       instrument
     )
