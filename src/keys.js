@@ -15,6 +15,10 @@ const explanationPane = document.getElementById("note-finger-explanation");
 // r1: key-rh-broll
 // r2: key-rh-croll
 // pr2: key-rh-csharp
+// const setKeys = (keyArr) => {
+//   return
+// }
+
 const fluteKeys = {
   3: {},
   4: {
