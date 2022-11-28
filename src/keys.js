@@ -19,6 +19,7 @@ const explanationPane = document.getElementById("note-finger-explanation");
 //   return
 // }
 
+// TODO: Implement setting keys based on revised ids
 const fluteKeys = {
   3: {},
   4: {
