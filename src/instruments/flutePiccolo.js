@@ -91,10 +91,10 @@ const createKeyItem = () => {
 };
 
 // thumb1
-const renderKeysFlutePiccoloThumb1 = (keyId, keyItem) => {
+const renderKeysFlutePiccoloThumb1 = (keyId, keyName, keyItem) => {
   keyItem.classList.add("key-lower");
   keyItem.innerHTML = `
-  <svg class="key-target" id="${keyId}" height="${
+  <svg class="key-target" id="${keyId}" data-key-name="${keyName}" height="${
     keySizeValues.thumb1.mainHeight * screenSizeFactor
   }" width="${keySizeValues.thumb1.mainWidth * screenSizeFactor}">
       <rect x="${keySizeValues.thumb1.x * screenSizeFactor}" y="${
@@ -111,10 +111,10 @@ const renderKeysFlutePiccoloThumb1 = (keyId, keyItem) => {
 };
 
 // thumb2
-const renderKeysFlutePiccoloThumb2 = (keyId, keyItem) => {
+const renderKeysFlutePiccoloThumb2 = (keyId, keyName, keyItem) => {
   keyItem.classList.add("key-lower");
   keyItem.innerHTML = `
-  <svg class="key-target" id="${keyId}" height="${
+  <svg class="key-target" id="${keyId}" data-key-name="${keyName}" height="${
     keySizeValues.thumb2.mainHeight * screenSizeFactor
   }" width="${keySizeValues.thumb2.mainWidth * screenSizeFactor}">
       <rect x="${keySizeValues.thumb2.x * screenSizeFactor}" y="${
@@ -131,9 +131,9 @@ const renderKeysFlutePiccoloThumb2 = (keyId, keyItem) => {
 };
 
 // main
-const renderKeysFlutePiccoloMain = (keyId, keyItem) => {
+const renderKeysFlutePiccoloMain = (keyId, keyName, keyItem) => {
   keyItem.innerHTML = `
-  <svg class="key-target" id="${keyId}" height="${
+  <svg class="key-target" id="${keyId}" data-key-name="${keyName}" height="${
     keySizeValues.mainRound.mainHeight * screenSizeFactor
   }" width="${keySizeValues.mainRound.mainWidth * screenSizeFactor}">
       <circle cx="${keySizeValues.mainRound.cx * screenSizeFactor}" cy="${
@@ -150,7 +150,7 @@ const renderKeysFlutePiccoloMain = (keyId, keyItem) => {
 };
 
 // leftPinky
-const renderKeysFlutePiccoloLeftPinky = (keyId, keyItem) => {
+const renderKeysFlutePiccoloLeftPinky = (keyId, keyName, keyItem) => {
   const keyShape = keySizeValues.leftPinky.d
     .split(" ")
     .map((item) => {
@@ -159,7 +159,7 @@ const renderKeysFlutePiccoloLeftPinky = (keyId, keyItem) => {
     .join(" ");
 
   keyItem.innerHTML = `
-    <svg class="key-target" id="${keyId}" height="${
+    <svg class="key-target" id="${keyId}" data-key-name="${keyName}" height="${
     keySizeValues.leftPinky.mainHeight * screenSizeFactor
   }" width="${keySizeValues.leftPinky.mainWidth * screenSizeFactor}">
     <path d="${keyShape}" stroke="${keyStrokeColor}" stroke-width="${
@@ -173,10 +173,10 @@ const renderKeysFlutePiccoloLeftPinky = (keyId, keyItem) => {
 };
 
 // trill
-const renderKeysFlutePiccoloTrill = (keyId, keyItem) => {
+const renderKeysFlutePiccoloTrill = (keyId, keyName, keyItem) => {
   keyItem.classList.add("key-lower");
   keyItem.innerHTML = `
-    <svg class="key-target" id="${keyId}" height="${
+    <svg class="key-target" id="${keyId}" data-key-name="${keyName}" height="${
     keySizeValues.trill.mainHeight * screenSizeFactor
   }" width="${keySizeValues.trill.mainWidth * screenSizeFactor}">
         <ellipse cx="${keySizeValues.trill.cx * screenSizeFactor}" cy="${
@@ -193,9 +193,9 @@ const renderKeysFlutePiccoloTrill = (keyId, keyItem) => {
 };
 
 // rightPinky
-const renderKeysFlutePiccoloRightPinky = (keyId, keyItem) => {
+const renderKeysFlutePiccoloRightPinky = (keyId, keyName, keyItem) => {
   keyItem.innerHTML = `
-  <svg class="key-target" id="${keyId}" height="${
+  <svg class="key-target" id="${keyId}" data-key-name="${keyName}" height="${
     keySizeValues.rightPinky.mainHeight * screenSizeFactor
   }" width="${keySizeValues.rightPinky.mainWidth * screenSizeFactor}">
   <ellipse cx="${keySizeValues.rightPinky.cx * screenSizeFactor}" cy="${
@@ -227,12 +227,12 @@ const updateRollersContent = (instrument) => {
   `;
 };
 
-const renderKeysFlutePiccoloRollers = (keyId, keyItem, instrument) => {
+const renderKeysFlutePiccoloRollers = (keyId, keyName, keyItem, instrument) => {
   keyItem.classList.add("key-item-roller");
   // both rollers are added to the same div
   keyId.forEach((keyId) => {
     keyItem.innerHTML += `
-    <svg class="key-target" id="${keyId}" height="${
+    <svg class="key-target" id="${keyId}" data-key-name="${keyName}" height="${
       keySizeValues.roller.mainHeight * screenSizeFactor
     }" width="${keySizeValues.roller.mainWidth * screenSizeFactor}">
     ${updateRollersContent(instrument)}
@@ -243,9 +243,9 @@ const renderKeysFlutePiccoloRollers = (keyId, keyItem, instrument) => {
 };
 
 // foot key
-const renderKeysFlutePiccoloFootKey = (keyId, keyItem) => {
+const renderKeysFlutePiccoloFootKey = (keyId, keyName, keyItem) => {
   keyItem.innerHTML = `
-  <svg class="key-target" id="${keyId}" height="${
+  <svg class="key-target" id="${keyId}" data-key-name="${keyName}" height="${
     keySizeValues.footKey.mainHeight * screenSizeFactor
   }" width="${keySizeValues.footKey.mainWidth * screenSizeFactor}">
   <rect x="${keySizeValues.footKey.x * screenSizeFactor}" y="${
@@ -264,48 +264,48 @@ const renderKeysFlutePiccoloFootKey = (keyId, keyItem) => {
 const renderCommonKeys = (instrument) => {
   // left thumb keys
   finalChart.appendChild(
-    renderKeysFlutePiccoloThumb1("key-th-bflat", createKeyItem())
+    renderKeysFlutePiccoloThumb1("th1", "key-th-bflat", createKeyItem())
   );
   finalChart.appendChild(
-    renderKeysFlutePiccoloThumb2("key-th", createKeyItem())
+    renderKeysFlutePiccoloThumb2("th2", "key-th", createKeyItem())
   );
   // left main keys
   finalChart.appendChild(
-    renderKeysFlutePiccoloMain("key-lh-1", createKeyItem())
+    renderKeysFlutePiccoloMain("l1", "key-lh-1", createKeyItem())
   );
   finalChart.appendChild(
-    renderKeysFlutePiccoloMain("key-lh-2", createKeyItem())
+    renderKeysFlutePiccoloMain("l2", "key-lh-2", createKeyItem())
   );
   finalChart.appendChild(
-    renderKeysFlutePiccoloMain("key-lh-3", createKeyItem())
+    renderKeysFlutePiccoloMain("l3", "key-lh-3", createKeyItem())
   );
   // left pinky
   finalChart.appendChild(
-    renderKeysFlutePiccoloLeftPinky("key-lh-4", createKeyItem())
+    renderKeysFlutePiccoloLeftPinky("pl1", "key-lh-4", createKeyItem())
   );
   // right main 1
   finalChart.appendChild(
-    renderKeysFlutePiccoloMain("key-rh-1", createKeyItem())
+    renderKeysFlutePiccoloMain("r1", "key-rh-1", createKeyItem())
   );
   // trill 1
   finalChart.appendChild(
-    renderKeysFlutePiccoloTrill("key-rh-tr1", createKeyItem())
+    renderKeysFlutePiccoloTrill("tr1", "key-rh-tr1", createKeyItem())
   );
   // right main 2
   finalChart.appendChild(
-    renderKeysFlutePiccoloMain("key-rh-2", createKeyItem())
+    renderKeysFlutePiccoloMain("r2", "key-rh-2", createKeyItem())
   );
   // trill 2
   finalChart.appendChild(
-    renderKeysFlutePiccoloTrill("key-rh-tr2", createKeyItem())
+    renderKeysFlutePiccoloTrill("tr2", "key-rh-tr2", createKeyItem())
   );
   // right main 3
   finalChart.appendChild(
-    renderKeysFlutePiccoloMain("key-rh-3", createKeyItem())
+    renderKeysFlutePiccoloMain("r3", "key-rh-3", createKeyItem())
   );
   // right pinky
   finalChart.appendChild(
-    renderKeysFlutePiccoloRightPinky("key-rh-pinky", createKeyItem())
+    renderKeysFlutePiccoloRightPinky("pr1", "key-rh-pinky", createKeyItem())
   );
   // right rollers and foot key
   let rollerDiv = document.createElement("div");
@@ -319,7 +319,7 @@ const renderCommonKeys = (instrument) => {
   );
   // foot key
   rollerDiv.appendChild(
-    renderKeysFlutePiccoloFootKey("key-rh-csharp", createKeyItem())
+    renderKeysFlutePiccoloFootKey("pr2", "key-rh-csharp", createKeyItem())
   );
   // add right rollers and foot key
   finalChart.appendChild(rollerDiv);
