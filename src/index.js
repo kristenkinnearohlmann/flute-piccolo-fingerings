@@ -19,9 +19,9 @@ const getChartList = (instrument, octave, pitch) => {
   console.log("Get chart list for", instrument, octave, pitch);
 };
 
-// const getScreenSize = () => {
-//   return screen.width >= 768 ? "large" : "small";
-// };
+const getScreenSize = () => {
+  return screen.width >= 768 ? "large" : "small";
+};
 
 // const setInstrumentKeys = (instrument) => {
 //   renderKeys(instrument, getScreenSize());
