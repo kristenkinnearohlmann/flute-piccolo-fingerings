@@ -102,9 +102,7 @@ const generateOctaveOptions = (instrument = "") => {
   let octaveMax = 8;
 
   if (instrument) {
-    let selectedOctaves = Object.keys(
-      instrumentOctaves[instrument.toLowerCase()]
-    );
+    let selectedOctaves = Object.keys(instrumentOctaves[instrument]);
 
     octaveMin = parseInt(selectedOctaves.shift());
     octaveMax = parseInt(selectedOctaves.pop());
@@ -122,7 +120,7 @@ const generatePitchOptions = (instrument = "", octave = "") => {
   let pitchItems = [];
 
   if (instrument) {
-    let pitchSet = instrumentOctaves[instrument.toLowerCase()][octave];
+    let pitchSet = instrumentOctaves[instrument][octave];
 
     for (let pitch in pitchSet) {
       pitchItems.push(pitchSet[pitch].join("/"));

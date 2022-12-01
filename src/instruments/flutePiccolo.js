@@ -68,23 +68,18 @@ const keySizeValues = {
 };
 
 const renderFlutePiccoloKeys = (instrument, screenSize, chart) => {
-  console.log("Start render of keys");
-  console.log(chart);
-  console.log(chart.innerHTML);
   screenSizeFactor = screenSize === "large" ? 1 : 0.85;
   finalChart = document.createElement("div");
 
   if (instrument === "flute") {
     keyStrokeColor = "silver";
     renderCommonKeys(instrument);
-    console.log(finalChart.innerHTML);
     chart.innerHTML = finalChart.innerHTML;
   }
 
   if (instrument === "piccolo") {
     keyStrokeColor = "black";
     renderCommonKeys(instrument);
-    console.log(finalChart.innerHTML);
     chart.innerHTML = finalChart.innerHTML;
   }
 };

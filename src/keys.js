@@ -48,8 +48,7 @@ const fluteKeys = {
 const piccoloKeys = { 3: {}, 4: {}, 5: {}, 6: {} };
 
 const renderKeys = (instrument, screenSize, chart) => {
-  console.log(instrument);
-  switch (instrument.toLowerCase()) {
+  switch (instrument) {
     case "flute":
       explanationPane.innerText = "Pane 2: Explanation";
       renderFlutePiccoloKeys(instrument, screenSize, chart);

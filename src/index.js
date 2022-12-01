@@ -37,13 +37,13 @@ const setKeyPress = () => {
   });
 };
 
-// const keyPress = (key) => {
-//   return function curried_func(e) {
-//     console.log("keyPress Function");
-//     console.log(key);
-//     console.log(key.id);
-//   };
-// };
+const keyPress = (key) => {
+  return function curried_func(e) {
+    console.log("keyPress Function");
+    console.log(key);
+    console.log(key.id);
+  };
+};
 
 // const debounce = (func, delay) => {
 //   let timeout;
@@ -75,8 +75,8 @@ instrumentChoice.addEventListener("change", (event) => {
   currentInstrument = instrumentChoice.value;
   currentOctave = octaveChoice.value;
   currentPitch = pitchChoice.value;
-  generateOctaveOptions(instrumentChoice.value);
-  generatePitchOptions(instrumentChoice.value);
+  generateOctaveOptions(currentInstrument);
+  generatePitchOptions(currentInstrument);
 });
 
 octaveChoice.addEventListener("change", (event) => {
