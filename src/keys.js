@@ -47,14 +47,15 @@ const fluteKeys = {
 };
 const piccoloKeys = { 3: {}, 4: {}, 5: {}, 6: {} };
 
-const renderKeys = (instrument, screenSize) => {
+const renderKeys = (instrument, screenSize, chart) => {
   console.log(instrument);
   switch (instrument.toLowerCase()) {
     case "flute":
       explanationPane.innerText = "Pane 2: Explanation";
+      renderFlutePiccoloKeys(instrument, screenSize, chart);
     case "piccolo":
       explanationPane.innerText = "Sounds 1 octave higher than written";
-      renderFlutePiccoloKeys(instrument, screenSize);
+      renderFlutePiccoloKeys(instrument, screenSize, chart);
       break;
     default:
       console.warn("This instrument is not defined.");

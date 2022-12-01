@@ -1,5 +1,5 @@
 const keyTargets = document.getElementsByClassName("key-target");
-const chart = document.getElementById("note-finger-chart");
+const chart = document.getElementById("finger-chart");
 const instrumentChoice = document.getElementById("instrument-choice");
 const selectButton = document.getElementById("select-button");
 const resetButton = document.getElementById("reset-button");
@@ -24,7 +24,7 @@ const getScreenSize = () => {
 };
 
 const setInstrumentKeys = (instrument) => {
-  renderKeys(instrument, getScreenSize());
+  renderKeys(instrument, getScreenSize(), chart);
   // getOctavesAndPitches(instrument, octaveChoice);
   setKeyPress();
 };
