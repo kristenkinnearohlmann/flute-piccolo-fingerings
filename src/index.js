@@ -23,11 +23,11 @@ const getScreenSize = () => {
   return screen.width >= 768 ? "large" : "small";
 };
 
-// const setInstrumentKeys = (instrument) => {
-//   renderKeys(instrument, getScreenSize());
-//   getOctavesAndPitches(instrument, octaveChoice);
-//   setKeyPress();
-// };
+const setInstrumentKeys = (instrument) => {
+  renderKeys(instrument, getScreenSize());
+  getOctavesAndPitches(instrument, octaveChoice);
+  setKeyPress();
+};
 
 // const setKeyPress = () => {
 //   console.log("setKeyPress Function");
