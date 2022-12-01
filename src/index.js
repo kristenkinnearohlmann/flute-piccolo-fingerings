@@ -25,17 +25,17 @@ const getScreenSize = () => {
 
 const setInstrumentKeys = (instrument) => {
   renderKeys(instrument, getScreenSize());
-  getOctavesAndPitches(instrument, octaveChoice);
+  // getOctavesAndPitches(instrument, octaveChoice);
   setKeyPress();
 };
 
-// const setKeyPress = () => {
-//   console.log("setKeyPress Function");
-//   Array.from(keyTargets).forEach((element) => {
-//     let key = element;
-//     element.addEventListener("click", keyPress(key));
-//   });
-// };
+const setKeyPress = () => {
+  console.log("setKeyPress Function");
+  Array.from(keyTargets).forEach((element) => {
+    let key = element;
+    element.addEventListener("click", keyPress(key));
+  });
+};
 
 // const keyPress = (key) => {
 //   return function curried_func(e) {
@@ -93,6 +93,7 @@ selectButton.addEventListener("click", () => {
     noteResult.style.display = "block";
     fingerExplanation.innerText = `${instrumentChoice.value} ${octaveChoice.value} ${pitchChoice.value}`;
     getChartList(instrumentChoice.value, octaveChoice.value, pitchChoice.value);
+    setInstrumentKeys(instrumentChoice.value);
     // TODO: Implement creation of fingering options
   }
 });

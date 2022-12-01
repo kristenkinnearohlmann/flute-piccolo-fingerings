@@ -1,4 +1,4 @@
-const explanationPane = document.getElementById("note-finger-explanation");
+const explanationPane = document.getElementById("finger-explanation");
 // options
 // th1: key-th-bflat
 // th2: key-th
@@ -29,7 +29,7 @@ const fluteKeys = {
       {
         title: "Basic",
         description: "",
-        keys: setKeys(["th2", "l2", "l3", "r1", "r2", "r3"]),
+        // keys: setKeys(["th2", "l2", "l3", "r1", "r2", "r3"]),
       },
     ],
     4: [],
@@ -48,7 +48,8 @@ const fluteKeys = {
 const piccoloKeys = { 3: {}, 4: {}, 5: {}, 6: {} };
 
 const renderKeys = (instrument, screenSize) => {
-  switch (instrument) {
+  console.log(instrument);
+  switch (instrument.toLowerCase()) {
     case "flute":
       explanationPane.innerText = "Pane 2: Explanation";
     case "piccolo":
