@@ -72,7 +72,6 @@ button {
 }
 
 .note-finger-chart {
-  border: 1px solid black;
   align-items: center;
   display: flex;
   flex-flow: row nowrap;
