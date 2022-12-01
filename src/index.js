@@ -45,30 +45,30 @@ const keyPress = (key) => {
   };
 };
 
-// const debounce = (func, delay) => {
-//   let timeout;
+const debounce = (func, delay) => {
+  let timeout;
 
-//   return function executedFunction(...args) {
-//     const later = () => {
-//       clearTimeout(timeout);
-//       func(...args);
-//     };
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
 
-//     clearTimeout(timeout);
-//     timeout = setTimeout(later, delay);
-//   };
-// };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, delay);
+  };
+};
 
 // instrumentChoice.addEventListener("change", (event) => {
 //   setInstrumentKeys(instrumentChoice.value);
 // });
 
-// window.addEventListener(
-//   "resize",
-//   debounce(() => {
-//     setInstrumentKeys(instrumentChoice.value);
-//   }, 250)
-// );
+window.addEventListener(
+  "resize",
+  debounce(() => {
+    setInstrumentKeys(instrumentChoice.value);
+  }, 250)
+);
 
 instrumentChoice.addEventListener("change", (event) => {
   // TODO: Implement check on currentInstrument, currentOctave, currentPitch
