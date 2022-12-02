@@ -5,9 +5,6 @@ const selectButton = document.getElementById("select-button");
 const resetButton = document.getElementById("reset-button");
 const noteResult = document.getElementById("note-result");
 const fingerExplanation = document.getElementById("finger-explanation");
-let currentInstrument;
-let currentOctave;
-let currentPitch;
 
 // Set up functions
 const init = () => {
@@ -72,11 +69,8 @@ window.addEventListener(
 
 instrumentChoice.addEventListener("change", (event) => {
   // TODO: Implement check on currentInstrument, currentOctave, currentPitch
-  currentInstrument = instrumentChoice.value;
-  currentOctave = octaveChoice.value;
-  currentPitch = pitchChoice.value;
-  generateOctaveOptions(currentInstrument);
-  generatePitchOptions(currentInstrument);
+  generateOctaveOptions(instrumentChoice.value);
+  generatePitchOptions(instrumentChoice.value);
 });
 
 octaveChoice.addEventListener("change", (event) => {
@@ -94,6 +88,7 @@ selectButton.addEventListener("click", () => {
     fingerExplanation.innerText = `${instrumentChoice.value} ${octaveChoice.value} ${pitchChoice.value}`;
     getChartList(instrumentChoice.value, octaveChoice.value, pitchChoice.value);
     setInstrumentKeys(instrumentChoice.value);
+    // setBasicFingering(instrumentChoice.value);
     // TODO: Implement creation of fingering options
   }
 });
