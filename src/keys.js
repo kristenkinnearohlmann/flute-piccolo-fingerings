@@ -15,9 +15,6 @@ const explanationPane = document.getElementById("finger-explanation");
 // r1: key-rh-broll
 // r2: key-rh-croll
 // pr2: key-rh-csharp
-// const setKeys = (keyArr) => {
-//   return
-// }
 
 // TODO: Implement setting keys based on revised ids
 const fluteKeys = {
@@ -29,7 +26,7 @@ const fluteKeys = {
       {
         title: "Basic",
         description: "",
-        // keys: setKeys(["th2", "l2", "l3", "r1", "r2", "r3"]),
+        keys: ["th2", "l2", "l3", "r1", "r2", "r3"],
       },
     ],
     4: [],
