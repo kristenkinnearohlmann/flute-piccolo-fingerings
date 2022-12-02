@@ -88,7 +88,13 @@ selectButton.addEventListener("click", () => {
     fingerExplanation.innerText = `${instrumentChoice.value} ${octaveChoice.value} ${pitchChoice.value}`;
     getChartList(instrumentChoice.value, octaveChoice.value, pitchChoice.value);
     setInstrumentKeys(instrumentChoice.value);
-    // setBasicFingering(instrumentChoice.value);
+    setKeys(
+      instrumentChoice.value,
+      octaveChoice.value,
+      pitchChoice.value,
+      "basic",
+      chart
+    );
     // TODO: Implement creation of fingering options
   }
 });

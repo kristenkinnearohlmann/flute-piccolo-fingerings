@@ -57,3 +57,7 @@ const renderKeys = (instrument, screenSize, chart) => {
       console.warn("This instrument is not defined.");
   }
 };
+
+const setKeys = (instrument, octave, pitch, type, chart) => {
+  console.log(instrument, octave, pitch, type, chart);
+};
