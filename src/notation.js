@@ -108,6 +108,12 @@ const generateOctaveOptions = (instrument = "") => {
     octaveMax = parseInt(selectedOctaves.pop());
   }
 
+  const octaveRange = instrument
+    ? generateNumberRange(octaveMin, octaveMax)
+    : [];
+
+  console.log(octaveRange);
+
   instrument
     ? populateDropdownList(
         generateNumberRange(octaveMin, octaveMax),
