@@ -22,14 +22,15 @@ const fluteKeys = {
   4: {
     1: [],
     2: [],
-    3: [
+    3: [],
+    4: [
       {
-        title: "Basic",
-        description: "",
+        title: "basic",
+        description:
+          "The standard fingering for the selected pitch in the selected octave.",
         keys: ["th2", "l2", "l3", "r1", "r2", "r3"],
       },
     ],
-    4: [],
     5: [],
     6: [],
     7: [],
@@ -61,6 +62,6 @@ const renderKeys = (instrument, screenSize, chart) => {
 const setKeys = (instrument, octave, pitch, type, chart) => {
   console.log(instrument, octave, pitch, type, chart);
   if (instrument === "flute") {
-    console.log(fluteKeys[octave]);
+    console.log(fluteKeys[octave][pitch]);
   }
 };
