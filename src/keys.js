@@ -60,4 +60,7 @@ const renderKeys = (instrument, screenSize, chart) => {
 
 const setKeys = (instrument, octave, pitch, type, chart) => {
   console.log(instrument, octave, pitch, type, chart);
+  if (instrument === "flute") {
+    console.log(fluteKeys[octave]);
+  }
 };
