@@ -22,8 +22,7 @@ const fluteKeys = {
   4: {
     1: [],
     2: [],
-    3: [],
-    4: [
+    3: [
       {
         title: "basic",
         description:
@@ -31,6 +30,7 @@ const fluteKeys = {
         keys: ["th2", "l2", "l3", "r1", "r2", "r3"],
       },
     ],
+    4: [],
     5: [],
     6: [],
     7: [],
