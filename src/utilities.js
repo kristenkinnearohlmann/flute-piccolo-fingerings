@@ -18,7 +18,7 @@ const populateDropdownList = (listData, listElement) => {
 
   listData.forEach((listItem) => {
     let opt = document.createElement("option");
-    opt.value = listItem.toString().toLowerCase();
+    opt.value = listItem;
     opt.textContent = listItem;
     listElement.appendChild(opt);
   });
