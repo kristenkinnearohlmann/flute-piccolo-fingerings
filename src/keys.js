@@ -24,7 +24,7 @@ const fluteKeys = {
     2: [],
     3: [
       {
-        title: "basic",
+        title: "Basic",
         description:
           "The standard fingering for the selected pitch in the selected octave.",
         keys: ["th2", "l2", "l3", "r1", "r2", "r3"],
@@ -68,7 +68,9 @@ const setKeys = (instrument, octave, pitch, type, chart) => {
   console.log(instrument, octave, pitch, type, chart);
   if (instrument === "flute") {
     console.log(
-      fluteKeys[octave][pitch].filter((item) => item.title === "basic")
+      fluteKeys[octave][pitch].filter(
+        (item) => item.title.toLowerCase() === "basic"
+      )
     );
   }
 };
