@@ -24,12 +24,14 @@ const fluteKeys = {
     2: [],
     3: [
       {
+        _id: "b6e0cf63-224c-4849-8966-f8af2bfe35b0",
         title: "Basic",
         description:
           "The standard fingering for the selected pitch in the selected octave.",
         keys: ["th2", "l2", "l3", "r1", "r2", "r3"],
       },
       {
+        _id: "33e12a60-1ecb-4795-a120-7db0ac6330b4",
         title: "another fingering",
         description: "Test description",
         keys: [""],
@@ -64,8 +66,9 @@ const renderKeys = (instrument, screenSize, chart) => {
   }
 };
 
-const setKeys = (instrument, octave, pitch, type, chart) => {
-  console.log(instrument, octave, pitch, type, chart);
+const setKeys = (instrument, octave, pitch, chart, id = "") => {
+  console.log(instrument, octave, pitch, chart, id);
+  if (!!id) console.log("No id");
   if (instrument === "flute") {
     console.log(
       fluteKeys[octave][pitch].filter(
