@@ -130,8 +130,6 @@ const generateOctaveOptions = (instrument = "") => {
 };
 
 const generatePitchOptions = (instrument = "", octave = "") => {
-  let pitchItems = [];
-
   const pitchOptionData = [];
 
   if (instrument) {
