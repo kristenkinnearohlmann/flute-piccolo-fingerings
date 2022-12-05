@@ -16,10 +16,12 @@ const populateDropdownList = (listData, listElement) => {
   optDefault.text = "";
   listElement.appendChild(optDefault);
 
-  listData.forEach((listItem) => {
-    let opt = document.createElement("option");
-    opt.value = listItem.value;
-    opt.textContent = listItem.option;
-    listElement.appendChild(opt);
-  });
+  if (listData) {
+    listData.forEach((listItem) => {
+      let opt = document.createElement("option");
+      opt.value = listItem.value;
+      opt.textContent = listItem.option;
+      listElement.appendChild(opt);
+    });
+  }
 };
