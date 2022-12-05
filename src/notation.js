@@ -132,14 +132,22 @@ const generateOctaveOptions = (instrument = "") => {
 const generatePitchOptions = (instrument = "", octave = "") => {
   let pitchItems = [];
 
+  const pitchOptionData = [];
+
   if (instrument) {
     let pitchSet = instrumentOctaves[instrument][octave];
 
     console.log(pitchSet);
     for (let pitch in pitchSet) {
-      pitchItems.push(pitchSet[pitch].join("/"));
+      // pitchItems.push(pitchSet[pitch].join("/"));
+      console.log(pitchSet[pitch].join("/"));
+      console.log(pitch);
+      pitchOptionData.push({ option: pitchSet[pitch].join("/"), value: pitch });
     }
   }
 
-  populateDropdownList(pitchItems, pitchChoice);
+  console.log(pitchOptionData);
+
+  // populateDropdownList(pitchItems, pitchChoice);
+  populateDropdownList(pitchOptionData, pitchChoice);
 };
