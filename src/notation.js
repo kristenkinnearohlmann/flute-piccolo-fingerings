@@ -98,7 +98,7 @@ const generateInstrumentOptions = () => {
     { option: "Flute", value: "flute" },
     { option: "Piccolo", value: "piccolo" },
   ];
-  // populateDropdownList(["Flute", "Piccolo"], instrumentChoice);
+
   populateDropdownList(instrumentOptionData, instrumentChoice);
 };
 
@@ -137,17 +137,10 @@ const generatePitchOptions = (instrument = "", octave = "") => {
   if (instrument) {
     let pitchSet = instrumentOctaves[instrument][octave];
 
-    console.log(pitchSet);
     for (let pitch in pitchSet) {
-      // pitchItems.push(pitchSet[pitch].join("/"));
-      console.log(pitchSet[pitch].join("/"));
-      console.log(pitch);
       pitchOptionData.push({ option: pitchSet[pitch].join("/"), value: pitch });
     }
   }
 
-  console.log(pitchOptionData);
-
-  // populateDropdownList(pitchItems, pitchChoice);
   populateDropdownList(pitchOptionData, pitchChoice);
 };
