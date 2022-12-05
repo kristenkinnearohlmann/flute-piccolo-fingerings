@@ -68,12 +68,17 @@ const renderKeys = (instrument, screenSize, chart) => {
 
 const setKeys = (instrument, octave, pitch, chart, id = "") => {
   console.log(instrument, octave, pitch, chart, id);
-  if (!!id) console.log("No id");
   if (instrument === "flute") {
-    console.log(
-      fluteKeys[octave][pitch].filter(
-        (item) => item.title.toLowerCase() === "basic"
-      )
-    );
+    !!id
+      ? console.log(
+          fluteKeys[octave][pitch].filter(
+            (item) => item.title.toLowerCase() === "basic"
+          )
+        )
+      : console.log(
+          fluteKeys[octave][pitch].filter(
+            (item) => (item._id = "33e12a60-1ecb-4795-a120-7db0ac6330b4")
+          )
+        );
   }
 };
