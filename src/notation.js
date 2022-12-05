@@ -94,7 +94,12 @@ let instrumentOctaves = {
   },
 };
 const generateInstrumentOptions = () => {
-  populateDropdownList(["Flute", "Piccolo"], instrumentChoice);
+  const instrumentOptionData = [
+    { option: "Flute", value: "flute" },
+    { option: "Piccolo", value: "piccolo" },
+  ];
+  // populateDropdownList(["Flute", "Piccolo"], instrumentChoice);
+  populateDropdownList(instrumentOptionData, instrumentChoice);
 };
 
 const generateOctaveOptions = (instrument = "") => {
