@@ -87,6 +87,7 @@ selectButton.addEventListener("click", () => {
     fingerExplanation.innerText = `${instrumentChoice.value} ${octaveChoice.value} ${pitchChoice.value}`;
     getChartList(instrumentChoice.value, octaveChoice.value, pitchChoice.value);
     setInstrumentKeys(instrumentChoice.value);
+    console.log("Chart to be passed", chart);
     setKeys(
       instrumentChoice.value,
       octaveChoice.value,
