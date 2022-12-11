@@ -79,5 +79,9 @@ const setKeys = (instrument, octave, pitch, chart, id = "") => {
   }
 
   console.log(keysToSet);
-  console.log("Chart a second time", chart);
+  console.log(chart.id);
+  console.log(chart.children);
+  // for (let item in chart) {
+  //   console.log(item);
+  // }
 };
