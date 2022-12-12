@@ -81,6 +81,7 @@ const setKeys = (instrument, octave, pitch, chart, id = "") => {
   console.log(keysToSet);
   console.log(chart.id);
   console.log(chart.children);
+  console.log(Array.from(chart.children));
   // for (let item in chart) {
   //   console.log(item);
   // }
