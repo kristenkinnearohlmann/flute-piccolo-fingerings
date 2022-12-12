@@ -69,17 +69,19 @@ const renderKeys = (instrument, screenSize, chart) => {
 const setKeys = (instrument, octave, pitch, chart, id = "") => {
   console.log(instrument, octave, pitch, chart, id);
   // TODO: Refactor for better flow
+  console.log("What is id", !!id);
   let keysToSet = [];
   console.log(
+    "What is here",
     fluteKeys[octave][pitch].filter(
       (item) => item.title.toLowerCase() === "basic"
-    )
+    )[0].keys
   );
   if (instrument === "flute") {
-    keysToSet = !!id
+    keysToSet = !id
       ? fluteKeys[octave][pitch].filter(
           (item) => item.title.toLowerCase() === "basic"
-        ).keys
+        )[0].keys
       : fluteKeys[octave][pitch].filter((item) => (item._id = id));
   }
 
