@@ -70,17 +70,21 @@ const setKeys = (instrument, octave, pitch, chart, id = "") => {
   console.log(instrument, octave, pitch, chart, id);
   // TODO: Refactor for better flow
   let keysToSet = [];
+  console.log(
+    fluteKeys[octave][pitch].filter(
+      (item) => item.title.toLowerCase() === "basic"
+    )
+  );
   if (instrument === "flute") {
     keysToSet = !!id
       ? fluteKeys[octave][pitch].filter(
           (item) => item.title.toLowerCase() === "basic"
-        )[0].keys
+        ).keys
       : fluteKeys[octave][pitch].filter((item) => (item._id = id));
   }
 
   console.log(keysToSet);
   console.log(chart.id);
-  console.log(chart.children);
   console.log(Array.from(chart.children));
   // for (let item in chart) {
   //   console.log(item);
