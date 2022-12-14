@@ -83,6 +83,8 @@ const setKeys = (instrument, octave, pitch, chart, id = "") => {
   console.log("Below are display keys");
   displayKeysToSet.forEach((item) => {
     console.log(item.children);
+    const itemArray = Array.from(item.children);
+    console.log(itemArray.children);
   });
   keysToSet.forEach((key) => {
     console.log(key);
