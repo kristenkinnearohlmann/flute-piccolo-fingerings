@@ -56,10 +56,10 @@ const renderKeys = (instrument, screenSize, chart) => {
   switch (instrument) {
     case "flute":
       explanationPane.innerText = "Pane 2: Explanation";
-      renderFlutePiccoloKeys(instrument, screenSize, chart);
+      renderFlutePiccoloKeys(instrument, screenSize, chart, []);
     case "piccolo":
       explanationPane.innerText = "Sounds 1 octave higher than written";
-      renderFlutePiccoloKeys(instrument, screenSize, chart);
+      renderFlutePiccoloKeys(instrument, screenSize, chart, []);
       break;
     default:
       console.warn("This instrument is not defined.");
@@ -79,19 +79,19 @@ const setKeys = (instrument, screenSize, octave, pitch, chart, id = "") => {
       : fluteKeys[octave][pitch].filter((item) => (item._id = id));
   }
 
-  const displayKeysToSet = Array.from(chart.children);
-  console.log("Below are display keys");
+  // const displayKeysToSet = Array.from(chart.children);
+  // console.log("Below are display keys");
 
-  displayKeysToSet.forEach((key) => {
-    console.log(key);
-    console.log(key.children["0"].id);
-    console.log(keysToSet.includes(key.children["0"].id));
-  });
+  // displayKeysToSet.forEach((key) => {
+  //   console.log(key);
+  //   console.log(key.children["0"].id);
+  //   console.log(keysToSet.includes(key.children["0"].id));
+  // });
 
-  const newMap = displayKeysToSet.filter((key) => {
-    1 === 1;
-  });
-  console.log(newMap);
+  // const newMap = displayKeysToSet.filter((key) => {
+  //   1 === 1;
+  // });
+  // console.log(newMap);
   // keysToSet.forEach((key) => {
   //   console.log(key);
   //   // console.log(displayKeysToSet.filter((item) => item.id === key));

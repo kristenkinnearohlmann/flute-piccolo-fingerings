@@ -74,13 +74,13 @@ const renderFlutePiccoloKeys = (instrument, screenSize, chart, keysToSet) => {
 
   if (instrument === "flute") {
     keyStrokeColor = "silver";
-    renderCommonKeys(instrument);
+    renderCommonKeys(instrument, keysToSet);
     chart.innerHTML = finalChart.innerHTML;
   }
 
   if (instrument === "piccolo") {
     keyStrokeColor = "black";
-    renderCommonKeys(instrument);
+    renderCommonKeys(instrument, keysToSet);
     chart.innerHTML = finalChart.innerHTML;
   }
 };
@@ -112,7 +112,8 @@ const renderKeysFlutePiccoloThumb1 = (keyId, keyName, keyItem) => {
 };
 
 // thumb2
-const renderKeysFlutePiccoloThumb2 = (keyId, keyName, keyItem) => {
+const renderKeysFlutePiccoloThumb2 = (keyId, keyName, keysToSet, keyItem) => {
+  keyFill = keysToSet.includes(keyId) ? keyStrokeColor : "none";
   keyItem.classList.add("key-lower");
   keyItem.innerHTML = `
   <svg class="key-target" id="${keyId}" data-key-name="${keyName}" height="${
@@ -264,13 +265,13 @@ const renderKeysFlutePiccoloFootKey = (keyId, keyName, keyItem) => {
   return keyItem;
 };
 
-const renderCommonKeys = (instrument) => {
+const renderCommonKeys = (instrument, keysToSet) => {
   // left thumb keys
   finalChart.appendChild(
     renderKeysFlutePiccoloThumb1("th1", "key-th-bflat", createKeyItem())
   );
   finalChart.appendChild(
-    renderKeysFlutePiccoloThumb2("th2", "key-th", createKeyItem())
+    renderKeysFlutePiccoloThumb2("th2", "key-th", keysToSet, createKeyItem())
   );
   // left main keys
   finalChart.appendChild(
