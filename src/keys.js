@@ -81,18 +81,17 @@ const setKeys = (instrument, octave, pitch, chart, id = "") => {
 
   const displayKeysToSet = Array.from(chart.children);
   console.log("Below are display keys");
-  displayKeysToSet.forEach((item) => {
-    const itemArray = Array.from(item.children);
-    const tempMap = itemArray.map((item) => {
-      if (keysToSet.includes(item.id)) return item;
-    });
-    console.log(tempMap);
-    // itemArray.forEach((item) => {
-    //   if (keysToSet.includes(item.id)) {
-    //     return item
-    //   }
-    // });
+
+  displayKeysToSet.forEach((key) => {
+    console.log(key);
+    console.log(key.children["0"].id);
+    console.log(keysToSet.includes(key.children["0"].id));
   });
+
+  const newMap = displayKeysToSet.filter((key) => {
+    1 === 1;
+  });
+  console.log(newMap);
   // keysToSet.forEach((key) => {
   //   console.log(key);
   //   // console.log(displayKeysToSet.filter((item) => item.id === key));
