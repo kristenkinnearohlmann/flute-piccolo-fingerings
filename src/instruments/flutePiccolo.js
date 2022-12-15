@@ -67,7 +67,8 @@ const keySizeValues = {
   },
 };
 
-const renderFlutePiccoloKeys = (instrument, screenSize, chart) => {
+const renderFlutePiccoloKeys = (instrument, screenSize, chart, keysToSet) => {
+  console.log("keysToSet values", keysToSet);
   screenSizeFactor = screenSize === "large" ? 1 : 0.85;
   finalChart = document.createElement("div");
 

@@ -89,6 +89,7 @@ selectButton.addEventListener("click", () => {
     setInstrumentKeys(instrumentChoice.value);
     setKeys(
       instrumentChoice.value,
+      getScreenSize(),
       octaveChoice.value,
       pitchChoice.value,
       chart

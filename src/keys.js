@@ -66,7 +66,7 @@ const renderKeys = (instrument, screenSize, chart) => {
   }
 };
 
-const setKeys = (instrument, octave, pitch, chart, id = "") => {
+const setKeys = (instrument, screenSize, octave, pitch, chart, id = "") => {
   console.log(instrument, octave, pitch, chart, id);
   // TODO: Refactor for better flow
   let keysToSet = [];
@@ -96,4 +96,5 @@ const setKeys = (instrument, octave, pitch, chart, id = "") => {
   //   console.log(key);
   //   // console.log(displayKeysToSet.filter((item) => item.id === key));
   // });
+  renderFlutePiccoloKeys(instrument, screenSize, chart, keysToSet);
 };
