@@ -354,8 +354,8 @@ const renderCommonKeys = (instrument, keysToSet) => {
   rollerDiv.appendChild(
     renderKeysFlutePiccoloRollers(
       [
-        { keyId: "r1", keyName: "key-rh-broll" },
-        { keyId: "r2", keyName: "key-rh-croll" },
+        { keyId: "roll1", keyName: "key-rh-broll" },
+        { keyId: "roll2", keyName: "key-rh-croll" },
       ],
       createKeyItem(),
       keysToSet,

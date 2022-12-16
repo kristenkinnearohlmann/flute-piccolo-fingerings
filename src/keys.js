@@ -12,8 +12,8 @@ const explanationPane = document.getElementById("finger-explanation");
 // tr2: key-rh-tr2
 // r3: key-rh-3
 // pr1: key-rh-pinky
-// r1: key-rh-broll
-// r2: key-rh-croll
+// roll1: key-rh-broll
+// roll2: key-rh-croll
 // pr2: key-rh-csharp
 
 // TODO: Implement setting keys based on revised ids
