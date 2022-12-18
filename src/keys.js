@@ -32,7 +32,7 @@ const fluteKeys = {
       },
       {
         _id: "33e12a60-1ecb-4795-a120-7db0ac6330b4",
-        title: "another fingering",
+        title: "Another fingering",
         description: "Test description",
         keys: [""],
       },
@@ -50,7 +50,22 @@ const fluteKeys = {
   5: {},
   6: {},
 };
-const piccoloKeys = { 3: {}, 4: {}, 5: {}, 6: {} };
+const piccoloKeys = {
+  3: {},
+  4: {
+    3: [
+      {
+        _id: "5d6e11e4-52cf-4d96-9b32-76aeb6bae9fb",
+        title: "Basic",
+        description:
+          "The standard fingering for the selected pitch in the selected octave.",
+        keys: ["th2", "l2", "l3", "r1", "r2", "r3"],
+      },
+    ],
+  },
+  5: {},
+  6: {},
+};
 
 const renderKeys = (instrument, screenSize, chart) => {
   switch (instrument) {
