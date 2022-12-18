@@ -20,11 +20,6 @@ const getScreenSize = () => {
   return screen.width >= 768 ? "large" : "small";
 };
 
-const setInstrumentKeys = (instrument) => {
-  renderKeys(instrument, getScreenSize(), chart);
-  setKeyPress();
-};
-
 const setKeyPress = () => {
   console.log("setKeyPress Function");
   Array.from(keyTargets).forEach((element) => {
@@ -55,14 +50,9 @@ const debounce = (func, delay) => {
   };
 };
 
-// instrumentChoice.addEventListener("change", (event) => {
-//   setInstrumentKeys(instrumentChoice.value);
-// });
-
 window.addEventListener(
   "resize",
   debounce(() => {
-    // setInstrumentKeys(instrumentChoice.value);
     setKeys(
       instrumentChoice.value,
       getScreenSize(),
@@ -94,7 +84,6 @@ selectButton.addEventListener("click", () => {
     noteResult.style.display = "block";
     fingerExplanation.innerText = `${instrumentChoice.value} ${octaveChoice.value} ${pitchChoice.value}`;
     getChartList(instrumentChoice.value, octaveChoice.value, pitchChoice.value);
-    // setInstrumentKeys(instrumentChoice.value);
     setKeys(
       instrumentChoice.value,
       getScreenSize(),
