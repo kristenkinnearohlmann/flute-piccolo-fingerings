@@ -86,7 +86,7 @@ selectButton.addEventListener("click", () => {
     noteResult.style.display = "block";
     fingerExplanation.innerText = `${instrumentChoice.value} ${octaveChoice.value} ${pitchChoice.value}`;
     getChartList(instrumentChoice.value, octaveChoice.value, pitchChoice.value);
-    setInstrumentKeys(instrumentChoice.value);
+    // setInstrumentKeys(instrumentChoice.value);
     setKeys(
       instrumentChoice.value,
       getScreenSize(),
@@ -94,6 +94,7 @@ selectButton.addEventListener("click", () => {
       pitchChoice.value,
       chart
     );
+    setKeyPress();
     // TODO: Implement creation of fingering options
   }
 });

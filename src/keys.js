@@ -70,6 +70,7 @@ const instrumentKeySets = {
 };
 
 const renderKeys = (instrument, screenSize, chart) => {
+  console.log("Am I still called?");
   switch (instrument) {
     case "flute":
       explanationPane.innerText = "Pane 2: Explanation";
