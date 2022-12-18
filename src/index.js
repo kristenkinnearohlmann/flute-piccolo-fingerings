@@ -62,7 +62,15 @@ const debounce = (func, delay) => {
 window.addEventListener(
   "resize",
   debounce(() => {
-    setInstrumentKeys(instrumentChoice.value);
+    // setInstrumentKeys(instrumentChoice.value);
+    setKeys(
+      instrumentChoice.value,
+      getScreenSize(),
+      octaveChoice.value,
+      pitchChoice.value,
+      chart
+    );
+    setKeyPress();
   }, 250)
 );
 
