@@ -1,4 +1,5 @@
 const explanationPane = document.getElementById("finger-explanation");
+const instrumentKeySets = { flute: "fluteKeys", piccolo: "piccoloKeys" };
 // options
 // th1: key-th-bflat
 // th2: key-th
