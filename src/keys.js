@@ -1,5 +1,5 @@
 const explanationPane = document.getElementById("finger-explanation");
-const instrumentKeySets = { flute: "fluteKeys", piccolo: "piccoloKeys" };
+// const instrumentKeySets = { flute: "fluteKeys", piccolo: "piccoloKeys" };
 // options
 // th1: key-th-bflat
 // th2: key-th
@@ -18,55 +18,106 @@ const instrumentKeySets = { flute: "fluteKeys", piccolo: "piccoloKeys" };
 // pr2: key-rh-csharp
 
 // TODO: Implement setting keys based on revised ids
-const fluteKeys = {
-  3: {},
-  4: {
-    1: [],
-    2: [],
-    3: [
-      {
-        _id: "b6e0cf63-224c-4849-8966-f8af2bfe35b0",
-        title: "Basic",
-        description:
-          "The standard fingering for the selected pitch in the selected octave.",
-        keys: ["th2", "l2", "l3", "r1", "r2", "r3"],
-      },
-      {
-        _id: "33e12a60-1ecb-4795-a120-7db0ac6330b4",
-        title: "Another fingering",
-        description: "Test description",
-        keys: [""],
-      },
-    ],
-    4: [],
-    5: [],
-    6: [],
-    7: [],
-    8: [],
-    9: [],
-    10: [],
-    11: [],
-    12: [],
+const instrumentKeySets = {
+  flute: {
+    3: {},
+    4: {
+      1: [],
+      2: [],
+      3: [
+        {
+          _id: "b6e0cf63-224c-4849-8966-f8af2bfe35b0",
+          title: "Basic",
+          description:
+            "The standard fingering for the selected pitch in the selected octave.",
+          keys: ["th2", "l2", "l3", "r1", "r2", "r3"],
+        },
+        {
+          _id: "33e12a60-1ecb-4795-a120-7db0ac6330b4",
+          title: "Another fingering",
+          description: "Test description",
+          keys: [""],
+        },
+      ],
+      4: [],
+      5: [],
+      6: [],
+      7: [],
+      8: [],
+      9: [],
+      10: [],
+      11: [],
+      12: [],
+    },
+    5: {},
+    6: {},
   },
-  5: {},
-  6: {},
-};
-const piccoloKeys = {
-  3: {},
-  4: {
-    3: [
-      {
-        _id: "5d6e11e4-52cf-4d96-9b32-76aeb6bae9fb",
-        title: "Basic",
-        description:
-          "The standard fingering for the selected pitch in the selected octave.",
-        keys: ["th2", "l2", "l3", "r1", "r2", "r3"],
-      },
-    ],
+  piccolo: {
+    3: {},
+    4: {
+      3: [
+        {
+          _id: "5d6e11e4-52cf-4d96-9b32-76aeb6bae9fb",
+          title: "Basic",
+          description:
+            "The standard fingering for the selected pitch in the selected octave.",
+          keys: ["th2", "l2", "l3", "r1", "r2", "r3"],
+        },
+      ],
+    },
+    5: {},
+    6: {},
   },
-  5: {},
-  6: {},
 };
+// const fluteKeys = {
+//   3: {},
+//   4: {
+//     1: [],
+//     2: [],
+//     3: [
+//       {
+//         _id: "b6e0cf63-224c-4849-8966-f8af2bfe35b0",
+//         title: "Basic",
+//         description:
+//           "The standard fingering for the selected pitch in the selected octave.",
+//         keys: ["th2", "l2", "l3", "r1", "r2", "r3"],
+//       },
+//       {
+//         _id: "33e12a60-1ecb-4795-a120-7db0ac6330b4",
+//         title: "Another fingering",
+//         description: "Test description",
+//         keys: [""],
+//       },
+//     ],
+//     4: [],
+//     5: [],
+//     6: [],
+//     7: [],
+//     8: [],
+//     9: [],
+//     10: [],
+//     11: [],
+//     12: [],
+//   },
+//   5: {},
+//   6: {},
+// };
+// const piccoloKeys = {
+//   3: {},
+//   4: {
+//     3: [
+//       {
+//         _id: "5d6e11e4-52cf-4d96-9b32-76aeb6bae9fb",
+//         title: "Basic",
+//         description:
+//           "The standard fingering for the selected pitch in the selected octave.",
+//         keys: ["th2", "l2", "l3", "r1", "r2", "r3"],
+//       },
+//     ],
+//   },
+//   5: {},
+//   6: {},
+// };
 
 const renderKeys = (instrument, screenSize, chart) => {
   switch (instrument) {
@@ -85,18 +136,14 @@ const renderKeys = (instrument, screenSize, chart) => {
 const setKeys = (instrument, screenSize, octave, pitch, chart, id = "") => {
   console.log(instrument, octave, pitch, chart, id);
   // TODO: Refactor for better flow
-  // TODO: Allow fr multiple instruments
   const keySetToUse = instrumentKeySets[instrument];
-  console.log(keySetToUse);
   let keysToSet = [];
 
-  if (instrument === "flute") {
-    keysToSet = !id
-      ? fluteKeys[octave][pitch].filter(
-          (item) => item.title.toLowerCase() === "basic"
-        )[0].keys
-      : fluteKeys[octave][pitch].filter((item) => (item._id = id));
-  }
+  keysToSet = !id
+    ? keySetToUse[octave][pitch].filter(
+        (item) => item.title.toLowerCase() === "basic"
+      )[0].keys
+    : keySetToUse[octave][pitch].filter((item) => (item._id = id));
 
   renderFlutePiccoloKeys(instrument, screenSize, chart, keysToSet);
 };
