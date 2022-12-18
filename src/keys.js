@@ -69,6 +69,7 @@ const renderKeys = (instrument, screenSize, chart) => {
 const setKeys = (instrument, screenSize, octave, pitch, chart, id = "") => {
   console.log(instrument, octave, pitch, chart, id);
   // TODO: Refactor for better flow
+  // TODO: Allow fr multiple instruments
   let keysToSet = [];
 
   if (instrument === "flute") {
