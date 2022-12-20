@@ -76,7 +76,7 @@ octaveChoice.addEventListener("change", (event) => {
 });
 
 pitchChoice.addEventListener("change", (event) => {
-  console.log(instrumentChoice.value, octaveChoice.value, pitchChoice.value);
+  instrumentChoice.value, octaveChoice.value, pitchChoice.value;
 });
 
 selectButton.addEventListener("click", () => {

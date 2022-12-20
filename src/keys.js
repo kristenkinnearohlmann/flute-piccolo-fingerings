@@ -74,8 +74,6 @@ const instrumentKeySets = {
 };
 
 const setKeys = (instrument, screenSize, octave, pitch, chart, id = "") => {
-  console.log(instrument, octave, pitch, chart, id);
-  // TODO: Refactor for better flow
   const keySetToUse = instrumentKeySets[instrument];
   let keysToSet = [];
 
