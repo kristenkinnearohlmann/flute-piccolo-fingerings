@@ -69,20 +69,20 @@ const instrumentKeySets = {
   },
 };
 
-const renderKeys = (instrument, screenSize, chart) => {
-  console.log("Am I still called?");
-  switch (instrument) {
-    case "flute":
-      explanationPane.innerText = "Pane 2: Explanation";
-      renderFlutePiccoloKeys(instrument, screenSize, chart, []);
-    case "piccolo":
-      explanationPane.innerText = "Sounds 1 octave higher than written";
-      renderFlutePiccoloKeys(instrument, screenSize, chart, []);
-      break;
-    default:
-      console.warn("This instrument is not defined.");
-  }
-};
+// const renderKeys = (instrument, screenSize, chart) => {
+//   console.log("Am I still called?");
+//   switch (instrument) {
+//     case "flute":
+//       explanationPane.innerText = "Pane 2: Explanation";
+//       renderFlutePiccoloKeys(instrument, screenSize, chart, []);
+//     case "piccolo":
+//       explanationPane.innerText = "Sounds 1 octave higher than written";
+//       renderFlutePiccoloKeys(instrument, screenSize, chart, []);
+//       break;
+//     default:
+//       console.warn("This instrument is not defined.");
+//   }
+// };
 
 const setKeys = (instrument, screenSize, octave, pitch, chart, id = "") => {
   console.log(instrument, octave, pitch, chart, id);
@@ -96,5 +96,6 @@ const setKeys = (instrument, screenSize, octave, pitch, chart, id = "") => {
       )[0].keys
     : keySetToUse[octave][pitch].filter((item) => (item._id = id));
 
+  explanationPane.innerText = `${instrumentChoice.value} ${octaveChoice.value} ${pitchChoice.value}`;
   renderFlutePiccoloKeys(instrument, screenSize, chart, keysToSet);
 };

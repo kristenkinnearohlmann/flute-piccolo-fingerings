@@ -82,7 +82,6 @@ pitchChoice.addEventListener("change", (event) => {
 selectButton.addEventListener("click", () => {
   if (instrumentChoice.value && octaveChoice.value && pitchChoice.value) {
     noteResult.style.display = "block";
-    fingerExplanation.innerText = `${instrumentChoice.value} ${octaveChoice.value} ${pitchChoice.value}`;
     getChartList(instrumentChoice.value, octaveChoice.value, pitchChoice.value);
     setKeys(
       instrumentChoice.value,
