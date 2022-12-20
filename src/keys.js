@@ -17,6 +17,10 @@ const explanationPane = document.getElementById("finger-explanation");
 // roll2: key-rh-croll
 // pr2: key-rh-csharp
 
+const explanationDetails = {
+  default: "Pane 2: Explanation",
+  piccolo: "Sounds 1 octave higher than written",
+};
 const instrumentKeySets = {
   flute: {
     3: {},
