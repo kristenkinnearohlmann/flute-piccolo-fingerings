@@ -100,6 +100,8 @@ const setKeys = (instrument, screenSize, octave, pitch, chart, id = "") => {
       )[0].keys
     : keySetToUse[octave][pitch].filter((item) => (item._id = id));
 
-  explanationPane.innerText = `${instrumentChoice.value} ${octaveChoice.value} ${pitchChoice.value}`;
+  const explanationDetailsForInstrument =
+    explanationDetails[instrument] || explanationDetails["default"];
+  explanationPane.innerText = `${explanationDetailsForInstrument} ${instrumentChoice.value} ${octaveChoice.value} ${pitchChoice.value}`;
   renderFlutePiccoloKeys(instrument, screenSize, chart, keysToSet);
 };
