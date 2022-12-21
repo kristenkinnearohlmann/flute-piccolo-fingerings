@@ -30,6 +30,7 @@ const instrumentKeySets = {
       3: [
         {
           _id: "b6e0cf63-224c-4849-8966-f8af2bfe35b0",
+          isBasicOption: true,
           title: "Basic",
           description:
             "The standard fingering for the selected pitch in the selected octave.",
@@ -37,6 +38,7 @@ const instrumentKeySets = {
         },
         {
           _id: "33e12a60-1ecb-4795-a120-7db0ac6330b4",
+          isBasicOption: false,
           title: "Another fingering",
           description: "Test description",
           keys: [""],
@@ -61,6 +63,7 @@ const instrumentKeySets = {
       3: [
         {
           _id: "5d6e11e4-52cf-4d96-9b32-76aeb6bae9fb",
+          isBasicOption: true,
           title: "Basic",
           description:
             "The standard fingering for the selected pitch in the selected octave.",
