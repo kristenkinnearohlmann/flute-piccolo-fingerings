@@ -74,19 +74,15 @@ const instrumentKeySets = {
 };
 
 const getChartList = (instrument, octave, pitch, fingerOptions) => {
-  console.log("Get chart list for", instrument, octave, pitch, fingerOptions);
   const keySetToUse = instrumentKeySets[instrument];
-  keySetToUse[octave][pitch].forEach((item) => {
-    console.log(item.description);
-    console.log(item._id);
-  });
   const ul = document.createElement("ul");
   keySetToUse[octave][pitch].forEach((item) => {
     const li = document.createElement("li");
-    li.innerText = item.description;
+    li.innerHTML = `<strong>${item.title}</strong><br/>${item.description}`;
     li.setAttribute("data-id", item._id);
     ul.appendChild(li);
   });
+  fingerOptions.innerText = "";
   fingerOptions.appendChild(ul);
 };
 
