@@ -75,6 +75,8 @@ const instrumentKeySets = {
 
 const getChartList = (instrument, octave, pitch, fingerOptions) => {
   console.log("Get chart list for", instrument, octave, pitch, fingerOptions);
+  const keySetToUse = instrumentKeySets[instrument];
+  console.log(keySetToUse);
 };
 
 const setKeys = (instrument, screenSize, octave, pitch, chart, id = "") => {
