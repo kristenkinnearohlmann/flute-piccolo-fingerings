@@ -73,13 +73,16 @@ const instrumentKeySets = {
   },
 };
 
-const getChartList = (instrument, octave, pitch, fingerOptions) => {
+const getChartList = (instrument, octave, pitch, fingerOptions, id = "") => {
+  // id = "33e12a60-1ecb-4795-a120-7db0ac6330b4";
+  // TODO: How to set only basic or an id to selected
   const keySetToUse = instrumentKeySets[instrument];
   const ul = document.createElement("ul");
   keySetToUse[octave][pitch].forEach((item) => {
     const li = document.createElement("li");
     li.innerHTML = `<strong>${item.title}</strong><br/>${item.description}`;
     li.setAttribute("data-id", item._id);
+
     ul.appendChild(li);
   });
   fingerOptions.innerText = "";

@@ -137,4 +137,8 @@ button {
   .note-detail-panel:last-child {
     width: calc(100% - 10px);
   }
+
+  .selected-item {
+    border: 1px solid grey;
+  }
 }
