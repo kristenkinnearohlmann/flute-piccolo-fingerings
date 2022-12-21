@@ -78,7 +78,16 @@ const getChartList = (instrument, octave, pitch, fingerOptions) => {
   const keySetToUse = instrumentKeySets[instrument];
   keySetToUse[octave][pitch].forEach((item) => {
     console.log(item.description);
+    console.log(item._id);
   });
+  const ul = document.createElement("ul");
+  keySetToUse[octave][pitch].forEach((item) => {
+    const li = document.createElement("li");
+    li.innerText = item.description;
+    li.setAttribute("data-id", item._id);
+    ul.appendChild(li);
+  });
+  fingerOptions.appendChild(ul);
 };
 
 const setKeys = (instrument, screenSize, octave, pitch, chart, id = "") => {
