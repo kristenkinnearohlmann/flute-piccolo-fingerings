@@ -77,26 +77,21 @@ const instrumentKeySets = {
 };
 
 const getChartList = (instrument, octave, pitch, fingerOptions, id = "") => {
-  // id = "33e12a60-1ecb-4795-a120-7db0ac6330b4";
-  // TODO: How to set only basic or an id to selected
   const keySetToUse = instrumentKeySets[instrument];
   const ul = document.createElement("ul");
-  // keySetToUse[octave][pitch].forEach((item) => {
-  //   const li = document.createElement("li");
-  //   li.innerHTML = `<strong>${item.title}</strong><br/>${item.description}`;
-  //   li.setAttribute("data-id", item._id);
 
-  //   ul.appendChild(li);
-  // });
-  // fingerOptions.innerText = "";
-  // fingerOptions.appendChild(ul);
-  const keyOptionsList = keySetToUse[octave][pitch].map((item) => {
+  keySetToUse[octave][pitch].forEach((item) => {
     const li = document.createElement("li");
     li.innerHTML = `<strong>${item.title}</strong><br/>${item.description}`;
     li.setAttribute("data-id", item._id);
-    return li;
+    if ((id === "" && item.isBasicOption) || item._id === id) {
+      li.classList.add("selected-item");
+    }
+    ul.appendChild(li);
   });
-  console.log(keyOptionsList[0]);
+
+  fingerOptions.innerText = "";
+  fingerOptions.appendChild(ul);
 };
 
 const setKeys = (instrument, screenSize, octave, pitch, chart, id = "") => {
