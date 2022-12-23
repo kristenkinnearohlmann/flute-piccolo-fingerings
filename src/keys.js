@@ -102,7 +102,15 @@ const instrumentKeySets = {
   },
 };
 
-const getChartList = (instrument, octave, pitch, fingerOptions, id = "") => {
+const getChartList = (
+  instrument,
+  screenSize,
+  octave,
+  pitch,
+  fingerOptions,
+  chart,
+  id = ""
+) => {
   const keySetToUse = instrumentKeySets[instrument];
   const ul = document.createElement("ul");
 
@@ -113,6 +121,19 @@ const getChartList = (instrument, octave, pitch, fingerOptions, id = "") => {
     if ((id === "" && item.isBasicOption) || item._id === id) {
       li.classList.add("selected-item");
     }
+    li.addEventListener("click", (event) => {
+      console.log(event.target.getAttribute("data-id"));
+      // getChartList(
+      //   instrument,
+      //   screenSize,
+      //   octave,
+      //   pitch,
+      //   fingerOptions,
+      //   chart,
+      //   id
+      // );
+      // setKeys(instrument, screenSize, octave, pitch, fingerOptions, chart, id);
+    });
     ul.appendChild(li);
   });
 

@@ -85,9 +85,11 @@ selectButton.addEventListener("click", () => {
     noteResult.style.display = "block";
     getChartList(
       instrumentChoice.value,
+      getScreenSize(),
       octaveChoice.value,
       pitchChoice.value,
-      fingerOptions
+      fingerOptions,
+      chart
     );
     setKeys(
       instrumentChoice.value,
