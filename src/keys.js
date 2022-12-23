@@ -36,18 +36,27 @@ const instrumentKeySets = {
             "The standard fingering for the selected pitch in the selected octave.",
           keys: ["th2", "l2", "l3", "r1", "r2", "r3"],
         },
-        {
-          _id: "33e12a60-1ecb-4795-a120-7db0ac6330b4",
-          isBasicOption: false,
-          title: "Another fingering",
-          description: "Test description",
-          keys: [""],
-        },
       ],
       4: [],
       5: [],
       6: [],
-      7: [],
+      7: [
+        {
+          _id: "33e12a60-1ecb-4795-a120-7db0ac6330b4",
+          isBasicOption: true,
+          title: "Basic",
+          description:
+            "The standard fingering for the selected pitch in the selected octave.",
+          keys: ["th2", "l1", "l2", "l3", "r3", "pr1"],
+        },
+        {
+          _id: "2d48ecd9-e576-4b41-b9f8-35913ca3973d",
+          isBasicOption: false,
+          title: "Forked",
+          description: "Facilitates trills.",
+          keys: ["th2", "l1", "l2", "l3", "r2", "pr1"],
+        },
+      ],
       8: [],
       9: [],
       10: [],
@@ -68,6 +77,23 @@ const instrumentKeySets = {
           description:
             "The standard fingering for the selected pitch in the selected octave.",
           keys: ["th2", "l2", "l3", "r1", "r2", "r3"],
+        },
+      ],
+      7: [
+        {
+          _id: "14aac437-d987-48ce-aecc-df52e96e2171",
+          isBasicOption: true,
+          title: "Basic",
+          description:
+            "The standard fingering for the selected pitch in the selected octave.",
+          keys: ["th2", "l1", "l2", "l3", "r3", "pr1"],
+        },
+        {
+          _id: "2adb2c48-7eb6-4ac7-8c80-190dd86591c1",
+          isBasicOption: false,
+          title: "Forked",
+          description: "Facilitates trills.",
+          keys: ["th2", "l1", "l2", "l3", "r2", "pr1"],
         },
       ],
     },
