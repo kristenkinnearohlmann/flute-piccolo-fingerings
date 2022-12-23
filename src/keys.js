@@ -102,15 +102,7 @@ const instrumentKeySets = {
   },
 };
 
-const getChartList = (
-  instrument,
-  screenSize,
-  octave,
-  pitch,
-  fingerOptions,
-  chart,
-  id = ""
-) => {
+const getChartList = (instrument, octave, pitch, fingerOptions, id = "") => {
   const keySetToUse = instrumentKeySets[instrument];
   const ul = document.createElement("ul");
 
@@ -123,16 +115,6 @@ const getChartList = (
     }
     li.addEventListener("click", (event) => {
       console.log(event.target.getAttribute("data-id"));
-      // getChartList(
-      //   instrument,
-      //   screenSize,
-      //   octave,
-      //   pitch,
-      //   fingerOptions,
-      //   chart,
-      //   id
-      // );
-      // setKeys(instrument, screenSize, octave, pitch, fingerOptions, chart, id);
     });
     ul.appendChild(li);
   });
