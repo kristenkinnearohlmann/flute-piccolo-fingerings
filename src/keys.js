@@ -110,13 +110,13 @@ const getChartList = (instrument, octave, pitch, fingerOptions, id = "") => {
   keySetToUse[octave][pitch].forEach((item) => {
     const li = document.createElement("li");
     li.innerHTML = `<strong>${item.title}</strong><br/>${item.description}`;
-    li.setAttribute("data-id", item._id);
+    li.setAttribute("id", item._id);
     if ((id === "" && item.isBasicOption) || item._id === id) {
       li.classList.add("selected-item");
     }
     li.addEventListener("click", (event) => {
-      console.log(event.target.getAttribute("data-id"));
-      console.log(document.getElementById("finger-options"));
+      console.log(event.target.getAttribute("id"));
+      console.log(document.getElementById(event.target.getAttribute("id")));
     });
     ul.appendChild(li);
   });
