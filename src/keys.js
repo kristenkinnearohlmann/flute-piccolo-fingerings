@@ -106,6 +106,7 @@ const getChartList = (instrument, octave, pitch, fingerOptions, id = "") => {
   const keySetToUse = instrumentKeySets[instrument];
   const ul = document.createElement("ul");
 
+  ul.setAttribute("id", "chart-list-options");
   keySetToUse[octave][pitch].forEach((item) => {
     const li = document.createElement("li");
     li.innerHTML = `<strong>${item.title}</strong><br/>${item.description}`;
@@ -115,6 +116,7 @@ const getChartList = (instrument, octave, pitch, fingerOptions, id = "") => {
     }
     li.addEventListener("click", (event) => {
       console.log(event.target.getAttribute("data-id"));
+      console.log(document.getElementById("finger-options"));
     });
     ul.appendChild(li);
   });
