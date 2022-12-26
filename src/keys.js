@@ -117,6 +117,7 @@ const getChartList = (instrument, octave, pitch, fingerOptions, id = "") => {
     li.addEventListener("click", (event) => {
       console.log(event.target.getAttribute("id"));
       console.log(document.getElementById(event.target.getAttribute("id")));
+      console.log(document.getElementsByClassName("selected-item").length);
     });
     ul.appendChild(li);
   });
